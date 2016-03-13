@@ -7,18 +7,18 @@ namespace Trade24.App_Code
 {
     public class Account
     {
-        public string email { get; set; }
-        public string name { get; set; }
-        public string companyName { get; set; }
-        public DateTime createdAt { get; set; }
-        public string password { get; set; }
-        public int countryID { get; set; }
-        public int cityID { get; set; }
-        public string salt { get; set; }
-        public string address { get; set; }
-        public string phone { get; set; }
-        public bool isVerified { get; set; }
-        public bool isPublicProfile { get; set; }
-        public string lang { get; set; }
+        public string Email { get; set; }
+        public string Name { get; set; }
+        public string CompanyName { get; set; }
+        public DateTime CreatedAt { get; set; }
+        public string Password { get; set; }
+        public int CountryID { get; set; }
+        public int CityID { get; set; }
+        public string PasswordSalt { get; set; }
+        public string Address { get; set; }
+        public string Phone { get; set; }
+        public bool IsVerified { get; set; }
+        public bool IsPublicProfile { get; set; }
+        public string Lang { get; set; }
     }
 }
