@@ -79,6 +79,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Code\Account.cs" />
+    <Content Include="App_Code\Country.cs" />
+    <Content Include="App_Code\City.cs" />
+    <Content Include="App_Code\ItemCategory.cs" />
+    <Content Include="App_Code\Item.cs" />
+    <Content Include="App_Code\Message.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <PropertyGroup>
