@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Trade24.DAL.Model
+namespace Trade24.BO
 {
-    class ItemCategories
+    public class ItemCategoryBO
     {
         public int ID { get; set; }
         public string Name { get; set; }

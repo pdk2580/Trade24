@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Trade24.DAL.Model
+namespace Trade24.BO
 {
-    class Cities
+    public class CityBO
     {
         public string cityCode { get; set; }
         public string cityName { get; set; }
@@ -15,10 +15,5 @@ namespace Trade24.DAL.Model
         public string lat { get; set; }
         public string lon { get; set; }
         public int ID { get; set; }
-
-        //private List<Cities> GetCities()
-        //{ 
-        //    List
-        //}
     }
 }

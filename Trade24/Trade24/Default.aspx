@@ -1,4 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="Trade24.Default" %>
+<%@ Import Namespace="Trade24.BO" %>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -110,6 +111,15 @@
                           </div>
                         </div>
                     </div>
+                </div>
+                <div class="row">
+                    <asp:Repeater runat="server" ID="rpCities">
+                        <ItemTemplate>
+                            <div>
+                                <asp:Label runat="server" ID="lblCityName" Text="<%# ((CityBO)Container.DataItem).cityName %>"></asp:Label>
+                            </div>
+                        </ItemTemplate>
+                    </asp:Repeater>
                 </div>
             </div>
             <div class="container footer">
