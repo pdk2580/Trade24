@@ -1,28 +1,35 @@
 CREATE TABLE COUNTRIES
 (
-	code VARCHAR(3),
-	name VARCHAR(50),
-	continent CHAR(1),
-	shortCurrency VARCHAR(3),
-	mediumCurrency VARCHAR(3),
+	[ID] [int] NOT NULL,
+	[ISO2] [char](2) NULL,
+	[CountryName] [varchar](80) NOT NULL,
+	[LongCountryName] [varchar](80) NOT NULL,
+	[ISO3] [char](3) NULL,
+	[NumCode] [varchar](6) NULL,
+	[UNMemberState] [varchar](12) NULL,
+	[CallingCode] [varchar](8) NULL,
+	[CCTLD] [varchar](5) NULL,
+	[InternationalRegion] [varchar](50) NULL,
 	created_at datetime NOT NULL DEFAULT GETDATE(),
 
-	PRIMARY KEY(code),
-	CONSTRAINT Check_CCode CHECK (LEN(code) >= 2), 
-	CONSTRAINT Check_CName CHECK (LEN(name) >= 3) 
+	PRIMARY KEY(ID),
+	CONSTRAINT Check_CName CHECK (LEN(CountryName) >= 3) 
 );
 
 CREATE TABLE CITIES
 (
 	ID INTEGER IDENTITY,
-	name VARCHAR(50),
-	countryCode VARCHAR(3),
-	timeZone VARCHAR(10),
+	[cityCode] [varchar](50) NULL,
+	[cityName] [varchar](200) NULL,
+	[countryCode] [varchar](200) NULL,
+	[timezone] [varchar](8) NULL,
+	[lat] [varchar](32) NULL,
+	[lon] [varchar](32) NULL,
 	created_at datetime NOT NULL DEFAULT GETDATE(),
 	
 	PRIMARY KEY(ID),	
-	FOREIGN KEY (countryCode)REFERENCES COUNTRIES(code),
-	CONSTRAINT Check_CityName CHECK (LEN(name) >= 2), 
+	FOREIGN KEY (countryCode)REFERENCES COUNTRIES(ID),
+	CONSTRAINT Check_CityName CHECK (LEN(cityName) >= 2), 
 	CONSTRAINT Check_CountryCode CHECK (LEN(countryCode) >= 2)
 );
 
