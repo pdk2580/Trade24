@@ -56,17 +56,22 @@
                         <div class="page-header">
                             <h1>Login <small>Continue your journey in Trade24</small></h1>
                         </div>
-                        <form id="form2" runat="server" class="form-signin" style="max-width:330px;text-align:center">
-                        <label for="inputEmail" class="sr-only">Email address</label>
-                        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus="" />
-                        <label for="inputPassword" class="sr-only">Password</label>
-                        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="" />
-                        <div class="checkbox">
-                          <label>
-                            <input type="checkbox" value="remember-me" /> Remember me
-                          </label>
-                        </div>
-                        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+                        <form id="form2" runat="server" class="form-horizontal" role="form">
+                          <div class="form-group">
+                            <label class="control-label col-sm-2" for="email">Email:</label>
+                            <div class="col-sm-10">
+                              <input type="email" class="form-control" id="email" placeholder="Enter email">
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label class="control-label col-sm-2" for="pwd">Password:</label>
+                            <div class="col-sm-10"> 
+                              <input type="password" class="form-control" id="pwd" placeholder="Enter password">
+                            </div>
+                          </div>
+
+
+                          <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
                       </form>
                     </div>
                 </div>
