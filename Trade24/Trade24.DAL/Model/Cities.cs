@@ -15,5 +15,10 @@ namespace Trade24.DAL.Model
         public string lat { get; set; }
         public string lon { get; set; }
         public int ID { get; set; }
+
+        //private List<Cities> GetCities()
+        //{ 
+        //    List
+        //}
     }
 }
