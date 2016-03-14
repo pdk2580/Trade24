@@ -54,7 +54,7 @@
                 <div class="row">
                     <div class="col-lg-2">
                         <ol class="breadcrumb" style="margin-bottom: 5px;">
-                            <li><a href="#">Item Categories</a></li>
+                            <li>Item Categories</li>
                         </ol>
                         <div class="list-group">
                             <a href="#" class="list-group-item">First item</a>
@@ -100,6 +100,15 @@
                         <script>
                             $('.carousel').carousel()
                         </script>
+                       <div class="media">
+                          <a class="media-left" href="#">
+                            <img class="media-object" data-src="..." alt="Generic placeholder image">
+                          </a>
+                          <div class="media-body">
+                            <h4 class="media-heading">ITEM01 <small><span class="label label-success">Request</span></small></h4>
+                            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                          </div>
+                        </div>
                     </div>
                 </div>
             </div>

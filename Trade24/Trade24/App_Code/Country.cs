@@ -12,6 +12,5 @@ namespace Trade24.App_Code
         public string CurrencyShort { get; set; }
         public string CurrencyLong { get; set; }
         public int Continent { get; set; }
-
     }
 }

@@ -77,6 +77,10 @@
     <Content Include="Assets\js\jquery-migrate-1.2.1.min.js" />
     <Content Include="Assets\js\jquery.magnific-popup.min.js" />
     <Content Include="Assets\js\owl.carousel.min.js" />
+    <Content Include="Assets\trade24.mdf" />
+    <Content Include="Assets\trade24_log.ldf">
+      <DependentUpon>trade24.mdf</DependentUpon>
+    </Content>
     <Content Include="Default.aspx" />
     <Content Include="packages.config" />
     <None Include="Web.Debug.config">
