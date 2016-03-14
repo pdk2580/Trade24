@@ -4,10 +4,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Trade24</title>
-    <link href="Assets/css/bootstrap.min.css" rel="stylesheet">
-    <link href="Assets/css/font-awesome.min.css" rel="stylesheet">
-    <link href="Assets/css/owl.carousel.css" rel="stylesheet">
-    <link href="Assets/css/style.css" rel="stylesheet">
+    <link href="Assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="Assets/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="Assets/css/owl.carousel.css" rel="stylesheet" />
+    <link href="Assets/css/style.css" rel="stylesheet" />
 </head>
 <body>
     <form id="form1" runat="server">
