@@ -32,15 +32,12 @@ namespace Trade24.DAL
         {
             IEnumerable<ItemCategoryBO> categories = null;
 
-            if (parentID != null)
-            { 
-                using (var sqlConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["trade24"].ConnectionString))
-                {
-                    sqlConnection.Open();
+            using (var sqlConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["trade24"].ConnectionString))
+            {
+                sqlConnection.Open();
 
-                    string query = string.Format("SELECT * FROM ItemCategories WHERE parentID = {0}", parentID);
-                    categories = sqlConnection.Query<ItemCategoryBO>(query);
-                }
+                string query = string.Format("SELECT * FROM ItemCategories WHERE parentID = {0}", parentID);
+                categories = sqlConnection.Query<ItemCategoryBO>(query);
             }
 
             return categories;

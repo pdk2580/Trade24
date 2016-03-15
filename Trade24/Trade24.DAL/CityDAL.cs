@@ -33,15 +33,12 @@ namespace Trade24.DAL
         {
             IEnumerable<CityBO> cities = null;
 
-            if (!string.IsNullOrEmpty(countryISO2))
-            { 
-                using (var sqlConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["trade24"].ConnectionString))
-                {
-                    sqlConnection.Open();
+            using (var sqlConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["trade24"].ConnectionString))
+            {
+                sqlConnection.Open();
 
-                    string query = string.Format("SELECT * FROM Cities WHERE countryCode = {0}", countryISO2);
-                    cities = sqlConnection.Query<CityBO>(query);
-                }
+                string query = string.Format("SELECT * FROM Cities WHERE countryCode = {0}", countryISO2);
+                cities = sqlConnection.Query<CityBO>(query);
             }
 
             return cities;
