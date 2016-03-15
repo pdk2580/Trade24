@@ -1,14 +1,14 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="Trade24.Default" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="View.aspx.cs" Inherits="Trade24.ItemCategories.View" %>
 <%@ Import Namespace="Trade24.BO" %>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Trade24</title>
-    <link href="Assets/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="Assets/css/font-awesome.min.css" rel="stylesheet" />
-    <link href="Assets/css/owl.carousel.css" rel="stylesheet" />
-    <link href="Assets/css/style.css" rel="stylesheet" />
+    <link href="/Assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/Assets/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="/Assets/css/owl.carousel.css" rel="stylesheet" />
+    <link href="/Assets/css/style.css" rel="stylesheet" />
     <style>
     @import url(http://fonts.googleapis.com/css?family=roboto);
     @charset "UTF-8";
