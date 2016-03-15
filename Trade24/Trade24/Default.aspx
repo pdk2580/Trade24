@@ -52,17 +52,19 @@
             </nav>
             <div class="container main content">
                 <div class="row">
-                    <div class="col-lg-2">
-                        <ol class="breadcrumb" style="margin-bottom: 5px;">
+                    <div class="col-lg-3">
+                        <ol class="breadcrumb" style="margin:15px 0 10px 0;">
                             <li>Item Categories</li>
                         </ol>
-                        <div class="list-group">
-                            <a href="#" class="list-group-item">First item</a>
-                            <a href="#" class="list-group-item">Second item</a>
-                            <a href="#" class="list-group-item">Third item</a>
+                        <div class="list-group">                            
+                            <asp:Repeater runat="server" ID="rpItemCategories">
+                                <ItemTemplate>
+                                    <a href="#" class="list-group-item"> <asp:Label runat="server" ID="lblICName" Text="<%# ((ItemCategoryBO)Container.DataItem).Name %>"></asp:Label></a>
+                                </ItemTemplate>
+                            </asp:Repeater>
                         </div>
                     </div>
-                    <div class="col-xs-10" style="background-color:white; padding:15px;">
+                    <div class="col-xs-9" style="background-color:white; padding:15px;">
                         <ol class="breadcrumb" style="margin-bottom: 5px;">
                             <li><a href="#">Home</a></li>
                             <li><a href="#">Library</a></li>
@@ -114,9 +116,11 @@
                 <div class="row">
                     <asp:Repeater runat="server" ID="rpCities">
                         <ItemTemplate>
+                                <!--
                             <div>
                                 <asp:Label runat="server" ID="lblCityName" Text="<%# ((CityBO)Container.DataItem).cityName %>"></asp:Label>
                             </div>
+                                    --->
                         </ItemTemplate>
                     </asp:Repeater>
                 </div>
