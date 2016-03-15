@@ -18,5 +18,18 @@ namespace Trade24.BO
         public string CallingCode { get; set; }
         public string CCTLD { get; set; }
         public string InternationalRegion { get; set; }
+
+        public CountryBO(string ISO2, string CountryName, string LongCountryName, string ISO3, string NumCode, string UNMemberState, string CallingCode, string CCTLD, string InternationalRegion)
+        {
+            this.ISO2 = ISO2;
+            this.CountryName = CountryName;
+            this.LongCountryName = LongCountryName;
+            this.ISO3 = ISO3;
+            this.NumCode = NumCode;
+            this.UNMemberState = UNMemberState;
+            this.CallingCode = CallingCode;
+            this.CCTLD = CCTLD;
+            this.InternationalRegion = InternationalRegion;
+        }
     }
 }
