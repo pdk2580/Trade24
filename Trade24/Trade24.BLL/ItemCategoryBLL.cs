@@ -17,7 +17,7 @@ namespace Trade24.BLL
 
         public IEnumerable<ItemCategoryBO> GetCategories(int parentID)
         {
-            return parentID != null ? new ItemCategoryDAL().GetCategories(parentID) : null;
+            return parentID >= 0 ? new ItemCategoryDAL().GetCategories(parentID) : null;
         }
     }
 }

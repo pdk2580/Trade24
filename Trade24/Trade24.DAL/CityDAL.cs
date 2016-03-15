@@ -37,7 +37,7 @@ namespace Trade24.DAL
             {
                 sqlConnection.Open();
 
-                string query = string.Format("SELECT * FROM Cities WHERE countryCode = {0}", countryISO2);
+                string query = string.Format("SELECT * FROM Cities WHERE countryCode = '{0}'", countryISO2);
                 cities = sqlConnection.Query<CityBO>(query);
             }
 
