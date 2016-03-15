@@ -73,6 +73,7 @@
     <Content Include="Assets\css\font-awesome.min.css" />
     <Content Include="Assets\css\owl.carousel.css" />
     <Content Include="Assets\css\style.css" />
+    <Content Include="Assets\img\hand_handshake_icon.jpg" />
     <Content Include="Assets\js\bootstrap-hover-dropdown.min.js" />
     <Content Include="Assets\js\bootstrap.min.js" />
     <Content Include="Assets\js\custom.js" />
@@ -80,10 +81,6 @@
     <Content Include="Assets\js\jquery-migrate-1.2.1.min.js" />
     <Content Include="Assets\js\jquery.magnific-popup.min.js" />
     <Content Include="Assets\js\owl.carousel.min.js" />
-    <Content Include="Assets\trade24.mdf" />
-    <Content Include="Assets\trade24_log.ldf">
-      <DependentUpon>trade24.mdf</DependentUpon>
-    </Content>
     <Content Include="Default.aspx" />
     <Content Include="packages.config" />
     <None Include="Web.Debug.config">
@@ -96,6 +93,8 @@
   <ItemGroup>
     <Content Include="Public\Feedback.aspx" />
     <Content Include="Users\Logout.aspx" />
+    <Content Include="Users\Profile.aspx" />
+    <Content Include="Users\Settings.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -120,12 +119,26 @@
     <Compile Include="Users\Logout.aspx.designer.cs">
       <DependentUpon>Logout.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Users\Profile.aspx.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Users\Profile.aspx.designer.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Users\Register.aspx.cs">
       <DependentUpon>Register.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Users\Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Users\Settings.aspx.cs">
+      <DependentUpon>Settings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Users\Settings.aspx.designer.cs">
+      <DependentUpon>Settings.aspx</DependentUpon>
     </Compile>
     <Content Include="App_Code\Account.cs" />
     <Content Include="App_Code\Country.cs" />
@@ -142,9 +155,7 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Assets\img\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
