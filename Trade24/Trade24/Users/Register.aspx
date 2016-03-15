@@ -70,7 +70,7 @@
                           <div class="form-group">
                             <label class="control-label col-sm-4" for="ctry">Country:</label>
                             <div class="col-sm-8">
-                                <asp:DropDownList ID="ddl_Country" CssClass="form-control" runat="server" OnSelectedIndexChanged="ddl_Country_SelectedIndexChanged">
+                                <asp:DropDownList ID="ddl_Country" CssClass="form-control" runat="server" OnSelectedIndexChanged="ddl_Country_SelectedIndexChanged" AutoPostBack="true">
                                 </asp:DropDownList>
                             </div>
                           </div>
