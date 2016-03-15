@@ -10,9 +10,14 @@ namespace Trade24.BLL
 {
     public class ItemCategoryBLL
     {
-        public IEnumerable<ItemCategoryBO> GetAllCategories(int parentID = -1)
+        public IEnumerable<ItemCategoryBO> GetAllCategories()
         {
-            return new ItemCategoryDAL().GetAllCategories(parentID);
+            return new ItemCategoryDAL().GetAllCategories();
+        }
+
+        public IEnumerable<ItemCategoryBO> GetCategories(int parentID)
+        {
+            return parentID != null ? new ItemCategoryDAL().GetCategories(parentID) : null;
         }
     }
 }
