@@ -77,6 +77,8 @@
     <Content Include="Assets\js\owl.carousel.min.js" />
     <Content Include="Default.aspx" />
     <Content Include="ItemCategories\View.aspx" />
+    <Content Include="Messages\Conversation.aspx" />
+    <Content Include="Messages\Default.aspx" />
     <Content Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -86,7 +88,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Products\Request.aspx" />
+    <Content Include="Products\Sell.aspx" />
     <Content Include="Public\Feedback.aspx" />
+    <Content Include="Users\Login.aspx" />
     <Content Include="Users\Logout.aspx" />
     <Content Include="Users\Profile.aspx" />
     <Content Include="Users\Register.aspx" />
@@ -100,6 +105,34 @@
     </Compile>
     <Compile Include="ItemCategories\View.aspx.designer.cs">
       <DependentUpon>View.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Messages\Conversation.aspx.cs">
+      <DependentUpon>Conversation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Messages\Conversation.aspx.designer.cs">
+      <DependentUpon>Conversation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Messages\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Messages\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Products\Request.aspx.cs">
+      <DependentUpon>Request.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Products\Request.aspx.designer.cs">
+      <DependentUpon>Request.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Products\Sell.aspx.cs">
+      <DependentUpon>Sell.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Products\Sell.aspx.designer.cs">
+      <DependentUpon>Sell.aspx</DependentUpon>
     </Compile>
     <Compile Include="Public\Feedback.aspx.cs">
       <DependentUpon>Feedback.aspx</DependentUpon>
@@ -143,12 +176,6 @@
     <Compile Include="Users\Settings.aspx.designer.cs">
       <DependentUpon>Settings.aspx</DependentUpon>
     </Compile>
-    <Content Include="App_Code\Account.cs" />
-    <Content Include="App_Code\Country.cs" />
-    <Content Include="App_Code\City.cs" />
-    <Content Include="App_Code\ItemCategory.cs" />
-    <Content Include="App_Code\Item.cs" />
-    <Content Include="App_Code\Message.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -168,6 +195,7 @@
       <Name>Trade24.BO</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
