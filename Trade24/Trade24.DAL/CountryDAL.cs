@@ -14,17 +14,17 @@ namespace Trade24.DAL
     {
         public IEnumerable<CountryBO> GetAllCountries()
         {
-            IEnumerable<CountryBO> cities;
+            IEnumerable<CountryBO> countries;
 
             using (var sqlConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["trade24"].ConnectionString))
             {
                 sqlConnection.Open();
 
                 string query = "SELECT * FROM Countries";
-                cities = sqlConnection.Query<CountryBO>(query);
+                countries = sqlConnection.Query<CountryBO>(query);
             }
 
-            return cities;
+            return countries;
         }
     }
 }
