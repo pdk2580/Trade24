@@ -1,6 +1,9 @@
 body{
 	background:#E9EAED;
 }
+.content{
+    background-color:white;
+}
 hr{
     border-top: 1px solid #7E7E7F;
 }

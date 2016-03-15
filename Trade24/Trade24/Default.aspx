@@ -21,7 +21,7 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="#">Trade24</a>
+                        <a class="navbar-brand" href="\Default.aspx">Trade24</a>
                     </div>
                     <div id="navbar" class="navbar-collapse collapse">
                         <ul class="nav navbar-nav">
@@ -42,9 +42,8 @@
                             </li>
                         </ul>
                         <ul class="nav navbar-nav navbar-right">
-                            <li><a href="../navbar/">Default</a></li>
-                            <li class="active"><a href="./">Static top <span class="sr-only">(current)</span></a></li>
-                            <li><a href="../navbar-fixed-top/">Fixed top</a></li>
+                            <li><a href="Users\Login.aspx">Login</a></li>
+                            <li><a href="Users\Register.aspx">Register</a></li>
                         </ul>
                     </div>
                     <!--/.nav-collapse -->
@@ -119,11 +118,11 @@
         </div>
     </form>
 </body>
-<script src="Assets/js/jquery-1.11.1.min.js"></script>
-<script src="Assets/js/jquery-migrate-1.2.1.min.js"></script>
-<script src="Assets/js/bootstrap.min.js"></script>
-<script src="Assets/js/bootstrap-hover-dropdown.min.js"></script>
-<script src="Assets/js/jquery.magnific-popup.min.js"></script>
-<script src="Assets/js/owl.carousel.min.js"></script>
-<script src="Assets/js/custom.js"></script>
+<script src="/Assets/js/jquery-1.11.1.min.js"></script>
+<script src="/Assets/js/jquery-migrate-1.2.1.min.js"></script>
+<script src="/Assets/js/bootstrap.min.js"></script>
+<script src="/Assets/js/bootstrap-hover-dropdown.min.js"></script>
+<script src="/Assets/js/jquery.magnific-popup.min.js"></script>
+<script src="/Assets/js/owl.carousel.min.js"></script>
+<script src="/Assets/js/custom.js"></script>
 </html>

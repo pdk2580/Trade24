@@ -21,7 +21,7 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="#">Trade24</a>
+                        <a class="navbar-brand" href="\Default.aspx">Trade24</a>
                     </div>
                     <div id="navbar" class="navbar-collapse collapse">
                         <ul class="nav navbar-nav">
@@ -110,11 +110,11 @@
             </div>
         </div>
 </body>
-<script src="Assets/js/jquery-1.11.1.min.js"></script>
-<script src="Assets/js/jquery-migrate-1.2.1.min.js"></script>
-<script src="Assets/js/bootstrap.min.js"></script>
-<script src="Assets/js/bootstrap-hover-dropdown.min.js"></script>
-<script src="Assets/js/jquery.magnific-popup.min.js"></script>
-<script src="Assets/js/owl.carousel.min.js"></script>
-<script src="Assets/js/custom.js"></script>
+<script src="/Assets/js/jquery-1.11.1.min.js"></script>
+<script src="/Assets/js/jquery-migrate-1.2.1.min.js"></script>
+<script src="/Assets/js/bootstrap.min.js"></script>
+<script src="/Assets/js/bootstrap-hover-dropdown.min.js"></script>
+<script src="/Assets/js/jquery.magnific-popup.min.js"></script>
+<script src="/Assets/js/owl.carousel.min.js"></script>
+<script src="/Assets/js/custom.js"></script>
 </html>

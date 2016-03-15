@@ -1,16 +1,16 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="Trade24.Users.Login" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="Trade24.Default" %>
 
 <!DOCTYPE html>
-
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Login - Trade24</title>
+    <title>Trade24</title>
     <link href="/Assets/css/bootstrap.min.css" rel="stylesheet" />
     <link href="/Assets/css/font-awesome.min.css" rel="stylesheet" />
     <link href="/Assets/css/owl.carousel.css" rel="stylesheet" />
     <link href="/Assets/css/style.css" rel="stylesheet" />
 </head>
 <body>
+    <form id="form4" runat="server">
         <div>
             <nav class="navbar navbar-default navbar-static-top">
                 <div class="container">
@@ -42,41 +42,19 @@
                             </li>
                         </ul>
                         <ul class="nav navbar-nav navbar-right">
-                            <li class="active"><a href="#">Login</a></li>
-                            <li><a href="Register.aspx">Register</a></li>
+                            <li><a href="Users\Login.aspx">Login</a></li>
+                            <li><a href="Users\Register.aspx">Register</a></li>
                         </ul>
                     </div>
                     <!--/.nav-collapse -->
                 </div>
             </nav>
-            <div class="container main content" style="text-align:center">
+            <div class="container main content">
                 <div class="row">
-                    <div class="col-lg-5 col-lg-offset-3">
-                        <div class="page-header">
-                            <h1>Login <small>Continue your journey in Trade24</small></h1>
+                    <div class="col-lg-12">
+                        <div class="page-header" style="border:none;">
+                            <h1>Thank You<br /><small>Continue to <a href="/Default.aspx">homepage</a></small></h1>
                         </div>
-                        <form id="form2" runat="server" class="form-horizontal" role="form">
-                          <div class="form-group">
-                            <label class="control-label col-sm-2" for="email">Email:</label>
-                            <div class="col-sm-10">
-                              <input type="email" class="form-control" id="email" placeholder="Enter email" />
-                            </div>
-                          </div>
-                          <div class="form-group">
-                            <label class="control-label col-sm-2" for="pwd">Password:</label>
-                            <div class="col-sm-10"> 
-                              <input type="password" class="form-control" id="pwd" placeholder="Enter password" />
-                            </div>
-                          </div>
-                          <div class="form-group">
-                            <label class="control-label col-sm-2"></label>
-                            <div class="col-sm-10"> 
-                                <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
-                            </div>
-                          </div>
-
-
-                      </form>
                     </div>
                 </div>
             </div>
@@ -85,6 +63,7 @@
                 &copy; Trade24 | <a href="">Feedback</a> | <a href="">Business Relation</a> | <a href="">About Us</a>
             </div>
         </div>
+    </form>
 </body>
 <script src="/Assets/js/jquery-1.11.1.min.js"></script>
 <script src="/Assets/js/jquery-migrate-1.2.1.min.js"></script>
