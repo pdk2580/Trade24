@@ -37,18 +37,22 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="Trade24.BO">
-      <HintPath>..\Trade24.BO\bin\Debug\Trade24.BO.dll</HintPath>
-    </Reference>
-    <Reference Include="Trade24.DAL">
-      <HintPath>..\Trade24.DAL\bin\Debug\Trade24.DAL.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CityBLL.cs" />
     <Compile Include="CountryBLL.cs" />
     <Compile Include="ItemCategoryBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Trade24.BO\Trade24.BO.csproj">
+      <Project>{54d58bd6-ff38-4306-a28b-d12fd708406a}</Project>
+      <Name>Trade24.BO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Trade24.DAL\Trade24.DAL.csproj">
+      <Project>{7f6ffd77-0e2f-4b06-ab99-db4dde92c766}</Project>
+      <Name>Trade24.DAL</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

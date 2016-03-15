@@ -61,12 +61,6 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
-    <Reference Include="Trade24.BLL">
-      <HintPath>..\Trade24.BLL\bin\Debug\Trade24.BLL.dll</HintPath>
-    </Reference>
-    <Reference Include="Trade24.BO">
-      <HintPath>..\Trade24.BO\bin\Debug\Trade24.BO.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\css\bootstrap.min.css" />
@@ -155,7 +149,16 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Trade24.BLL\Trade24.BLL.csproj">
+      <Project>{1d2a188d-19ab-4eea-a4cb-3bf65427f40a}</Project>
+      <Name>Trade24.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Trade24.BO\Trade24.BO.csproj">
+      <Project>{54d58bd6-ff38-4306-a28b-d12fd708406a}</Project>
+      <Name>Trade24.BO</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
