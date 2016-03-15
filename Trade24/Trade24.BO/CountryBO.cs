@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Trade24.DAL.Model
+namespace Trade24.BO
 {
-    class Countries
+    public class CountryBO
     {
         public int CountryID { get; set; }
         public string ISO2 { get; set; }

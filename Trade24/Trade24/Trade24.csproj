@@ -61,6 +61,12 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Trade24.BLL">
+      <HintPath>..\Trade24.BLL\bin\Debug\Trade24.BLL.dll</HintPath>
+    </Reference>
+    <Reference Include="Trade24.BO">
+      <HintPath>..\Trade24.BO\bin\Debug\Trade24.BO.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\css\bootstrap.min.css" />
