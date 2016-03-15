@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Trade24.BLL;
 
 namespace Trade24.Users
 {
@@ -11,7 +12,25 @@ namespace Trade24.Users
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
+                CountryBLL objCountry = new CountryBLL();
 
+                ddl_Country.DataSource = objCountry.GetAllCountries().ToList();
+                ddl_Country.DataTextField = "CountryName";
+                ddl_Country.DataValueField = "ISO2";
+                ddl_Country.DataBind();
+            }
+        }
+
+        protected void ddl_Country_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            CityBLL objCity = new CityBLL();
+
+            ddl_City.DataSource = objCity.GetAllCities(ddl_Country.SelectedItem.Value).ToList();
+            ddl_City.DataTextField = "cityName";
+            ddl_City.DataValueField = "ID";
+            ddl_City.DataBind();
         }
     }
 }

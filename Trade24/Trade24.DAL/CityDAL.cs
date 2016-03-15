@@ -14,7 +14,7 @@ namespace Trade24.DAL
 {
     public class CityDAL
     {
-        public IEnumerable<CityBO> GetAllCities()
+        public IEnumerable<CityBO> GetAllCities(string countryISO2 = "")
         {
             IEnumerable<CityBO> cities;
 
@@ -23,6 +23,10 @@ namespace Trade24.DAL
                 sqlConnection.Open();
 
                 string query = "SELECT * FROM Cities";
+                if (countryISO2.Length == 2)
+                {
+                    query += " WHERE countryCode = '"+countryISO2+"'";
+                }
                 cities = sqlConnection.Query<CityBO>(query);
             }
 

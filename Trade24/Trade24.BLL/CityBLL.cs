@@ -10,9 +10,9 @@ namespace Trade24.BLL
 {
     public class CityBLL
     {
-        public IEnumerable<CityBO> GetAllCities()
+        public IEnumerable<CityBO> GetAllCities(string countryCode = "")
         {
-            return new CityDAL().GetAllCities();
+            return new CityDAL().GetAllCities(countryCode);
         }
     }
 }

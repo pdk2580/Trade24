@@ -89,6 +89,7 @@
     <Content Include="Public\Feedback.aspx" />
     <Content Include="Users\Logout.aspx" />
     <Content Include="Users\Profile.aspx" />
+    <Content Include="Users\Register.aspx" />
     <Content Include="Users\Settings.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>

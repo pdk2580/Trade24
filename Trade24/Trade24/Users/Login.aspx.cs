@@ -13,5 +13,10 @@ namespace Trade24.Users
         {
 
         }
+
+        protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

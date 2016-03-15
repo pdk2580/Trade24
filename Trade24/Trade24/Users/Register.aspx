@@ -1,5 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="Trade24.Users.Login" %>
-
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Register.aspx.cs" Inherits="Trade24.Users.Register" %>
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -71,13 +70,15 @@
                           <div class="form-group">
                             <label class="control-label col-sm-4" for="ctry">Country:</label>
                             <div class="col-sm-8">
-                              <input type="text" class="form-control" id="ctry" placeholder="Select country">
+                                <asp:DropDownList ID="ddl_Country" CssClass="form-control" runat="server" OnSelectedIndexChanged="ddl_Country_SelectedIndexChanged">
+                                </asp:DropDownList>
                             </div>
                           </div>
                           <div class="form-group">
                             <label class="control-label col-sm-4" for="cty">City:</label>
                             <div class="col-sm-8">
-                              <input type="text" class="form-control" id="cty" placeholder="Select city">
+                               <asp:DropDownList ID="ddl_City" CssClass="form-control" runat="server">
+                                </asp:DropDownList>
                             </div>
                           </div>
                           <div class="form-group">
