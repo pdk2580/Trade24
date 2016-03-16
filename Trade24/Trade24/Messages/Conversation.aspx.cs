@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace Trade24.Message
+namespace Trade24.Messages
 {
     public partial class Conversation : System.Web.UI.Page
     {
