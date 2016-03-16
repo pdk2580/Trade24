@@ -25,8 +25,16 @@ namespace Trade24.Users
 
         protected void ddl_Country_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if(ddl_Country.SelectedItem.Value == "")
+            {
+                ddl_City.Enabled = false;
+                ddl_City.ClearSelection();
+                ddl_City.DataSource = null;
+                ddl_City.DataBind();
+                return;
+            }
             CityBLL objCity = new CityBLL();
-
+            ddl_City.Enabled = true;
             ddl_City.DataSource = objCity.GetAllCities(ddl_Country.SelectedItem.Value).ToList();
             ddl_City.DataTextField = "cityName";
             ddl_City.DataValueField = "ID";
