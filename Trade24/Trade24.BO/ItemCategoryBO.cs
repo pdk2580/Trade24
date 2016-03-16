@@ -11,5 +11,11 @@ namespace Trade24.BO
         public int ID { get; set; }
         public string Name { get; set; }
         public int ParentID { get; set; }
+
+        public ItemCategoryBO(string Name, int ParentID)
+        {
+            this.Name = Name;
+            this.ParentID = ParentID;
+        }
     }
 }

@@ -16,7 +16,7 @@ namespace Trade24.ItemCategories
             {
                 ItemCategoryBLL objItemCategory = new ItemCategoryBLL();
 
-                rpItemCategories.DataSource = objItemCategory.GetAllCategories(Int32.Parse(Request["id"])).ToList();
+                rpItemCategories.DataSource = objItemCategory.GetCategories(Int32.Parse(Request["id"])).ToList();
                 rpItemCategories.DataBind();
             }
         }

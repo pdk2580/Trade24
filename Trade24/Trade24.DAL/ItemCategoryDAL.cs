@@ -12,23 +12,35 @@ namespace Trade24.DAL
 {
     public class ItemCategoryDAL
     {
-        public IEnumerable<ItemCategoryBO> GetAllCategories(int parentID = -1)
+        public IEnumerable<ItemCategoryBO> GetAllCategories()
         {
-            IEnumerable<ItemCategoryBO> cities;
+            IEnumerable<ItemCategoryBO> categories;
 
             using (var sqlConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["trade24"].ConnectionString))
             {
                 sqlConnection.Open();
 
                 string query = "SELECT * FROM ItemCategories";
-                if(parentID >= 0)
-                {
-                    query += " WHERE parentID = " + parentID.ToString();
-                }
-                cities = sqlConnection.Query<ItemCategoryBO>(query);
+                categories = sqlConnection.Query<ItemCategoryBO>(query);
             }
 
-            return cities;
+            return categories;
+        }
+
+        // Get item categories with specific parentID eg. parentID = 0 is most top level
+        public IEnumerable<ItemCategoryBO> GetCategories(int parentID)
+        {
+            IEnumerable<ItemCategoryBO> categories = null;
+
+            using (var sqlConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["trade24"].ConnectionString))
+            {
+                sqlConnection.Open();
+
+                string query = string.Format("SELECT * FROM ItemCategories WHERE parentID = {0}", parentID);
+                categories = sqlConnection.Query<ItemCategoryBO>(query);
+            }
+
+            return categories;
         }
     }
 }

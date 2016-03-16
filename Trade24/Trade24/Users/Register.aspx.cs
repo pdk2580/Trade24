@@ -34,7 +34,7 @@ namespace Trade24.Users
                 return;
             }
             CityBLL objCity = new CityBLL();
-            ddl_City.Enabled = true;
+
             ddl_City.DataSource = objCity.GetAllCities(ddl_Country.SelectedItem.Value).ToList();
             ddl_City.DataTextField = "cityName";
             ddl_City.DataValueField = "ID";
