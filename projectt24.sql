@@ -37,77 +37,77 @@ CREATE TABLE ItemCategories(
 CREATE TABLE Accounts
 (
 	ID			   INTEGER IDENTITY,
-	password       VARCHAR(20) NOT NULL,
-	fName          VARCHAR(40) NOT NULL,
-	lName          VARCHAR(40) NOT NULL,
-	email          VARCHAR(40) UNIQUE, 
-	securityQ      VARCHAR(MAX),
-	securityA      VARCHAR(255),
-	adminStats	   CHAR(1) DEFAULT '0',
-	loginAttempts  INTEGER DEFAULT 0, 
-	countryCode	   VARCHAR(3),
-	cityID		   INTEGER DEFAULT 0, 
-	passwordSalt   INTEGER DEFAULT 0, 
-	address1	   VARCHAR(150), 
-	address2	   VARCHAR(150), 
-	postalCode	   VARCHAR(10), 
-	phone1		   VARCHAR(50), 
-	phone2		   VARCHAR(50), 
-	fax1		   VARCHAR(50), 
-	fax2		   VARCHAR(50), 
-	isVerified	   CHAR(1) DEFAULT '0',
-	isPublicProfile	   CHAR(1) DEFAULT '0',
-	lang	   	   CHAR(8) DEFAULT 'en',
+	Password       VARCHAR(20) NOT NULL,
+	FName          VARCHAR(40) NOT NULL,
+	LName          VARCHAR(40) NOT NULL,
+	Email          VARCHAR(40) UNIQUE, 
+	SecurityQ      VARCHAR(MAX),
+	SecurityA      VARCHAR(255),
+	AdminStats	   CHAR(1) DEFAULT '0',
+	LoginAttempts  INTEGER DEFAULT 0, 
+	CountryID	   INT,
+	CityID		   INTEGER DEFAULT 0, 
+	PasswordSalt   INTEGER DEFAULT 0, 
+	Address1	   VARCHAR(150), 
+	Address2	   VARCHAR(150), 
+	PostalCode	   VARCHAR(10), 
+	Phone1		   VARCHAR(50), 
+	Phone2		   VARCHAR(50), 
+	Fax1		   VARCHAR(50), 
+	Fax2		   VARCHAR(50), 
+	IsVerified	   CHAR(1) DEFAULT '0',
+	IsPublicProfile	   CHAR(1) DEFAULT '0',
+	Lang	   	   CHAR(8) DEFAULT 'en',
 	--User level starts from
 	-- 1: Normal user
 	-- 99: Admin
-	userLevel  	   CHAR(2) DEFAULT '1',
-	created_at datetime NOT NULL DEFAULT GETDATE(),
-	userStatuts    CHAR(1) DEFAULT '1'
+	UserLevel  	   CHAR(2) DEFAULT '1',
+	Created_at	   DATETIME NOT NULL DEFAULT GETDATE(),
+	UserStatuts    CHAR(1) DEFAULT '1'
 
 	PRIMARY KEY (ID), 
 	
-	FOREIGN KEY (countryCode) REFERENCES COUNTRIES(code),
-	FOREIGN KEY (cityID) REFERENCES CITIES(ID),
-
-	CONSTRAINT Check_ACCPassword CHECK (LEN(password) >= 8),  
-	-- Check if Account status is either DISABLE(0), ACTIVE(1) or PENDING(2)  
-	CONSTRAINT Check_ACCStatus  CHECK (userStatuts IN ('0', '1', '2')),
-	CONSTRAINT Check_UserStats CHECK (userLevel >= 0)  
+	FOREIGN KEY (CountryID) REFERENCES Countries(ID),
+	FOREIGN KEY (CityID) REFERENCES Cities(ID)
 );
 
-
-CREATE TABLE REQUESTS(
-	ID	INTEGER IDENTITY,
-	requestType CHAR(1),
-	uploaderID INTEGER,
-
-	created_at datetime NOT NULL DEFAULT GETDATE(),
-
-	PRIMARY KEY(ID)
-);
-
-CREATE TABLE MESSAGES(
-	ID	INTEGER IDENTITY,
-	senderID INTEGER,
-	receiverID INTEGER,
-	messageType CHAR(1),
-	content VARCHAR(MAX),
-	attachmentPhysicFile VARCHAR(150),
-	attachmentFileName VARCHAR(MAX),
-	created_at datetime NOT NULL DEFAULT GETDATE(),
-
-	PRIMARY KEY(ID)
-);
-
-CREATE TABLE CONTACTS(
-	ID INTEGER IDENTITY,
-	created_at datetime NOT NULL DEFAULT GETDATE(),
-	accepted_at datetime NOT NULL DEFAULT GETDATE(),
-	requesterID INTEGER,
-	contactID INTEGER
+CREATE TABLE Contacts(
+	ID				INTEGER	IDENTITY,
+	Created_at		DATETIME NOT NULL DEFAULT GETDATE(),
+	Accepted_at		DATETIME DEFAULT NULL,
+	RequesterID		INTEGER NOT NULL,
+	ContactID		INTEGER NOT NULL
 
 	PRIMARY KEY(ID),
-	FOREIGN KEY (requesterID) REFERENCES ACCOUNTS(ID),
-	FOREIGN KEY (contactID) REFERENCES ACCOUNTS(ID),
+	FOREIGN KEY (RequesterID) REFERENCES Accounts(ID),
+	FOREIGN KEY (ContactID) REFERENCES Accounts(ID),
+);
+
+CREATE TABLE Messages(
+	ID	INTEGER IDENTITY,
+	SenderID INTEGER,
+	ReceiverID INTEGER,
+	MessageType CHAR(1),
+	Content VARCHAR(MAX),
+	AttachmentPhysicFile VARCHAR(150),
+	AttachmentFileName VARCHAR(MAX),
+	Created_at datetime NOT NULL DEFAULT GETDATE(),
+
+	PRIMARY KEY(ID)
+);
+
+
+CREATE TABLE Request(
+	ID	INTEGER IDENTITY,
+	RequestType CHAR(1),
+	UploaderID INTEGER,
+	ItemCategoryID INT,
+	MinQty FLOAT,
+	MinPrice FLOAT,
+	Description TEXT,
+
+	Created_at datetime NOT NULL DEFAULT GETDATE(),
+
+	PRIMARY KEY(ID),
+	FOREIGN KEY (ItemCategoryID) REFERENCES ItemCategories(ID)
 );
