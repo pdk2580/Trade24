@@ -78,7 +78,6 @@
     <Content Include="Default.aspx" />
     <Content Include="ItemCategories\View.aspx" />
     <Content Include="Messages\Conversation.aspx" />
-    <Content Include="Messages\Default.aspx" />
     <Content Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -112,13 +111,6 @@
     </Compile>
     <Compile Include="Messages\Conversation.aspx.designer.cs">
       <DependentUpon>Conversation.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Messages\Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Messages\Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="Products\Request.aspx.cs">
       <DependentUpon>Request.aspx</DependentUpon>
