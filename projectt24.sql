@@ -1,39 +1,41 @@
-CREATE TABLE COUNTRIES
-(
-	[ID] [int] NOT NULL,
-	[ISO2] [char](2) NULL,
-	[CountryName] [varchar](80) NOT NULL,
-	[LongCountryName] [varchar](80) NOT NULL,
-	[ISO3] [char](3) NULL,
-	[NumCode] [varchar](6) NULL,
-	[UNMemberState] [varchar](12) NULL,
-	[CallingCode] [varchar](8) NULL,
-	[CCTLD] [varchar](5) NULL,
-	[InternationalRegion] [varchar](50) NULL,
-	created_at datetime NOT NULL DEFAULT GETDATE(),
-
-	PRIMARY KEY(ID),
-	CONSTRAINT Check_CName CHECK (LEN(CountryName) >= 3) 
+CREATE TABLE Countries(
+	ID INT IDENTITY,
+	Name VARCHAR(150) NOT NULL,
+	LongName VARCHAR(150) NOT NULL,
+	ISO2 VARCHAR(3) NOT NULL,
+	ISO3 VARCHAR(5) NOT NULL,
+	NumCode INT NOT NULL,
+	UNMemberState CHAR(5) NOT NULL,
+	CallingCode VARCHAR(15) NOT NULL,
+	CCTLD VARCHAR(5) NOT NULL,
+	InternationalRegion VARCHAR(50) NOT NULL,	
+	PRIMARY KEY (ID)
 );
 
-CREATE TABLE CITIES
-(
-	ID INTEGER IDENTITY,
-	[cityCode] [varchar](50) NULL,
-	[cityName] [varchar](200) NULL,
-	[countryCode] [varchar](200) NULL,
-	[timezone] [varchar](8) NULL,
-	[lat] [varchar](32) NULL,
-	[lon] [varchar](32) NULL,
-	created_at datetime NOT NULL DEFAULT GETDATE(),
+CREATE TABLE Cities(
+	ID INT IDENTITY,
+	Name VARCHAR(150) NOT NULL,
+	ISO3 VARCHAR(5) NOT NULL,
+	CountryID INT NOT NULL,
+	CountryISO2 VARCHAR(5) NOT NULL,
+	Timezone VARCHAR(15) NOT NULL,
+	Lat FLOAT NOT NULL,
+	Lon FLOAT NOT NULL,
 	
-	PRIMARY KEY(ID),	
-	FOREIGN KEY (countryCode)REFERENCES COUNTRIES(ID),
-	CONSTRAINT Check_CityName CHECK (LEN(cityName) >= 2), 
-	CONSTRAINT Check_CountryCode CHECK (LEN(countryCode) >= 2)
+	PRIMARY KEY (ID),
+	FOREIGN KEY (CountryID) REFERENCES Countries(ID)
 );
 
-CREATE TABLE ACCOUNT
+CREATE TABLE ItemCategories(
+	ID INT IDENTITY,
+	Name VARCHAR(150) NOT NULL,
+	ParentID INT NOT NULL,
+	
+	PRIMARY KEY (ID),
+	FOREIGN KEY (ParentID) REFERENCES ItemCategories(ID)
+);
+
+CREATE TABLE Accounts
 (
 	ID			   INTEGER IDENTITY,
 	password       VARCHAR(20) NOT NULL,
@@ -74,18 +76,6 @@ CREATE TABLE ACCOUNT
 	CONSTRAINT Check_ACCStatus  CHECK (userStatuts IN ('0', '1', '2')),
 	CONSTRAINT Check_UserStats CHECK (userLevel >= 0)  
 );
-CREATE TABLE ITEMCATEGORIES(
-	ID	INTEGER,
-	name VARCHAR(150),
-	parentID INTEGER NULL, 
-
-	PRIMARY KEY(ID),
-	FOREIGN KEY parentid_fk (parentid) REFERENCES ITEMCATEGORIES (ID)
-);
-CREATE TABLE ITEMS(
-	ID	INTEGER IDENTITY
-);
-
 
 
 CREATE TABLE REQUESTS(
@@ -113,7 +103,6 @@ CREATE TABLE MESSAGES(
 
 CREATE TABLE CONTACTS(
 	ID INTEGER IDENTITY,
-	--https://github.com/pdk2580/Trade24.git
 	created_at datetime NOT NULL DEFAULT GETDATE(),
 	accepted_at datetime NOT NULL DEFAULT GETDATE(),
 	requesterID INTEGER,
