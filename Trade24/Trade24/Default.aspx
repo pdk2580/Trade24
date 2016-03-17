@@ -321,17 +321,6 @@
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <asp:Repeater runat="server" ID="rpCities">
-                        <ItemTemplate>
-                                <!--
-                            <div>
-                                <asp:Label runat="server" ID="lblCityName" Text="<%# ((CityBO)Container.DataItem).cityName %>"></asp:Label>
-                            </div>
-                                    --->
-                        </ItemTemplate>
-                    </asp:Repeater>
-                </div>
             </div>
             <div class="container footer">
                 <hr />

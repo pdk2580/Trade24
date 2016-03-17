@@ -16,11 +16,6 @@ namespace Trade24
         {
             if (!IsPostBack)
             {
-                CityBLL objCity = new CityBLL();
-
-                rpCities.DataSource = objCity.GetAllCities().ToList();
-                rpCities.DataBind();
-
                 ItemCategoryBLL objItemCategory = new ItemCategoryBLL();
 
                 rpItemCategories.DataSource = objItemCategory.GetCategories(0).ToList();

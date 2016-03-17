@@ -8,23 +8,28 @@ namespace Trade24.BO
 {
     public class CityBO
     {
-        public string cityCode { get; set; }
-        public string cityName { get; set; }
-        public string countryCode { get; set; }
-        public string timezone { get; set; }
-        public string lat { get; set; }
-        public string lon { get; set; }
         public int ID { get; set; }
+        public string Name { get; set; }
+        public string ISO3 { get; set; }
+        public int CountryID { get; set; }
+        public string CountryISO2 { get; set; }
+        public string Timezone { get; set; }
+        public double Lat { get; set; }
+        public double Lon { get; set; }
 
-        public CityBO(string cityCode, string cityName, string countryCode, string timezone, string lat, string lon, int ID)
+        public CityBO(int ID, string Name, string ISO3, int CountryID, string CountryISO2, string Timezone, double Lat, double Lon)
         {
-            this.cityCode = cityCode;
-            this.cityName = cityName;
-            this.countryCode = countryCode;
-            this.timezone = timezone;
-            this.lat = lat;
-            this.lon = lon;
             this.ID = ID;
+            this.Name = Name;
+            this.ISO3 = ISO3;
+            this.CountryID = CountryID;
+            this.CountryISO2 = CountryISO2;
+            this.Timezone = Timezone;
+            this.Lat = Lat;
+            this.Lon = Lon;
+
         }
     }
+
+
 }
