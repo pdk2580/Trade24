@@ -37,11 +37,33 @@ namespace Trade24.DAL
             {
                 sqlConnection.Open();
 
-                string query = string.Format("SELECT * FROM Cities WHERE CountryISO2 = '{0}'", countryISO2);
-                cities = sqlConnection.Query<CityBO>(query);
+                string query = "SELECT * FROM Cities WHERE CountryISO2 = @CountryISO2";
+                cities = sqlConnection.Query<CityBO>(query, new { CountryISO2 = countryISO2 });
             }
 
             return cities;
+        }
+
+        public void CreateCity(CityBO city)
+        {
+            using (var sqlConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["trade24"].ConnectionString))
+            {
+                sqlConnection.Open();
+
+                string query = "INSERT Cities (Name, ISO3, CountryID, CountryISO2, Timezone, Lat, Lon) VALUES (@Name, @ISO3, @CountryID, @CountryISO2, @Timezone, @Lat, @Lon)";
+                sqlConnection.Execute(query, city);
+            }
+        }
+
+        public void RemoveCity(int cityId)
+        {
+            using (var sqlConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["trade24"].ConnectionString))
+            {
+                sqlConnection.Open();
+
+                string query = "DELETE FROM Cities WHERE ID = @ID";
+                sqlConnection.Execute(query, new { ID = cityId });
+            }
         }
     }
 }

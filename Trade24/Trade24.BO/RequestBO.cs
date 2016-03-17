@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Trade24.BO
 {
-    class RequestBO
+    public class RequestBO
     {
         public int ID { get; set; }
         public string RequestType { get; set; }
