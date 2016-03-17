@@ -65,5 +65,16 @@ namespace Trade24.DAL
                 sqlConnection.Execute(query, new { ID = cityId });
             }
         }
+
+        public void UpdateCity(CityBO updatedCity)
+        {
+            using (var sqlConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["trade24"].ConnectionString))
+            {
+                sqlConnection.Open();
+
+                string query = "UPDATE Cities SET Name=@Name, ISO3=@ISO3, CountryID=@CountryID, CountryISO2=@CountryISO2, Timezone=@Timezone, Lat=@Lat, Lon=@Lon WHERE ID=@ID";
+                sqlConnection.Execute(query, updatedCity);
+            }
+        }
     }
 }
