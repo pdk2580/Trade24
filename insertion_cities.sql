@@ -3877,3 +3877,14 @@ INSERT INTO Cities(Name,ISO3,CountryID,CountryISO2,Timezone,Lat,Lon) VALUES ('Ve
 INSERT INTO Cities(Name,ISO3,CountryID,CountryISO2,Timezone,Lat,Lon) VALUES ('Sandvika', 'ZYW', 1, 'NO', '-100', 1, 0);
 INSERT INTO Cities(Name,ISO3,CountryID,CountryISO2,Timezone,Lat,Lon) VALUES ('Marnardal', 'ZYY', 1, 'NO', '-100', 1, 0);
 INSERT INTO Cities(Name,ISO3,CountryID,CountryISO2,Timezone,Lat,Lon) VALUES ('Zanesville', 'ZZV', 1, 'US', '-100', 39.9445, -81.8921);
+
+UPDATE
+    Cities
+SET
+    Cities.CountryID = Countries.ID
+FROM
+    Cities
+INNER JOIN
+    Countries
+ON
+    Cities.CountryISO2 = Countries.ISO2
