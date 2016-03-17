@@ -13,13 +13,13 @@ namespace Trade24.BO
         public string LongName { get; set; }
         public string ISO2 { get; set; }
         public string ISO3 { get; set; }
-        public int NumCode { get; set; }
+        public string NumCode { get; set; }
         public string UNMemberState { get; set; }
         public string CallingCode { get; set; }
         public string CCTLD { get; set; }
         public string InternationalRegion { get; set; }
 
-        public CountryBO(int ID, string Name, string LongName, string ISO2, string ISO3, int NumCode, string UNMemberState, string CallingCode, string CCTLD, string InternationalRegion)
+        public CountryBO(int ID, string Name, string LongName, string ISO2, string ISO3, string NumCode, string UNMemberState, string CallingCode, string CCTLD, string InternationalRegion)
         {
             this.ID = ID;
             this.Name = Name;
@@ -34,5 +34,6 @@ namespace Trade24.BO
 
         }
     }
+
 
 }
