@@ -30,8 +30,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Dapper">
+    <Reference Include="Dapper, Version=1.40.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Dapper.1.42\lib\net45\Dapper.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="ObjectDumper">
       <HintPath>..\packages\ObjectDumper.1.0.0.12\lib\net35-Client\ObjectDumper.dll</HintPath>
@@ -46,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccountDAL.cs" />
     <Compile Include="CityDAL.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -55,7 +57,9 @@
     <Compile Include="ItemCategoryDAL.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="MessageDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RequestDAL.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

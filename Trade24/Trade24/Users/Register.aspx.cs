@@ -35,7 +35,7 @@ namespace Trade24.Users
             }
             CityBLL objCity = new CityBLL();
 
-            ddl_City.DataSource = objCity.GetAllCities(ddl_Country.SelectedItem.Value).ToList();
+            ddl_City.DataSource = objCity.GetCities(ddl_Country.SelectedItem.Value).ToList();
             ddl_City.DataTextField = "cityName";
             ddl_City.DataValueField = "ID";
             ddl_City.DataBind();

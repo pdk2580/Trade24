@@ -16,7 +16,7 @@ namespace Trade24.BO
         public string lon { get; set; }
         public int ID { get; set; }
 
-        public CityBO(string cityCode, string cityName, string countryCode, string timezone, string lat, string lon)
+        public CityBO(string cityCode, string cityName, string countryCode, string timezone, string lat, string lon, int ID)
         {
             this.cityCode = cityCode;
             this.cityName = cityName;
@@ -24,6 +24,7 @@ namespace Trade24.BO
             this.timezone = timezone;
             this.lat = lat;
             this.lon = lon;
+            this.ID = ID;
         }
     }
 }
