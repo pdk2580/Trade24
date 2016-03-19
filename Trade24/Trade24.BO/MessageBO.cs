@@ -17,6 +17,8 @@ namespace Trade24.BO
         public string AttachmentFileName { get; set; }
         public DateTime Created_at { get; set; }
 
+        public MessageBO() { }
+
         public MessageBO(int ID, int? SenderID, int? ReceiverID, string MessageType, string Content, string AttachmentPhysicFile, string AttachmentFileName, DateTime Created_at)
         {
             this.ID = ID;
