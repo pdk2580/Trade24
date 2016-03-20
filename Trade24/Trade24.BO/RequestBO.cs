@@ -17,6 +17,8 @@ namespace Trade24.BO
         public string Description { get; set; }
         public DateTime Created_at { get; set; }
 
+        public RequestBO() { }
+
         public RequestBO(int ID, string RequestType, int? UploaderID, int? ItemCategoryID, float? MinQty, float? MinPrice, string Description, DateTime Created_at)
         {
             this.ID = ID;
