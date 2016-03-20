@@ -51,13 +51,14 @@
             <div class="container main content" style="text-align:center">
                 <div class="row">
                     <div class="col-lg-7 col-lg-offset-2">
+                        <form id="form3" runat="server" class="form-horizontal" role="form">
                         <div class="page-header">
                             <h1>Register <small>Start explore our Trade24 world</small></h1>
+                            <asp:ValidationSummary ID="ValidationSummary1" runat="server" />
                         </div>
-                        <form id="form3" runat="server" class="form-horizontal" role="form">
                           <div class="form-group">
-                            <label class="control-label col-sm-4" for="email">Email:</label>
-                            <div class="col-sm-8">
+                            <label class="control-label col-sm-4" for="email">Email:</label><asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="RequiredFieldValidator"></asp:RequiredFieldValidator>
+&nbsp;<div class="col-sm-8">
                                 <asp:TextBox ID="txtEmail" runat="server" class="form-control" placeholder="Enter email" TextMode="Email"></asp:TextBox>
                             </div>
                           </div>
@@ -99,7 +100,7 @@
                           <div class="form-group">
                             <label class="control-label col-sm-4"></label>
                             <div class="col-sm-8"> 
-                                <asp:Button ID="btnRegister" runat="server" Text="Register" class="btn btn-lg btn-primary btn-block" />
+                                <asp:Button ID="btnRegister" runat="server" Text="Register" class="btn btn-lg btn-primary btn-block" OnClick="btnRegister_Click" />
                             </div>
                           </div>
 
