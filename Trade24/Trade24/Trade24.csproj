@@ -75,10 +75,14 @@
     <Content Include="Assets\js\jquery-migrate-1.2.1.min.js" />
     <Content Include="Assets\js\jquery.magnific-popup.min.js" />
     <Content Include="Assets\js\owl.carousel.min.js" />
+    <Content Include="Contacts\RequestReceived.aspx" />
+    <Content Include="Contacts\RequestSent.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="ItemCategories\View.aspx" />
     <Content Include="Messages\Conversation.aspx" />
     <Content Include="packages.config" />
+    <Content Include="Layouts\Site.Public.Master" />
+    <Content Include="Layouts\Site.Login.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -90,6 +94,8 @@
     <Content Include="Products\Request.aspx" />
     <Content Include="Products\Sell.aspx" />
     <Content Include="Public\Feedback.aspx" />
+    <Content Include="UserControls\Header.Login.ascx" />
+    <Content Include="UserControls\Header.Public.ascx" />
     <Content Include="Users\Login.aspx" />
     <Content Include="Users\Logout.aspx" />
     <Content Include="Users\Profile.aspx" />
@@ -98,12 +104,40 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Contacts\RequestReceived.aspx.cs">
+      <DependentUpon>RequestReceived.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contacts\RequestReceived.aspx.designer.cs">
+      <DependentUpon>RequestReceived.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contacts\RequestSent.aspx.cs">
+      <DependentUpon>RequestSent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contacts\RequestSent.aspx.designer.cs">
+      <DependentUpon>RequestSent.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ItemCategories\View.aspx.cs">
       <DependentUpon>View.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ItemCategories\View.aspx.designer.cs">
       <DependentUpon>View.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\Site.Login.Master.cs">
+      <DependentUpon>Site.Login.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\Site.Login.Master.designer.cs">
+      <DependentUpon>Site.Login.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\Site.Public.Master.cs">
+      <DependentUpon>Site.Public.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\Site.Public.Master.designer.cs">
+      <DependentUpon>Site.Public.Master</DependentUpon>
     </Compile>
     <Compile Include="Messages\Conversation.aspx.cs">
       <DependentUpon>Conversation.aspx</DependentUpon>
@@ -132,6 +166,20 @@
     </Compile>
     <Compile Include="Public\Feedback.aspx.designer.cs">
       <DependentUpon>Feedback.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Header.Login.ascx.cs">
+      <DependentUpon>Header.Login.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\Header.Login.ascx.designer.cs">
+      <DependentUpon>Header.Login.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Header.Public.ascx.cs">
+      <DependentUpon>Header.Public.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\Header.Public.ascx.designer.cs">
+      <DependentUpon>Header.Public.ascx</DependentUpon>
     </Compile>
     <Compile Include="Users\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
@@ -187,9 +235,7 @@
       <Name>Trade24.BO</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Layouts\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

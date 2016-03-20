@@ -58,13 +58,13 @@
                           <div class="form-group">
                             <label class="control-label col-sm-4" for="email">Email:</label>
                             <div class="col-sm-8">
-                              <input type="email" class="form-control" id="email" placeholder="Enter email">
+                                <asp:TextBox ID="txtEmail" runat="server" class="form-control" placeholder="Enter email" TextMode="Email"></asp:TextBox>
                             </div>
                           </div>
                           <div class="form-group">
                             <label class="control-label col-sm-4" for="name">Name:</label>
                             <div class="col-sm-8">
-                              <input type="text" class="form-control" id="name" placeholder="Enter name">
+                                <asp:TextBox ID="txtName" runat="server" class="form-control" placeholder="Enter Name" TextMode="SingleLine"></asp:TextBox>
                             </div>
                           </div>
                           <div class="form-group">
@@ -87,19 +87,19 @@
                           <div class="form-group">
                             <label class="control-label col-sm-4" for="pwd">Password:</label>
                             <div class="col-sm-8"> 
-                              <input type="password" class="form-control" id="pwd" placeholder="Enter password">
+                                <asp:TextBox ID="txtPwd" runat="server" class="form-control" placeholder="Enter password" TextMode="Password"></asp:TextBox>
                             </div>
                           </div>
                           <div class="form-group">
                             <label class="control-label col-sm-4" for="pwd2"> Confirm Password:</label>
                             <div class="col-sm-8"> 
-                              <input type="password" class="form-control" id="pwd2" placeholder="Re-enter password">
-                            </div>
+                                <asp:TextBox ID="txtPwd2" runat="server" class="form-control" placeholder="Enter password" TextMode="Password"></asp:TextBox>
+                             </div>
                           </div>
                           <div class="form-group">
                             <label class="control-label col-sm-4"></label>
                             <div class="col-sm-8"> 
-                                <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
+                                <asp:Button ID="btnRegister" runat="server" Text="Register" class="btn btn-lg btn-primary btn-block" />
                             </div>
                           </div>
 
