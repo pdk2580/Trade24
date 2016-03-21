@@ -19,5 +19,9 @@ namespace Trade24.BLL
         {
             return !string.IsNullOrEmpty(countryCode) ? new CityDAL().GetCities(countryCode) : null;
         }
+        public IEnumerable<CityBO> GetCities(int countryID)
+        {
+            return !((countryID)>0) ? new CityDAL().GetCities(countryID) : null;
+        }
     }
 }

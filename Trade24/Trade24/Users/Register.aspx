@@ -57,20 +57,22 @@
                             <asp:ValidationSummary ID="ValidationSummary1" runat="server" />
                         </div>
                           <div class="form-group">
-                            <label class="control-label col-sm-4" for="email">Email:</label><asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="RequiredFieldValidator"></asp:RequiredFieldValidator>
-&nbsp;<div class="col-sm-8">
+                            <label class="control-label col-sm-4" for="email">Email:</label><asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="txtEmail" CssClass="alert-danger" Display="Dynamic" ErrorMessage="Email is not valid" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
+                              <strong>
+                              <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtEmail" CssClass="alert-danger" Display="Dynamic" ErrorMessage="Email must be supplied"></asp:RequiredFieldValidator>
+&nbsp;</strong><div class="col-sm-8">
                                 <asp:TextBox ID="txtEmail" runat="server" class="form-control" placeholder="Enter email" TextMode="Email"></asp:TextBox>
                             </div>
                           </div>
                           <div class="form-group">
-                            <label class="control-label col-sm-4" for="name">Name:</label>
-                            <div class="col-sm-8">
+                            <label class="control-label col-sm-4" for="name">Name:</label><asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtName" CssClass="alert-danger" Display="Dynamic" ErrorMessage="Name must be supplied"></asp:RequiredFieldValidator>
+&nbsp;<div class="col-sm-8">
                                 <asp:TextBox ID="txtName" runat="server" class="form-control" placeholder="Enter Name" TextMode="SingleLine"></asp:TextBox>
                             </div>
                           </div>
                           <div class="form-group">
-                            <label class="control-label col-sm-4" for="ctry">Country:</label>
-                            <div class="col-sm-8">
+                            <label class="control-label col-sm-4" for="ctry">Country:</label><asp:RangeValidator ID="RangeValidator1" runat="server" ControlToValidate="ddl_Country" CssClass="alert-danger" Display="Dynamic" ErrorMessage="Please select a country" MaximumValue="245" MinimumValue="1"></asp:RangeValidator>
+&nbsp;<div class="col-sm-8">
                                 <asp:DropDownList ID="ddl_Country" CssClass="form-control" runat="server" OnSelectedIndexChanged="ddl_Country_SelectedIndexChanged" AutoPostBack="true" AppendDataBoundItems="true">
                                    <Items>
                                        <asp:ListItem Text="Select" Value="" />
@@ -79,21 +81,21 @@
                             </div>
                           </div>
                           <div class="form-group">
-                            <label class="control-label col-sm-4" for="cty">City:</label>
+                            <label class="control-label col-sm-4" for="cty">City:</label><asp:RangeValidator ID="RangeValidator2" runat="server" ControlToValidate="ddl_City" CssClass="alert-danger" Display="Dynamic" ErrorMessage="Please select a city" MaximumValue="3879" MinimumValue="1"></asp:RangeValidator>
                             <div class="col-sm-8">
                                <asp:DropDownList ID="ddl_City" CssClass="form-control" runat="server" Enabled="False">
                                 </asp:DropDownList>
                             </div>
                           </div>
                           <div class="form-group">
-                            <label class="control-label col-sm-4" for="pwd">Password:</label>
+                            <label class="control-label col-sm-4" for="pwd">Password:</label><asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtName" CssClass="alert-danger" Display="Dynamic" ErrorMessage="Password must be supplied"></asp:RequiredFieldValidator>
                             <div class="col-sm-8"> 
                                 <asp:TextBox ID="txtPwd" runat="server" class="form-control" placeholder="Enter password" TextMode="Password"></asp:TextBox>
                             </div>
                           </div>
                           <div class="form-group">
-                            <label class="control-label col-sm-4" for="pwd2"> Confirm Password:</label>
-                            <div class="col-sm-8"> 
+                            <label class="control-label col-sm-4" for="pwd2"> Confirm Password:</label><asp:CompareValidator ID="CompareValidator1" runat="server" ControlToCompare="txtPwd" ControlToValidate="txtPwd2" CssClass="alert-danger" Display="Dynamic" ErrorMessage="Confirmed password not same"></asp:CompareValidator>
+&nbsp;<div class="col-sm-8"> 
                                 <asp:TextBox ID="txtPwd2" runat="server" class="form-control" placeholder="Enter password" TextMode="Password"></asp:TextBox>
                              </div>
                           </div>

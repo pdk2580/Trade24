@@ -42,7 +42,7 @@ namespace Trade24.DAL
             return message;
         }
 
-        public IEnumerable<MessageBO> GetMessages(int senderId)
+        public IEnumerable<MessageBO> GetMessages_(int senderId)
         {
             IEnumerable<MessageBO> messages = null;
 
@@ -57,7 +57,7 @@ namespace Trade24.DAL
             return messages;
         }
 
-        public IEnumerable<MessageBO> GetMessages(int recieverId)
+        public IEnumerable<MessageBO> GetMessages__(int recieverId)
         {
             IEnumerable<MessageBO> messages = null;
 

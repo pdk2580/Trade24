@@ -19,7 +19,7 @@ namespace Trade24.Users
 
                 ddl_Country.DataSource = objCountry.GetAllCountries().ToList();
                 ddl_Country.DataTextField = "Name";
-                ddl_Country.DataValueField = "ISO2";
+                ddl_Country.DataValueField = "ID";
                 ddl_Country.DataBind();
             }
         }

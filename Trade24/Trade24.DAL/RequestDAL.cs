@@ -57,7 +57,7 @@ namespace Trade24.DAL
             return requests;
         }
 
-        public IEnumerable<RequestBO> GetRequests(int uploaderId)
+        public IEnumerable<RequestBO> GetRequests_(int uploaderId)
         {
             IEnumerable<RequestBO> requests = null;
 

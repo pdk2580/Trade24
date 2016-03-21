@@ -43,6 +43,20 @@ namespace Trade24.DAL
 
             return cities;
         }
+        public IEnumerable<CityBO> GetCities(int countryID)
+        {
+            IEnumerable<CityBO> cities = null;
+
+            using (var sqlConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["trade24"].ConnectionString))
+            {
+                sqlConnection.Open();
+
+                string query = "SELECT * FROM Cities WHERE CountryID = @CountryID";
+                cities = sqlConnection.Query<CityBO>(query, new { CountryID = countryID });
+            }
+
+            return cities;
+        }
 
         public void CreateCity(CityBO city)
         {
