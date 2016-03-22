@@ -1,10 +1,18 @@
+DROP TABLE Contacts
+DROP TABLE Accounts
+DROP TABLE Request
+DROP TABLE Cities
+DROP TABLE Countries
+DROP TABLE ItemCategories
+DROP TABLE Messages
+
 CREATE TABLE Countries(
 	ID INT IDENTITY,
 	Name VARCHAR(150) NOT NULL,
 	LongName VARCHAR(150) NOT NULL,
 	ISO2 VARCHAR(3) NOT NULL,
 	ISO3 VARCHAR(5) NOT NULL,
-	NumCode VARCHAR(10) NOT NULL,
+	NumCode INT NOT NULL,
 	UNMemberState CHAR(5) NOT NULL,
 	CallingCode VARCHAR(15) NOT NULL,
 	CCTLD VARCHAR(5) NOT NULL,
@@ -34,7 +42,8 @@ CREATE TABLE ItemCategories(
 	PRIMARY KEY (ID)
 );
 
-CREATE TABLE Accounts (
+CREATE TABLE Accounts
+(
 	ID			   INTEGER IDENTITY,
 	Password       VARCHAR(20) NOT NULL,
 	FName          VARCHAR(40) NOT NULL,
@@ -45,8 +54,8 @@ CREATE TABLE Accounts (
 	AdminStats	   CHAR(1) DEFAULT '0',
 	LoginAttempts  INTEGER DEFAULT 0, 
 	CompanyName	   VARCHAR(250) DEFAULT '',
-	CountryID	   INTEGER DEFAULT 0,
-	CityID		   INTEGER DEFAULT 0, 
+	CountryID	   INTEGER,
+	CityID		   INTEGER, 
 	PasswordSalt   VARCHAR(254),
 	Address1	   VARCHAR(150), 
 	Address2	   VARCHAR(150), 
@@ -94,19 +103,6 @@ CREATE TABLE Messages(
 	Created_at datetime NOT NULL DEFAULT GETDATE(),
 
 	PRIMARY KEY(ID)
-);
-
-CREATE TABLE Notifications(
-	ID					INTEGER	IDENTITY,
-	Created_at			DATETIME NOT NULL DEFAULT GETDATE(),
-	ContactID			INTEGER NOT NULL
-	NotificationType	INTEGER NOT NULL
-	IsRead				CHAR(1) DEFAULT 0,
-
-
-	PRIMARY KEY(ID),
-	FOREIGN KEY (RequesterID) REFERENCES Accounts(ID),
-	FOREIGN KEY (ContactID) REFERENCES Accounts(ID),
 );
 
 
