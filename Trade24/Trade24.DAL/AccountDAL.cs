@@ -29,17 +29,17 @@ namespace Trade24.DAL
 
         public AccountBO GetAccount(string email)
         {
-            AccountBO account = null;
+            IEnumerable<AccountBO >accounts;
 
             using (var sqlConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["trade24"].ConnectionString))
             {
                 sqlConnection.Open();
 
                 string query = "SELECT * FROM Accounts WHERE Email = @Email";
-                account = sqlConnection.Query<AccountBO>(query, new { Email = email }).First();
+                accounts = sqlConnection.Query<AccountBO>(query, new { Email = email });
             }
 
-            return account;
+            return accounts.Count() > 0 ? accounts.First() : null;
         }
 
         public void CreateAccount(AccountBO account)
@@ -48,7 +48,8 @@ namespace Trade24.DAL
             {
                 sqlConnection.Open();
 
-                string query = "INSERT Accounts (Password, FName, LName, Email, SecurityQ, SecurityA, AdminStats, LoginAttempts, CompanyName, CountryID, CityID, PasswordSalt, Address1, Address2, PostalCode, Phone1, Phone2, Fax1, Fax2, IsVerified, IsPublicProfile, Lang, UserLevel, UserStatus) VALUES (@Password, @FName, @LName, @Email, @SecurityQ, @SecurityA, @AdminStats, @LoginAttempts, @CompanyName, @CountryID, @CityID, @PasswordSalt, @Address1, @Address2, @PostalCode, @Phone1, @Phone2, @Fax1, @Fax2, @IsVerified, @IsPublicProfile, @Lang, @UserLevel, @UserStatus)";
+                //string query = "INSERT Accounts (Password, FName, LName, Email, SecurityQ, SecurityA, AdminStats, LoginAttempts, CompanyName, CountryID, CityID, PasswordSalt, Address1, Address2, PostalCode, Phone1, Phone2, Fax1, Fax2, IsVerified, IsPublicProfile, Lang, UserLevel, UserStatus) VALUES (@Password, @FName, @LName, @Email, @SecurityQ, @SecurityA, @AdminStats, @LoginAttempts, @CompanyName, @CountryID, @CityID, @PasswordSalt, @Address1, @Address2, @PostalCode, @Phone1, @Phone2, @Fax1, @Fax2, @IsVerified, @IsPublicProfile, @Lang, @UserLevel, @UserStatus)";
+                string query = "INSERT Accounts (Password, FName, LName, Email, CountryID, CityID) VALUES (@Password, @FName, @LName, @Email, @CountryID, @CityID)";
                 sqlConnection.Execute(query, account);
             }
         }

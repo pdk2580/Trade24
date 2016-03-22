@@ -15,13 +15,13 @@ namespace Trade24.BLL
             return new CityDAL().GetAllCities();
         }
 
-        public IEnumerable<CityBO> GetCities(string countryCode)
+        public IEnumerable<CityBO> GetCities(string countryISO2)
         {
-            return !string.IsNullOrEmpty(countryCode) ? new CityDAL().GetCities(countryCode) : null;
+            return !string.IsNullOrEmpty(countryISO2) ? new CityDAL().GetCities(countryISO2) : null;
         }
         public IEnumerable<CityBO> GetCities(int countryID)
         {
-            return !((countryID)>0) ? new CityDAL().GetCities(countryID) : null;
+            return ((countryID)>0) ? new CityDAL().GetCities(countryID) : null;
         }
     }
 }

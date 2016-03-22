@@ -6,6 +6,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Trade24.BLL;
+using Trade24.BO;
 
 namespace Trade24.Users
 {
@@ -26,41 +27,59 @@ namespace Trade24.Users
 
         protected void ddl_Country_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(ddl_Country.SelectedItem.Value == "")
+            int selectedCountryId;
+            if (int.TryParse(ddl_Country.SelectedItem.Value, out selectedCountryId))
             {
-                ddl_City.Enabled = false;
-                ddl_City.ClearSelection();
-                ddl_City.DataSource = null;
+                CityBLL objCity = new CityBLL();
+                ddl_City.Enabled = true;
+                ddl_City.DataSource = objCity.GetCities(selectedCountryId);
+                ddl_City.DataTextField = "Name";
+                ddl_City.DataValueField = "ID";
                 ddl_City.DataBind();
-                return;
             }
-            CityBLL objCity = new CityBLL();
-            ddl_City.Enabled = true;
-            ddl_City.DataSource = objCity.GetCities(ddl_Country.SelectedItem.Value).ToList();
-            ddl_City.DataTextField = "Name";
-            ddl_City.DataValueField = "ID";
-            ddl_City.DataBind();
+            else
+            {
+                //ddl_City.Enabled = false;
+                //ddl_City.ClearSelection();
+                //ddl_City.DataSource = null;
+                //ddl_City.DataBind();
+            }
         }
 
         protected void btnRegister_Click(object sender, EventArgs e)
         {
-            Regex rEMail = new Regex(@"^[a-zA-Z][\w\.-]{0,68}[a-zA-Z0-9]@[a-zA-Z0-9][\w\.-]*[a-zA-Z0-9]\.[a-zA-Z][a-zA-Z\.]*[a-zA-Z]$");
-            if (txtEmail.Text.Length > 0)
+            if (IsValidated())
             {
-                if (!rEMail.IsMatch(txtEmail.Text))
+                AccountBO newAccount = new AccountBO
                 {
-                    //not match
-                }
+                    Email = txtEmail.Text.Trim(),
+                    FName = txtFName.Text.Trim(),
+                    LName = txtLName.Text.Trim(),
+                    CountryID = int.Parse(ddl_Country.SelectedValue),
+                    CityID = int.Parse(ddl_City.SelectedValue),
+                    Password = txtPwd.Text
+                };
 
-                //if match
-                if (!(txtPwd.Text.Length > 0))
-                {
-                    //not match
-                }
-
-
-                //do login check
+                new AccountBLL().CreateNewAccount(newAccount);
             }
+        }
+
+        protected bool IsValidated()
+        {
+            bool isValid = true;
+            Response.Write(ddl_City.SelectedValue);
+            // validation for registration input field
+            if (AccountBLL.IsAccountExist(txtEmail.Text.Trim()))
+            {
+                // to do: show error messgae
+                Response.Write("Error: Currennt email already exists"); // change this
+                isValid = false;
+            }
+            // to do: server side validation for other field
+
+            Regex rEMail = new Regex(@"^[a-zA-Z][\w\.-]{0,68}[a-zA-Z0-9]@[a-zA-Z0-9][\w\.-]*[a-zA-Z0-9]\.[a-zA-Z][a-zA-Z\.]*[a-zA-Z]$");
+
+            return isValid;
         }
     }
 }

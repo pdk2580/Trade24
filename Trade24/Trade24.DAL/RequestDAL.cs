@@ -29,17 +29,17 @@ namespace Trade24.DAL
 
         public RequestBO GetRequest(int requestId)
         {
-            RequestBO request = new RequestBO();
+            IEnumerable<RequestBO> requests = null;
 
             using (var sqlConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["trade24"].ConnectionString))
             {
                 sqlConnection.Open();
 
                 string query = "SELECT * FROM Request WHERE ID = @ID";
-                request = sqlConnection.Query<RequestBO>(query, new { ID = requestId }).First();
+                requests = sqlConnection.Query<RequestBO>(query, new { ID = requestId });
             }
 
-            return request;
+            return requests.Count() > 0 ? requests.First() : null;
         }
 
         public IEnumerable<RequestBO> GetRequests(int categoryId)

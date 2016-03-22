@@ -17,6 +17,7 @@ namespace Trade24.BO
         public string SecurityA { get; set; }
         public string AdminStats { get; set; }
         public int? LoginAttempts { get; set; }
+        public string CompanyName { get; set; }
         public int? CountryID { get; set; }
         public int? CityID { get; set; }
         public int? PasswordSalt { get; set; }
@@ -36,7 +37,7 @@ namespace Trade24.BO
 
         public AccountBO() { }
 
-        public AccountBO(int ID, string Password, string FName, string LName, string Email, string SecurityQ, string SecurityA, string AdminStats, int? LoginAttempts, int? CountryID, int? CityID, int? PasswordSalt, string Address1, string Address2, string PostalCode, string Phone1, string Phone2, string Fax1, string Fax2, string IsVerified, string IsPublicProfile, string Lang, string UserLevel, DateTime Created_at, string UserStatuts)
+        public AccountBO(int ID, string Password, string FName, string LName, string Email, string SecurityQ, string SecurityA, string AdminStats, int? LoginAttempts, string CompanyName, int? CountryID, int? CityID, int? PasswordSalt, string Address1, string Address2, string PostalCode, string Phone1, string Phone2, string Fax1, string Fax2, string IsVerified, string IsPublicProfile, string Lang, string UserLevel, DateTime Created_at, string UserStatuts)
         {
             this.ID = ID;
             this.Password = Password;
@@ -47,6 +48,7 @@ namespace Trade24.BO
             this.SecurityA = SecurityA;
             this.AdminStats = AdminStats;
             this.LoginAttempts = LoginAttempts;
+            this.CompanyName = CompanyName;
             this.CountryID = CountryID;
             this.CityID = CityID;
             this.PasswordSalt = PasswordSalt;

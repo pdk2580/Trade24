@@ -29,20 +29,20 @@ namespace Trade24.DAL
 
         public MessageBO GetMessages(int messageId)
         {
-            MessageBO message = new MessageBO();
+            IEnumerable<MessageBO> messages = null;
 
             using (var sqlConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["trade24"].ConnectionString))
             {
                 sqlConnection.Open();
 
                 string query = "SELECT * FROM Messages WHERE ID = @ID";
-                message = sqlConnection.Query<MessageBO>(query, new { ID = messageId }).First();
+                messages = sqlConnection.Query<MessageBO>(query, new { ID = messageId });
             }
 
-            return message;
+            return messages.Count() > 0 ? messages.First() : null;
         }
 
-        public IEnumerable<MessageBO> GetMessages_(int senderId)
+        public IEnumerable<MessageBO> GetSenderMessages(int senderId)
         {
             IEnumerable<MessageBO> messages = null;
 
@@ -57,7 +57,7 @@ namespace Trade24.DAL
             return messages;
         }
 
-        public IEnumerable<MessageBO> GetMessages__(int recieverId)
+        public IEnumerable<MessageBO> GetRecieverMessages(int recieverId)
         {
             IEnumerable<MessageBO> messages = null;
 
