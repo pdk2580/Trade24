@@ -61,7 +61,7 @@ namespace Trade24.BLL
             new AccountDAL().UpdateAccount(account);
         }
 
-        public bool IsAuthenticatedAccount(string email, string passowrd)
+        public static bool IsAuthenticatedAccount(string email, string passowrd)
         {
             bool isAuthenticated = false;
 

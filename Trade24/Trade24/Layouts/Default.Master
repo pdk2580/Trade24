@@ -1,0 +1,36 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Default.master.cs" Inherits="Trade24.Layouts.Default" %>
+<%@ Register TagPrefix="td" TagName="Header" Src="~/UserControls/Header.ascx" %>
+<%@ Register TagPrefix="td" TagName="Footer" Src="~/UserControls/Footer.ascx" %>
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Trade24</title>
+    <link href="~/Assets/css/bootstrap.min.css" rel="stylesheet" runat="server" />
+    <link href="~/Assets/css/font-awesome.min.css" rel="stylesheet" runat="server" />
+    <link href="~/Assets/css/owl.carousel.css" rel="stylesheet" runat="server" />
+    <link href="~/Assets/css/style.css" rel="stylesheet" runat="server" />
+
+    <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <td:Header runat="server" ID="ucHeader" />
+        
+        <asp:ContentPlaceHolder ID="main" runat="server"></asp:ContentPlaceHolder>
+
+        <td:Footer runat="server" ID="ucFooter" />
+    </div>
+    </form>
+</body>
+<script src="/Assets/js/jquery-1.11.1.min.js"></script>
+<script src="/Assets/js/jquery-migrate-1.2.1.min.js"></script>
+<script src="/Assets/js/bootstrap.min.js"></script>
+<script src="/Assets/js/bootstrap-hover-dropdown.min.js"></script>
+<script src="/Assets/js/jquery.magnific-popup.min.js"></script>
+<script src="/Assets/js/owl.carousel.min.js"></script>
+<script src="/Assets/js/custom.js"></script>
+
+<asp:ContentPlaceHolder ID="script" runat="server"></asp:ContentPlaceHolder>
+</html>

@@ -48,7 +48,7 @@ namespace Trade24.Users
 
         protected void btnRegister_Click(object sender, EventArgs e)
         {
-            if (IsValidated())
+            if (IsValidated() && IsAccountExist(txtEmail.Text.Trim()))
             {
                 AccountBO newAccount = new AccountBO
                 {
@@ -67,17 +67,22 @@ namespace Trade24.Users
         protected bool IsValidated()
         {
             bool isValid = true;
-            Response.Write(ddl_City.SelectedValue);
-            // validation for registration input field
-            if (AccountBLL.IsAccountExist(txtEmail.Text.Trim()))
+            
+            // to do: server side validation for other field
+            Regex rEMail = new Regex(@"^[a-zA-Z][\w\.-]{0,68}[a-zA-Z0-9]@[a-zA-Z0-9][\w\.-]*[a-zA-Z0-9]\.[a-zA-Z][a-zA-Z\.]*[a-zA-Z]$");
+
+            return isValid;
+        }
+
+        protected bool IsAccountExist(string email)
+        {
+            bool isValid = true;
+
+            if (AccountBLL.IsAccountExist(email))
             {
-                // to do: show error messgae
-                Response.Write("Error: Currennt email already exists"); // change this
+                Response.Write("Error: Currennt email already exists"); // to do: show error messgae
                 isValid = false;
             }
-            // to do: server side validation for other field
-
-            Regex rEMail = new Regex(@"^[a-zA-Z][\w\.-]{0,68}[a-zA-Z0-9]@[a-zA-Z0-9][\w\.-]*[a-zA-Z0-9]\.[a-zA-Z][a-zA-Z\.]*[a-zA-Z]$");
 
             return isValid;
         }

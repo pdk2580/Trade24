@@ -15,9 +15,13 @@ namespace Trade24.ItemCategories
             if (!IsPostBack)
             {
                 ItemCategoryBLL objItemCategory = new ItemCategoryBLL();
+                int selectedCategoryId;
 
-                rpItemCategories.DataSource = objItemCategory.GetCategories(Int32.Parse(Request["id"])).ToList();
-                rpItemCategories.DataBind();
+                if (int.TryParse(Request["id"], out selectedCategoryId))
+                {
+                    rpItemCategories.DataSource = objItemCategory.GetCategories(selectedCategoryId).ToList();
+                    rpItemCategories.DataBind();
+                }
             }
         }
     }

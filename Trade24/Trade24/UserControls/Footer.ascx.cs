@@ -5,9 +5,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace Trade24.Layouts
+namespace Trade24.UserControls
 {
-    public partial class Site_Login : System.Web.UI.MasterPage
+    public partial class Footer : System.Web.UI.UserControl
     {
         protected void Page_Load(object sender, EventArgs e)
         {

@@ -11,7 +11,7 @@ namespace Trade24.UserControls
 {
 
 
-    public partial class Header_Login
+    public partial class Footer
     {
     }
 }

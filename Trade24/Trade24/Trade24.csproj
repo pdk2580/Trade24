@@ -81,8 +81,7 @@
     <Content Include="ItemCategories\View.aspx" />
     <Content Include="Messages\Conversation.aspx" />
     <Content Include="packages.config" />
-    <Content Include="Layouts\Site.Public.Master" />
-    <Content Include="Layouts\Site.Login.Master" />
+    <Content Include="Layouts\Default.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -94,7 +93,8 @@
     <Content Include="Products\Request.aspx" />
     <Content Include="Products\Sell.aspx" />
     <Content Include="Public\Feedback.aspx" />
-    <Content Include="UserControls\Header.Login.ascx" />
+    <Content Include="UserControls\Footer.ascx" />
+    <Content Include="UserControls\Header.ascx" />
     <Content Include="UserControls\Header.Public.ascx" />
     <Content Include="Users\Login.aspx" />
     <Content Include="Users\Logout.aspx" />
@@ -125,19 +125,12 @@
     <Compile Include="ItemCategories\View.aspx.designer.cs">
       <DependentUpon>View.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Layouts\Site.Login.Master.cs">
-      <DependentUpon>Site.Login.Master</DependentUpon>
+    <Compile Include="Layouts\Default.Master.cs">
+      <DependentUpon>Default.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Layouts\Site.Login.Master.designer.cs">
-      <DependentUpon>Site.Login.Master</DependentUpon>
-    </Compile>
-    <Compile Include="Layouts\Site.Public.Master.cs">
-      <DependentUpon>Site.Public.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Layouts\Site.Public.Master.designer.cs">
-      <DependentUpon>Site.Public.Master</DependentUpon>
+    <Compile Include="Layouts\Default.Master.designer.cs">
+      <DependentUpon>Default.Master</DependentUpon>
     </Compile>
     <Compile Include="Messages\Conversation.aspx.cs">
       <DependentUpon>Conversation.aspx</DependentUpon>
@@ -167,12 +160,19 @@
     <Compile Include="Public\Feedback.aspx.designer.cs">
       <DependentUpon>Feedback.aspx</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\Header.Login.ascx.cs">
-      <DependentUpon>Header.Login.ascx</DependentUpon>
+    <Compile Include="UserControls\Footer.ascx.cs">
+      <DependentUpon>Footer.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="UserControls\Header.Login.ascx.designer.cs">
-      <DependentUpon>Header.Login.ascx</DependentUpon>
+    <Compile Include="UserControls\Footer.ascx.designer.cs">
+      <DependentUpon>Footer.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Header.ascx.cs">
+      <DependentUpon>Header.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\Header.ascx.designer.cs">
+      <DependentUpon>Header.ascx</DependentUpon>
     </Compile>
     <Compile Include="UserControls\Header.Public.ascx.cs">
       <DependentUpon>Header.Public.ascx</DependentUpon>
