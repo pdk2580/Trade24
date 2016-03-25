@@ -4,14 +4,16 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Trade24.BLL;
 
-namespace Trade24.UserControls
+namespace Trade24.Layouts
 {
-    public partial class Header_Public : System.Web.UI.UserControl
+    public partial class Default_Login : System.Web.UI.MasterPage
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!AccountBLL.CheckLogin())
+                Response.Redirect("~/Users/Login.aspx");
         }
     }
 }

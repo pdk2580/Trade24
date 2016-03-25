@@ -62,6 +62,7 @@ namespace Trade24.Users
 
                 new AccountBLL().CreateNewAccount(newAccount);
             }
+            Response.Redirect("~/Users/Login.aspx");
         }
 
         protected bool IsValidated()

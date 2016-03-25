@@ -82,6 +82,8 @@
     <Content Include="Messages\Conversation.aspx" />
     <Content Include="packages.config" />
     <Content Include="Layouts\Default.Master" />
+    <Content Include="Layouts\Default.Public.Master" />
+    <Content Include="Layouts\Default.Login.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -95,7 +97,6 @@
     <Content Include="Public\Feedback.aspx" />
     <Content Include="UserControls\Footer.ascx" />
     <Content Include="UserControls\Header.ascx" />
-    <Content Include="UserControls\Header.Public.ascx" />
     <Content Include="Users\Login.aspx" />
     <Content Include="Users\Logout.aspx" />
     <Content Include="Users\Profile.aspx" />
@@ -125,12 +126,26 @@
     <Compile Include="ItemCategories\View.aspx.designer.cs">
       <DependentUpon>View.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Layouts\Default.Login.Master.cs">
+      <DependentUpon>Default.Login.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\Default.Login.Master.designer.cs">
+      <DependentUpon>Default.Login.Master</DependentUpon>
+    </Compile>
     <Compile Include="Layouts\Default.Master.cs">
       <DependentUpon>Default.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Layouts\Default.Master.designer.cs">
       <DependentUpon>Default.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\Default.Public.Master.cs">
+      <DependentUpon>Default.Public.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\Default.Public.Master.designer.cs">
+      <DependentUpon>Default.Public.Master</DependentUpon>
     </Compile>
     <Compile Include="Messages\Conversation.aspx.cs">
       <DependentUpon>Conversation.aspx</DependentUpon>
@@ -173,13 +188,6 @@
     </Compile>
     <Compile Include="UserControls\Header.ascx.designer.cs">
       <DependentUpon>Header.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="UserControls\Header.Public.ascx.cs">
-      <DependentUpon>Header.Public.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="UserControls\Header.Public.ascx.designer.cs">
-      <DependentUpon>Header.Public.ascx</DependentUpon>
     </Compile>
     <Compile Include="Users\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>

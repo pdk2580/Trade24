@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web;
 using Trade24.BO;
 using Trade24.DAL;
 
@@ -59,6 +60,43 @@ namespace Trade24.BLL
                 account.Fax2 = newFax2;
 
             new AccountDAL().UpdateAccount(account);
+        }
+
+        public static void Logout()
+        {
+            HttpContext.Current.Session.Remove("login");
+        }
+
+        public static AccountBO Login(string email)
+        {
+            AccountBO account = new AccountBO();
+            account = GetAccount(email);
+
+            HttpContext.Current.Session.Add("login", email);
+
+            return account;
+        }
+
+        public static AccountBO GetLoginAccount()
+        {
+            AccountBO account = null;
+
+            string loggedInEmail = (string)HttpContext.Current.Session["login"];
+            if (!string.IsNullOrEmpty(loggedInEmail))
+                account = GetAccount(loggedInEmail);
+
+            return account;
+        }
+
+        public static bool CheckLogin()
+        {
+            bool isLoggedIn = false;
+
+            string loggedInEmail = (string)HttpContext.Current.Session["login"];
+            if (!string.IsNullOrEmpty(loggedInEmail))
+                isLoggedIn = true;
+
+            return isLoggedIn;
         }
 
         public static bool IsAuthenticatedAccount(string email, string passowrd)

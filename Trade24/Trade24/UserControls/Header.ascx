@@ -29,15 +29,19 @@
                     </ul>
                 </li>
             </ul>
-        <div class="navbar-form navbar-left" role="search">
-        <div class="form-group">
-            <input type="text" class="form-control" placeholder="Search">
-        </div>
-        <button type="submit" class="btn btn-default"><i class="glyphicon glyphicon-search"></i></button>
-        </div>
-            <ul class="nav navbar-nav navbar-right">
+            <div class="navbar-form navbar-left" role="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search">
+                </div>
+                <button type="submit" class="btn btn-default"><i class="glyphicon glyphicon-search"></i></button>
+            </div>
+            <ul id="publicAccountNavbar" class="nav navbar-nav navbar-right" visible="false" runat="server">
                 <li><a href="~/Users/Login.aspx" runat="server">Login</a></li>
                 <li><a href="~/Users/Register.aspx" runat="server">Register</a></li>
+            </ul>
+            <ul id="loginAccountNavbar" class="nav navbar-nav navbar-right" visible="false" runat="server">
+                <li><asp:LinkButton ID="lbUserName" runat="server"></asp:LinkButton></li>
+                <li><asp:LinkButton ID="lbLogout" runat="server" OnClick="Logout">Logout</asp:LinkButton></li>
             </ul>
         </div>
         <!--/.nav-collapse -->

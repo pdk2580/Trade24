@@ -20,7 +20,8 @@ namespace Trade24.Users
         {
             if (IsValidated() && IsAthenticatedAccount(txtEmail.Text.Trim(), txtPwd.Text.Trim()))
             {
-                
+                AccountBLL.Login(txtEmail.Text.Trim());
+                Response.Redirect("~/Default.aspx");
             }
 
         }
@@ -33,7 +34,6 @@ namespace Trade24.Users
             Page.Validate();
             if (!Page.IsValid)
                 isValid = false;
-
 
 
             //Regex rEMail = new Regex(@"^[a-zA-Z][\w\.-]{0,68}[a-zA-Z0-9]@[a-zA-Z0-9][\w\.-]*[a-zA-Z0-9]\.[a-zA-Z][a-zA-Z\.]*[a-zA-Z]$");
