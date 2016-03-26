@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Header.ascx.cs" Inherits="Trade24.UserControls.Header" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Header2.ascx.cs" Inherits="Trade24.UserControls.Header" %>
 
 <nav class="navbar navbar-default navbar-static-top">
     <div class="container">
