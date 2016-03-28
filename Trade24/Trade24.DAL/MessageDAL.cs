@@ -71,6 +71,20 @@ namespace Trade24.DAL
 
             return messages;
         }
+        public IEnumerable<MessageBO> GetConversations(int senderId, int recieverId, int startsFrom = 0)
+        {
+            IEnumerable<MessageBO> messages = null;
+
+            using (var sqlConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["trade24"].ConnectionString))
+            {
+                sqlConnection.Open();
+
+                string query = "SELECT * FROM Messages WHERE ReceiverID IN (@SenderID, @ReceiverID) OR SenderID IN (@SenderID, @ReceiverID)";
+                messages = sqlConnection.Query<MessageBO>(query, new { ReceiverID = recieverId, SenderID = senderId });
+            }
+
+            return messages;
+        }
 
         public void CreateMessage(MessageBO message)
         {

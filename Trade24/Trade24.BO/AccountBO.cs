@@ -66,6 +66,15 @@ namespace Trade24.BO
             this.Created_at = Created_at;
             this.UserStatuts = UserStatuts;
         }
+
+        public string GetName(bool reversed = false)
+        {
+            if (reversed)
+            {
+                return this.LName + ", " + this.FName;
+            }
+            return this.FName + " " + this.LName;
+        }
     }
 
 

@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Default.master.cs" Inherits="Trade24.Layouts.Default" %>
+﻿x<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Default.master.cs" Inherits="Trade24.Layouts.Default" %>
 <%@ Register TagPrefix="td" TagName="Header" Src="~/UserControls/Header.ascx" %>
 <%@ Register TagPrefix="td" TagName="Footer" Src="~/UserControls/Footer.ascx" %>
 <!DOCTYPE html>

@@ -20,6 +20,10 @@ namespace Trade24.BLL
         {
             return !string.IsNullOrEmpty(email) ? new AccountDAL().GetAccount(email) : null;
         }
+        public static AccountBO GetAccount(int id)
+        {
+            return new AccountDAL().GetAccount(id);
+        }
 
         public void CreateNewAccount(AccountBO newAccount)
         { 

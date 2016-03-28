@@ -35,6 +35,7 @@
                 </div>
                 <button type="submit" class="btn btn-default"><i class="glyphicon glyphicon-search"></i></button>
             </div>
+            
             <ul id="publicAccountNavbar" class="nav navbar-nav navbar-right" visible="false" runat="server">
                 <li><a href="~/Users/Login.aspx" runat="server">Login</a></li>
                 <li><a href="~/Users/Register.aspx" runat="server">Register</a></li>

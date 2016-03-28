@@ -29,7 +29,7 @@ namespace Trade24.DAL
 
         public AccountBO GetAccount(string email)
         {
-            IEnumerable<AccountBO >accounts;
+            IEnumerable<AccountBO> accounts;
 
             using (var sqlConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["trade24"].ConnectionString))
             {
@@ -37,6 +37,20 @@ namespace Trade24.DAL
 
                 string query = "SELECT * FROM Accounts WHERE Email = @Email";
                 accounts = sqlConnection.Query<AccountBO>(query, new { Email = email });
+            }
+
+            return accounts.Count() > 0 ? accounts.First() : null;
+        }
+        public AccountBO GetAccount(int ID)
+        {
+            IEnumerable<AccountBO> accounts;
+
+            using (var sqlConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["trade24"].ConnectionString))
+            {
+                sqlConnection.Open();
+
+                string query = "SELECT * FROM Accounts WHERE ID = @ID";
+                accounts = sqlConnection.Query<AccountBO>(query, new { ID = ID });
             }
 
             return accounts.Count() > 0 ? accounts.First() : null;

@@ -10,7 +10,9 @@ namespace Trade24.BO
     {
         public int ID { get; set; }
         public int? SenderID { get; set; }
+        public string SenderName { get; set; }
         public int? ReceiverID { get; set; }
+        public string ReceiverName { get; set; }
         public string MessageType { get; set; }
         public string Content { get; set; }
         public string AttachmentPhysicFile { get; set; }
@@ -29,7 +31,20 @@ namespace Trade24.BO
             this.AttachmentPhysicFile = AttachmentPhysicFile;
             this.AttachmentFileName = AttachmentFileName;
             this.Created_at = Created_at;
+        }
 
+        public MessageBO(int ID, int? SenderID, int? ReceiverID, string MessageType, string Content, string AttachmentPhysicFile, string AttachmentFileName, DateTime Created_at, string SenderName, string ReceiverName)
+        {
+            this.ID = ID;
+            this.SenderID = SenderID;
+            this.ReceiverID = ReceiverID;
+            this.MessageType = MessageType;
+            this.Content = Content;
+            this.AttachmentPhysicFile = AttachmentPhysicFile;
+            this.AttachmentFileName = AttachmentFileName;
+            this.Created_at = Created_at;
+            this.SenderName = SenderName;
+            this.ReceiverName = ReceiverName;
         }
     }
 }
