@@ -48,7 +48,7 @@ namespace Trade24.Users
 
         protected void btnRegister_Click(object sender, EventArgs e)
         {
-            if (IsValidated() && IsAccountExist(txtEmail.Text.Trim()))
+            if (IsValidated(txtEmail.Text.Trim()) && IsAccountExist(txtEmail.Text.Trim()))
             {
                 AccountBO newAccount = new AccountBO
                 {
@@ -65,14 +65,13 @@ namespace Trade24.Users
             Response.Redirect("~/Users/Login.aspx");
         }
 
-        protected bool IsValidated()
+        protected bool IsValidated(string email)
         {
-            bool isValid = true;
             
             // to do: server side validation for other field
             Regex rEMail = new Regex(@"^[a-zA-Z][\w\.-]{0,68}[a-zA-Z0-9]@[a-zA-Z0-9][\w\.-]*[a-zA-Z0-9]\.[a-zA-Z][a-zA-Z\.]*[a-zA-Z]$");
 
-            return isValid;
+            return rEMail.IsMatch(email);
         }
 
         protected bool IsAccountExist(string email)
