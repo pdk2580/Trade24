@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/Layouts/Default.Public.Master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="Trade24.Users.Login" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/Layouts/Default.Public.Master" AutoEventWireup="True" CodeBehind="Login.aspx.cs" Inherits="Trade24.Users.Login" %>
 
 <asp:Content ID="cHead" ContentPlaceHolderID="head" runat="server">
     <%--to add additional head--%>

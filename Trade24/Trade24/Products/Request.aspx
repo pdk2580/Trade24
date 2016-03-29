@@ -1,16 +1,13 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Request.aspx.cs" Inherits="Trade24.Product.Request" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/Layouts/Default.Login.Master" AutoEventWireup="true" CodeBehind="Request.aspx.cs" Inherits="Trade24.Product.Request" %>
 
-<!DOCTYPE html>
+<asp:Content ID="cHead" ContentPlaceHolderID="head" runat="server">
+    <%--to add additional head--%>
+</asp:Content>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
-    <div>
-    
-    </div>
-    </form>
-</body>
-</html>
+<asp:Content ID="cMain" ContentPlaceHolderID="main" runat="server">
+    <%--to add content here--%>
+</asp:Content>
+
+<asp:Content ID="cScript" ContentPlaceHolderID="script" runat="server">
+    <%--to add addtional script--%>
+</asp:Content>
