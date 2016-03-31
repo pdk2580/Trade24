@@ -29,5 +29,9 @@ namespace Trade24.BLL
             if (senderId == recieverId) return null;
             return new MessageDAL().GetConversations(senderId, recieverId);
         }
+        public static IEnumerable<MessageBO> GetLastConversationPartners(int myID)
+        {
+            return new MessageDAL().GetLastConversationPartners(myID);
+        }
     }
 }

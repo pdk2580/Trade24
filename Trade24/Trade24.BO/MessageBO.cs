@@ -18,6 +18,14 @@ namespace Trade24.BO
         public string AttachmentPhysicFile { get; set; }
         public string AttachmentFileName { get; set; }
         public DateTime Created_at { get; set; }
+        public string PartnerID { get; set; }
+        public string PartnerFName { get; set; }
+        public string PartnerLName { get; set; }
+        public string PartnerName(bool isReversed = false)
+        {
+            if(isReversed) return PartnerLName + " " + PartnerFName;
+            return PartnerFName + " " + PartnerLName;
+        }
 
         public MessageBO() { }
 

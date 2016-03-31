@@ -16,10 +16,24 @@ namespace Trade24.Messages
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if(AccountBLL.GetLoginAccount().ID == Int32.Parse(Request.QueryString["id"].ToString()))
+            try
             {
+                Int32.Parse(Request.QueryString["id"].ToString());
+            }
+            catch (Exception ex)
+            {
+                rptConversation.DataSource = MessageBLL.GetLastConversationPartners(AccountBLL.GetLoginAccount().ID);
+                rptConversation.DataBind();
                 return;
             }
+            if(AccountBLL.GetLoginAccount().ID == Int32.Parse(Request.QueryString["id"].ToString()))
+            {
+                rptConversation.DataSource = MessageBLL.GetLastConversationPartners(AccountBLL.GetLoginAccount().ID);
+                rptConversation.DataBind();
+                return;
+            }
+            rptConversation.DataSource = MessageBLL.GetLastConversationPartners(AccountBLL.GetLoginAccount().ID);
+            rptConversation.DataBind();
 
             FParty = AccountBLL.GetLoginAccount();
             SParty = AccountBLL.GetAccount(Int32.Parse(Request.QueryString["id"].ToString()));
