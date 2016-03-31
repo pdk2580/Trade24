@@ -16,9 +16,7 @@ namespace Trade24.Users
         {
             if (!IsPostBack)
             {
-                CountryBLL objCountry = new CountryBLL();
-
-                ddl_Country.DataSource = objCountry.GetAllCountries().ToList();
+                ddl_Country.DataSource = CountryBLL.GetAllCountries().ToList();
                 ddl_Country.DataTextField = "Name";
                 ddl_Country.DataValueField = "ID";
                 ddl_Country.DataBind();
@@ -30,9 +28,8 @@ namespace Trade24.Users
             int selectedCountryId;
             if (int.TryParse(ddl_Country.SelectedItem.Value, out selectedCountryId))
             {
-                CityBLL objCity = new CityBLL();
                 ddl_City.Enabled = true;
-                ddl_City.DataSource = objCity.GetCities(selectedCountryId);
+                ddl_City.DataSource = CityBLL.GetCities(selectedCountryId);
                 ddl_City.DataTextField = "Name";
                 ddl_City.DataValueField = "ID";
                 ddl_City.DataBind();
@@ -60,7 +57,7 @@ namespace Trade24.Users
                     Password = txtPwd.Text
                 };
 
-                new AccountBLL().CreateNewAccount(newAccount);
+                AccountBLL.CreateNewAccount(newAccount);
             }
             Response.Redirect("~/Users/Login.aspx");
         }

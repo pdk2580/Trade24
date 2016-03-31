@@ -16,9 +16,7 @@ namespace Trade24
         {
             if (!IsPostBack)
             {
-                ItemCategoryBLL objItemCategory = new ItemCategoryBLL();
-
-                rpItemCategories.DataSource = objItemCategory.GetCategories(0).ToList();
+                rpItemCategories.DataSource = ItemCategoryBLL.GetCategories(0).ToList();
                 rpItemCategories.DataBind();
             }
         }
