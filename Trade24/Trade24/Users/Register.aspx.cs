@@ -7,6 +7,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using Trade24.BLL;
 using Trade24.BO;
+using Trade24.Utilities.Logger;
 
 namespace Trade24.Users
 {
@@ -14,52 +15,67 @@ namespace Trade24.Users
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
+            try
             {
-                ddl_Country.DataSource = CountryBLL.GetAllCountries().ToList();
-                ddl_Country.DataTextField = "Name";
-                ddl_Country.DataValueField = "ID";
-                ddl_Country.DataBind();
+                if (!IsPostBack)
+                {
+                    ddl_Country.DataSource = CountryBLL.GetAllCountries().ToList();
+                    ddl_Country.DataTextField = "Name";
+                    ddl_Country.DataValueField = "ID";
+                    ddl_Country.DataBind();
+                }
+            }
+            catch (Exception ex)
+            {
+                LogManager.Log(LogType.ERROR, ex.ToString());
             }
         }
 
         protected void ddl_Country_SelectedIndexChanged(object sender, EventArgs e)
         {
             int selectedCountryId;
-            if (int.TryParse(ddl_Country.SelectedItem.Value, out selectedCountryId))
+
+            try
             {
-                ddl_City.Enabled = true;
-                ddl_City.DataSource = CityBLL.GetCities(selectedCountryId);
-                ddl_City.DataTextField = "Name";
-                ddl_City.DataValueField = "ID";
-                ddl_City.DataBind();
+                if (int.TryParse(ddl_Country.SelectedItem.Value, out selectedCountryId))
+                {
+                    ddl_City.Enabled = true;
+                    ddl_City.DataSource = CityBLL.GetCities(selectedCountryId);
+                    ddl_City.DataTextField = "Name";
+                    ddl_City.DataValueField = "ID";
+                    ddl_City.DataBind();
+                }
             }
-            else
+            catch (Exception ex)
             {
-                //ddl_City.Enabled = false;
-                //ddl_City.ClearSelection();
-                //ddl_City.DataSource = null;
-                //ddl_City.DataBind();
+                LogManager.Log(LogType.ERROR, ex.ToString());
             }
         }
 
         protected void btnRegister_Click(object sender, EventArgs e)
         {
-            if (IsValidated(txtEmail.Text.Trim()) && IsAccountExist(txtEmail.Text.Trim()))
+            try
             {
-                AccountBO newAccount = new AccountBO
+                if (IsValidated(txtEmail.Text.Trim()) && IsAccountExist(txtEmail.Text.Trim()))
                 {
-                    Email = txtEmail.Text.Trim(),
-                    FName = txtFName.Text.Trim(),
-                    LName = txtLName.Text.Trim(),
-                    CountryID = int.Parse(ddl_Country.SelectedValue),
-                    CityID = int.Parse(ddl_City.SelectedValue),
-                    Password = txtPwd.Text
-                };
+                    AccountBO newAccount = new AccountBO
+                    {
+                        Email = txtEmail.Text.Trim(),
+                        FName = txtFName.Text.Trim(),
+                        LName = txtLName.Text.Trim(),
+                        CountryID = int.Parse(ddl_Country.SelectedValue),
+                        CityID = int.Parse(ddl_City.SelectedValue),
+                        Password = txtPwd.Text
+                    };
 
-                AccountBLL.CreateNewAccount(newAccount);
+                    AccountBLL.CreateNewAccount(newAccount);
+                }
+                Response.Redirect("~/Users/Login.aspx");
             }
-            Response.Redirect("~/Users/Login.aspx");
+            catch (Exception ex)
+            {
+                LogManager.Log(LogType.ERROR, ex.ToString());
+            }
         }
 
         protected bool IsValidated(string email)

@@ -242,6 +242,10 @@
       <Project>{54d58bd6-ff38-4306-a28b-d12fd708406a}</Project>
       <Name>Trade24.BO</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Trade24.Utilities\Trade24.Utilities.csproj">
+      <Project>{938c1571-d105-49e8-88be-5f53c149162a}</Project>
+      <Name>Trade24.Utilities</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup />
   <PropertyGroup>

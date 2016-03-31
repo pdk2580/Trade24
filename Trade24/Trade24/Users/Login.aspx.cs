@@ -6,6 +6,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Trade24.BLL;
+using Trade24.Utilities.Logger;
 
 namespace Trade24.Users
 {
@@ -18,12 +19,18 @@ namespace Trade24.Users
 
         protected void btnLogin_Click(object sender, EventArgs e)
         {
-            if (IsValidated() && IsAthenticatedAccount(txtEmail.Text.Trim(), txtPwd.Text.Trim()))
+            try
             {
-                AccountBLL.Login(txtEmail.Text.Trim());
-                Response.Redirect("~/Default.aspx");
+                if (IsValidated() && IsAthenticatedAccount(txtEmail.Text.Trim(), txtPwd.Text.Trim()))
+                {
+                    AccountBLL.Login(txtEmail.Text.Trim());
+                    Response.Redirect("~/Default.aspx");
+                }
             }
-
+            catch (Exception ex)
+            {
+                LogManager.Log(LogType.ERROR, ex.ToString());
+            }
         }
 
         protected bool IsValidated()

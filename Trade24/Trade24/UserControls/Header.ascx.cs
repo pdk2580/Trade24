@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using Trade24.BLL;
 using Trade24.BO;
+using Trade24.Utilities.Logger;
 
 namespace Trade24.UserControls
 {
@@ -13,7 +14,14 @@ namespace Trade24.UserControls
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            InitiateLoginUserSetting();
+            try
+            {
+                InitiateLoginUserSetting();
+            }
+            catch (Exception ex)
+            {
+                LogManager.Log(LogType.ERROR, ex.ToString());
+            }
         }
 
         private void InitiateLoginUserSetting()
