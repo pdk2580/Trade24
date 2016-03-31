@@ -86,6 +86,21 @@ namespace Trade24.DAL
             return messages;
         }
 
+        public IEnumerable<MessageBO> GetLastConversationPartners(int myId)
+        {
+            IEnumerable<MessageBO> partners = null;
+
+            using (var sqlConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["trade24"].ConnectionString))
+            {
+                sqlConnection.Open();
+
+                string query = "select SenderID, ReceiverID, Content, ID AS PartnerID, Created_at, FName AS PartnerFName, LName AS PartnerLName from (SELECT CM.SenderID, CM.ReceiverID, CM.Content, U.ID, CM.Created_at, U.FName, U.LName, row_number() over (partition by CM.User1, CM.User2 order by CM.Created_at desc) as seqnum FROM (select CM.*, (case when SenderID < ReceiverID then SenderID else ReceiverID end) as User1, (case when SenderID < ReceiverID then ReceiverID else SenderID end) as User2 from Messages CM) CM JOIN Accounts U on U.ID <> @MyID and U.ID in (CM.SenderID, CM.ReceiverID) WHERE @MyID in (CM.SenderID, CM.ReceiverID)) s WHERE seqnum = 1 ORDER BY s.Created_at DESC;";
+                partners = sqlConnection.Query<MessageBO>(query, new { MyID = myId });
+            }
+
+            return partners;
+        }
+
         public void CreateMessage(MessageBO message)
         {
             using (var sqlConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["trade24"].ConnectionString))
