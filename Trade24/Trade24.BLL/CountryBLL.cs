@@ -10,7 +10,7 @@ namespace Trade24.BLL
 {
     public class CountryBLL
     {
-        public IEnumerable<CountryBO> GetAllCountries()
+        public static IEnumerable<CountryBO> GetAllCountries()
         {
             return new CountryDAL().GetAllCountries();
         }
