@@ -108,6 +108,7 @@ CREATE TABLE Messages(
 
 CREATE TABLE Request(
 	ID	INTEGER IDENTITY,
+	Name VARCHAR(250),
 	RequestType CHAR(1),
 	UploaderID INTEGER,
 	ItemCategoryID INT,
