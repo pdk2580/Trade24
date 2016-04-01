@@ -7,47 +7,88 @@
 <asp:Content ID="cMain" ContentPlaceHolderID="main" runat="server">
     <div class="container main content" style="text-align:center">
         <div class="row">
-            <div class="col-lg-5 col-lg-offset-3">
+            <div class="col-lg-3">
+                <img src="" />
+            </div>
+            <div class="col-lg-5 col-lg-offset-3" style="text-align:left">
                 <div class="page-header">
-                    <h1>Name <small>Company Name</small></h1>
+                    <h1>User <small>National University Of Singapore</small></h1>
                 </div>
                 <div class="form-group">
-                    <label class="control-label col-sm-2" for="email">Phone</label>
+                    <label class="col-sm-2">Phone</label>
                     <div class="col-sm-10">
-                        Phone1
+                        +65 6516 10293
                     </div>
                 </div>
                 <div class="form-group">
+                    <label class="col-sm-2"></label>
                     <div class="col-sm-10 col-offset-2">
-                        Phone2
+
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="control-label col-sm-2" for="email">Address</label>
+                    <label class="col-sm-2">Address</label>
                     <div class="col-sm-10">
-                        Address1
+                        21 Lower Kent Ridge Road
                     </div>
                 </div>
                 <div class="form-group">
+                    <label class="col-sm-2"></label>
                     <div class="col-sm-10 col-offset-2">
-                        Address2
+                        
                     </div>
                 </div>
                 <div class="form-group">
+                    <label class="col-sm-2"></label>
                     <div class="col-sm-10 col-offset-2">
-                        Postal Code
+                        119077
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="control-label col-sm-2" for="email">Location</label>
+                    <label class="col-sm-2">Location</label>
                     <div class="col-sm-10">
-                        City, Country
+                        Singapore, Singapore 
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="control-label col-sm-2" for="email">Email</label>
-                    <div class="col-sm-10">
-                        Ask
+                    <label class="col-sm-2"></label>
+                    <div class="col-sm-10 col-offset-2">
+                        <a href="/" class="btn btn-primary btn-block">Message</a><a href="/" class="btn btn-primary btn-block">Ask</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr />
+        <div class="row">
+            <div class="col-sm-6 col-offset-2">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        Request (Looking For)
+                    </div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="help-block-WithNoLineBreak" style="font-style: italic; font-size: small;"></div>                                        
+                                <br>
+                                <span class="fa fa-user"></span>&nbsp;DR <a data-container="body" data-toggle="popover" data-placement="bottom" data-content="Click to Email." href="mailto:issgl@nus.edu.sg?subject=IVLE: EB5101">Guo Lei</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        Sells
+                    </div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="help-block-WithNoLineBreak" style="font-style: italic; font-size: small;"></div>                                        
+                                <br>
+                                <span class="fa fa-user"></span>&nbsp;DR <a data-container="body" data-toggle="popover" data-placement="bottom" data-content="Click to Email." href="mailto:issgl@nus.edu.sg?subject=IVLE: EB5101">Guo Lei</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
