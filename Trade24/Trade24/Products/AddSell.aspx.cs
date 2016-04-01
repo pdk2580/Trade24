@@ -37,7 +37,8 @@ namespace Trade24.Products
                 {
                     throw new Exception("Wrong conversion of data");
                 }
-                RequestBLL.CreateRequest(req);
+                int i = RequestBLL.CreateRequest(req);
+                Response.Redirect("~/Products/Sell.aspx?id=" + i.ToString());
             }
             catch (Exception ex)
             {

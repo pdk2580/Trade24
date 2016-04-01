@@ -72,14 +72,17 @@ namespace Trade24.DAL
             return requests;
         }
 
-        public void CreateRequest(RequestBO request)
+        public int CreateRequest(RequestBO request)
         {
             using (var sqlConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["trade24"].ConnectionString))
             {
                 sqlConnection.Open();
 
-                string query = "INSERT Request (RequestType, UploaderID, ItemCategoryID, MinQty, MinPrice, Description) VALUES (@RequestType, @UploaderID, @ItemCategoryID, @MinQty, @MinPrice, @Description)";
-                sqlConnection.Execute(query, request);
+                string query = "INSERT Request (RequestType, UploaderID, ItemCategoryID, MinQty, MinPrice, Description) VALUES (@RequestType, @UploaderID, @ItemCategoryID, @MinQty, @MinPrice, @Description); ";
+                query += "SELECT CAST(SCOPE_IDENTITY() as int)";
+
+                return sqlConnection.Query<int>(query, request).Single();
+                //sqlConnection.Execute(query, request);
             }
         }
 

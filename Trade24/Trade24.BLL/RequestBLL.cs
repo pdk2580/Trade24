@@ -31,9 +31,9 @@ namespace Trade24.BLL
             return new RequestDAL().GetRequests_(uploaderId);
         }
 
-        public static void CreateRequest(RequestBO request)
+        public static int CreateRequest(RequestBO request)
         {
-            new RequestDAL().CreateRequest(request);
+            return new RequestDAL().CreateRequest(request);
         }
 
         public static void RemoveRequest(int requestId)
