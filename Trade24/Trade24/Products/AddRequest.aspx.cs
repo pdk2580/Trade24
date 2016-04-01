@@ -25,6 +25,8 @@ namespace Trade24.Products
                 RequestBO req = new RequestBO();
                 try
                 {
+                    //1 for request
+                    //2 for sell
                     req.RequestType = "1";
                     req.UploaderID = AccountBLL.GetLoginAccount().ID;
                     req.Name = txtPn.Text;
