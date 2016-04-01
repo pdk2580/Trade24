@@ -92,6 +92,8 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Products\AddRequest.aspx" />
+    <Content Include="Products\AddSell.aspx" />
     <Content Include="Products\Request.aspx" />
     <Content Include="Products\Sell.aspx" />
     <Content Include="Public\Feedback.aspx" />
@@ -153,6 +155,20 @@
     </Compile>
     <Compile Include="Messages\Conversation.aspx.designer.cs">
       <DependentUpon>Conversation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Products\AddRequest.aspx.cs">
+      <DependentUpon>AddRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Products\AddRequest.aspx.designer.cs">
+      <DependentUpon>AddRequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Products\AddSell.aspx.cs">
+      <DependentUpon>AddSell.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Products\AddSell.aspx.designer.cs">
+      <DependentUpon>AddSell.aspx</DependentUpon>
     </Compile>
     <Compile Include="Products\Request.aspx.cs">
       <DependentUpon>Request.aspx</DependentUpon>

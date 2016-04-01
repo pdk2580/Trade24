@@ -14,7 +14,7 @@
     <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
 </head>
 <body>
-    <form id="form1" runat="server">
+    <form id="form1" runat="server" class="form-horizontal">
     <div>
         <td:Header runat="server" ID="ucHeader" />
         

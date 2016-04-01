@@ -21,6 +21,10 @@ namespace Trade24.Users
             if (IsValidated() && IsAthenticatedAccount(txtEmail.Text.Trim(), txtPwd.Text.Trim()))
             {
                 AccountBLL.Login(txtEmail.Text.Trim());
+                if(Request.QueryString["continue"] != null)
+                {
+                    Response.Redirect("~"+ Request.QueryString["continue"].ToString());
+                }
                 Response.Redirect("~/Default.aspx");
             }
 
