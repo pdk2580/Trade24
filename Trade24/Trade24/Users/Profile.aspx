@@ -1,4 +1,5 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/Layouts/Default.Login.Master" AutoEventWireup="true" CodeBehind="Profile.aspx.cs" Inherits="Trade24.Users.Profile" %>
+<%@ Import Namespace="Trade24.BO" %>
 
 <asp:Content ID="cHead" ContentPlaceHolderID="head" runat="server">
     <%--to add additional head--%>
@@ -60,6 +61,8 @@
                     <label class="col-sm-2"></label>
                     <div class="col-sm-10 col-offset-2">
                         <asp:HyperLink ID="hlinkMessage" runat="server" CssClass="btn btn-primary btn-block">Message</asp:HyperLink>
+                        <a href="/Users/Settings.aspx" class="btn btn-primary btn-block">Settings</a>
+                        <asp:Button ID="btnAddContact" runat="server" Text="Add Contact" CssClass="btn btn-primary btn-block" />
                     </div>
                 </div>
             </div>
@@ -72,13 +75,19 @@
                         Request (Looking For)
                     </div>
                     <div class="panel-body">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="help-block-WithNoLineBreak" style="font-style: italic; font-size: small;"></div>                                        
-                                <br>
-                                <span class="fa fa-user"></span>&nbsp;DR <a data-container="body" data-toggle="popover" data-placement="bottom" data-content="Click to Email." href="mailto:issgl@nus.edu.sg?subject=IVLE: EB5101">Guo Lei</a>
-                            </div>
-                        </div>
+                        <asp:Repeater ID="rptRequests" runat="server">
+                            <ItemTemplate>
+                                <div class="media">
+                                    <a class="media-left" href="#">
+                                        <img class="media-object" data-src="..." alt="Generic placeholder image">
+                                    </a>
+                                    <div class="media-body" style="text-align:left">
+                                        <h4 class="media-heading"><%# ((RequestBO)Container.DataItem).Name %></h4>
+                                        <%# ((RequestBO)Container.DataItem).Description %>
+                                    </div>
+                                </div>
+                            </ItemTemplate>
+                        </asp:Repeater>
                     </div>
                 </div>
             </div>
@@ -88,13 +97,19 @@
                         Sells
                     </div>
                     <div class="panel-body">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="help-block-WithNoLineBreak" style="font-style: italic; font-size: small;"></div>                                        
-                                <br>
-                                <span class="fa fa-user"></span>&nbsp;DR <a data-container="body" data-toggle="popover" data-placement="bottom" data-content="Click to Email." href="mailto:issgl@nus.edu.sg?subject=IVLE: EB5101">Guo Lei</a>
-                            </div>
-                        </div>
+                        <asp:Repeater ID="rptSells" runat="server">
+                            <ItemTemplate>
+                                <div class="media">
+                                    <a class="media-left" href="#">
+                                        <img class="media-object" data-src="..." alt="Generic placeholder image">
+                                    </a>
+                                    <div class="media-body" style="text-align:left">
+                                        <h4 class="media-heading"><%# ((RequestBO)Container.DataItem).Name %></h4>
+                                        <%# ((RequestBO)Container.DataItem).Description %>
+                                    </div>
+                                </div>
+                            </ItemTemplate>
+                        </asp:Repeater>
                     </div>
                 </div>
             </div>
