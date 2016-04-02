@@ -13,13 +13,13 @@ namespace Trade24.Layouts
         protected void Page_Init(object sender, EventArgs e)
         {
             if (!AccountBLL.CheckLogin())
-                Response.Redirect("~/Users/Login.aspx?continue=" + HttpContext.Current.Request.Url.AbsolutePath);
+                Response.Redirect("~/Users/Login.aspx?continue=" + Request.Url.PathAndQuery);
         }
 
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!AccountBLL.CheckLogin())
-                Response.Redirect("~/Users/Login.aspx?continue=" + HttpContext.Current.Request.Url.AbsolutePath);
+                Response.Redirect("~/Users/Login.aspx?continue=" + Request.Url.PathAndQuery);
         }
     }
 }

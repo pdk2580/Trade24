@@ -13,7 +13,7 @@
             <div class="col-lg-5 col-lg-offset-3" style="text-align:left">
                 <div class="page-header">
                     <h1>
-                        <asp:Label ID="lblName" runat="server" Text="Label"></asp:Label> 
+                        <asp:Label ID="lblName" runat="server" Text="Label"></asp:Label> <br />
                          <small>
                             <asp:Label ID="lblCompany" runat="server" Text="Label"></asp:Label>
                          </small>
@@ -59,7 +59,7 @@
                 <div class="form-group">
                     <label class="col-sm-2"></label>
                     <div class="col-sm-10 col-offset-2">
-                        <a href="/" class="btn btn-primary btn-block">Message</a><a href="/" class="btn btn-primary btn-block">Ask</a>
+                        <asp:HyperLink ID="hlinkMessage" runat="server" CssClass="btn btn-primary btn-block">Message</asp:HyperLink>
                     </div>
                 </div>
             </div>

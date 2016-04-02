@@ -39,6 +39,7 @@ namespace Trade24.Users
                     lblPostalCode.Text = acc.PostalCode;
                     lblCity.Text = acc.CityID.ToString();
                     lblCountry.Text = acc.CountryID.ToString();
+                    hlinkMessage.NavigateUrl = "~/Messages/Conversation.aspx?id="+acc.ID.ToString();
                 }
             }
             catch(Exception ex)
