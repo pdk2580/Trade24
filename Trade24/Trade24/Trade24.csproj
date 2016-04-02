@@ -95,6 +95,7 @@
     <Content Include="Products\AddRequest.aspx" />
     <Content Include="Products\AddSell.aspx" />
     <Content Include="Products\Request.aspx" />
+    <Content Include="Products\Search.aspx" />
     <Content Include="Products\Sell.aspx" />
     <Content Include="Public\Feedback.aspx" />
     <Content Include="UserControls\Footer.ascx" />
@@ -176,6 +177,13 @@
     </Compile>
     <Compile Include="Products\Request.aspx.designer.cs">
       <DependentUpon>Request.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Products\Search.aspx.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Products\Search.aspx.designer.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
     </Compile>
     <Compile Include="Products\Sell.aspx.cs">
       <DependentUpon>Sell.aspx</DependentUpon>

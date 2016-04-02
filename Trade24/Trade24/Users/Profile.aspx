@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/Layouts/Default.Login.Master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="Trade24.Users.Login" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/Layouts/Default.Login.Master" AutoEventWireup="true" CodeBehind="Profile.aspx.cs" Inherits="Trade24.Users.Profile" %>
 
 <asp:Content ID="cHead" ContentPlaceHolderID="head" runat="server">
     <%--to add additional head--%>
@@ -12,42 +12,48 @@
             </div>
             <div class="col-lg-5 col-lg-offset-3" style="text-align:left">
                 <div class="page-header">
-                    <h1>User <small>National University Of Singapore</small></h1>
+                    <h1>
+                        <asp:Label ID="lblName" runat="server" Text="Label"></asp:Label> 
+                         <small>
+                            <asp:Label ID="lblCompany" runat="server" Text="Label"></asp:Label>
+                         </small>
+                    </h1>
                 </div>
                 <div class="form-group">
                     <label class="col-sm-2">Phone</label>
                     <div class="col-sm-10">
-                        +65 6516 10293
+                        <asp:Label ID="lblPhone1" runat="server" Text="Label"></asp:Label>
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-sm-2"></label>
                     <div class="col-sm-10 col-offset-2">
-
+                        <asp:Label ID="lblPhone2" runat="server" Text="Label"></asp:Label>
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-sm-2">Address</label>
                     <div class="col-sm-10">
-                        21 Lower Kent Ridge Road
+                        <asp:Label ID="lblAddress1" runat="server" Text="Label"></asp:Label>
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-sm-2"></label>
                     <div class="col-sm-10 col-offset-2">
-                        
+                        <asp:Label ID="lblAddress2" runat="server" Text="Label"></asp:Label>
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-sm-2"></label>
                     <div class="col-sm-10 col-offset-2">
-                        119077
+                        <asp:Label ID="lblPostalCode" runat="server" Text="Label"></asp:Label>
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-sm-2">Location</label>
                     <div class="col-sm-10">
-                        Singapore, Singapore 
+                        <asp:Label ID="lblCity" runat="server" Text="Label"></asp:Label>, 
+                        <asp:Label ID="lblCountry" runat="server" Text="Label"></asp:Label>
                     </div>
                 </div>
                 <div class="form-group">
