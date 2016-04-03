@@ -78,6 +78,7 @@
     <Content Include="Contacts\RequestReceived.aspx" />
     <Content Include="Contacts\RequestSent.aspx" />
     <Content Include="Default.aspx" />
+    <Content Include="Error.aspx" />
     <Content Include="ItemCategories\View.aspx" />
     <Content Include="Messages\Conversation.aspx" />
     <Content Include="packages.config" />
@@ -122,6 +123,13 @@
     </Compile>
     <Compile Include="Contacts\RequestSent.aspx.designer.cs">
       <DependentUpon>RequestSent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Error.aspx.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Error.aspx.designer.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
     </Compile>
     <Compile Include="ItemCategories\View.aspx.cs">
       <DependentUpon>View.aspx</DependentUpon>

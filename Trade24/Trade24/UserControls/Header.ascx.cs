@@ -30,7 +30,7 @@ namespace Trade24.UserControls
         {
             if (loginAccount != null)
             {
-                lbUserName.Text = loginAccount.FName.ToString() + " " + loginAccount.LName.ToString();
+                lblUserName.Text = loginAccount.FName.ToString() + " " + loginAccount.LName.ToString();
 
                 publicAccountNavbar.Visible = false;
                 loginAccountNavbar.Visible = true;
@@ -46,6 +46,7 @@ namespace Trade24.UserControls
         {
             AccountBLL.Logout();
             HttpContext.Current.Response.Redirect("~/Default.aspx");
+            LogManager.Log(LogType.INFO, loginAccount.Email + " successfully logged out");
         }
 
         protected void ViewProfile(object sender, EventArgs e)

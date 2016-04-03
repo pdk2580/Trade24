@@ -13,9 +13,9 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li class="active"><a href="/default.aspx">Home</a></li>
+                <li><a href="/products/request.aspx">Request</a></li>
+                <li><a href="/products/sell.aspx">Sell</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
                     <ul class="dropdown-menu">
@@ -41,8 +41,8 @@
                 <li><a href="~/Users/Register.aspx" runat="server">Register</a></li>
             </ul>
             <ul id="loginAccountNavbar" class="nav navbar-nav navbar-right" visible="false" runat="server">
-                <li><asp:LinkButton ID="lbUserName" runat="server" OnClick="ViewProfile"></asp:LinkButton></li>
-                <li><asp:LinkButton ID="lbLogout" runat="server" OnClick="Logout">Logout</asp:LinkButton></li>
+                <li><asp:LinkButton ID="lblUserName" runat="server" OnClick="ViewProfile"></asp:LinkButton></li>
+                <li><asp:LinkButton ID="lblLogout" runat="server" OnClick="Logout">Logout</asp:LinkButton></li>
             </ul>
         </div>
         <!--/.nav-collapse -->

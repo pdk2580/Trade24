@@ -31,21 +31,21 @@ namespace Trade24.UserControls {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl loginAccountNavbar;
         
         /// <summary>
-        /// lbUserName control.
+        /// lblUserName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lbUserName;
+        protected global::System.Web.UI.WebControls.LinkButton lblUserName;
         
         /// <summary>
-        /// lbLogout control.
+        /// lblLogout control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lbLogout;
+        protected global::System.Web.UI.WebControls.LinkButton lblLogout;
     }
 }

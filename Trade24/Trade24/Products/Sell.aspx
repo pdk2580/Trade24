@@ -6,7 +6,7 @@
 
 <asp:Content ID="cMain" ContentPlaceHolderID="main" runat="server">
     <div class="container main content" style="padding-top:25px;">
-        <div class="row">
+        <div id="dvSellDetail" class="row" visible="false" runat="server">
             <div class="col-lg-5">
                 <img id="pImg" src="" style="max-width:480px;" />
             </div>
@@ -42,8 +42,11 @@
                 </div>
               </div>
             </div>
-            </div>
         </div>
+        <div id="dvSellList" class="row" visible="false" runat="server">
+            <asp:GridView ID="gvSellList" runat="server"></asp:GridView>
+        </div>
+    </div>
 </asp:Content>
 
 <asp:Content ID="cScript" ContentPlaceHolderID="script" runat="server">

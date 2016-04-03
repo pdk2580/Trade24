@@ -13,6 +13,15 @@ namespace Trade24.Product {
     public partial class Sell {
         
         /// <summary>
+        /// dvSellDetail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl dvSellDetail;
+        
+        /// <summary>
         /// txtPn control.
         /// </summary>
         /// <remarks>
@@ -56,5 +65,23 @@ namespace Trade24.Product {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label txtPd;
+        
+        /// <summary>
+        /// dvSellList control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl dvSellList;
+        
+        /// <summary>
+        /// gvSellList control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView gvSellList;
     }
 }
