@@ -84,6 +84,7 @@
     <Content Include="Layouts\Default.Master" />
     <Content Include="Layouts\Default.Public.Master" />
     <Content Include="Layouts\Default.Login.Master" />
+    <None Include="Properties\PublishProfiles\Trade24.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

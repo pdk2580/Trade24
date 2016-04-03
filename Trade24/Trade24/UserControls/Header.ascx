@@ -41,7 +41,7 @@
                 <li><a href="~/Users/Register.aspx" runat="server">Register</a></li>
             </ul>
             <ul id="loginAccountNavbar" class="nav navbar-nav navbar-right" visible="false" runat="server">
-                <li><asp:LinkButton ID="lbUserName" runat="server"></asp:LinkButton></li>
+                <li><asp:LinkButton ID="lbUserName" runat="server" OnClick="ViewProfile"></asp:LinkButton></li>
                 <li><asp:LinkButton ID="lbLogout" runat="server" OnClick="Logout">Logout</asp:LinkButton></li>
             </ul>
         </div>

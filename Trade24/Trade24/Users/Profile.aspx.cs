@@ -40,9 +40,9 @@ namespace Trade24.Users
                     lblCity.Text = acc.CityID.ToString();
                     lblCountry.Text = acc.CountryID.ToString();
                     hlinkMessage.NavigateUrl = "~/Messages/Conversation.aspx?id="+acc.ID.ToString();
-                    rptRequests.DataSource = RequestBLL.GetRequestsByUploader(acc.ID);
+                    rptRequests.DataSource = RequestBLL.GetRequests(acc.ID);
                     rptRequests.DataBind();
-                    rptSells.DataSource = RequestBLL.GetRequestsByUploader(acc.ID);
+                    rptSells.DataSource = RequestBLL.GetRequests(acc.ID);
                     rptSells.DataBind();
                 }
             }

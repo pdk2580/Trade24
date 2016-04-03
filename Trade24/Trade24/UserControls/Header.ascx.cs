@@ -12,6 +12,8 @@ namespace Trade24.UserControls
 {
     public partial class Header : System.Web.UI.UserControl
     {
+        AccountBO loginAccount = AccountBLL.GetLoginAccount();
+
         protected void Page_Load(object sender, EventArgs e)
         {
             try
@@ -26,9 +28,6 @@ namespace Trade24.UserControls
 
         private void InitiateLoginUserSetting()
         {
-            AccountBO loginAccount = new AccountBO();
-            loginAccount = AccountBLL.GetLoginAccount();
-
             if (loginAccount != null)
             {
                 lbUserName.Text = loginAccount.FName.ToString() + " " + loginAccount.LName.ToString();
@@ -47,6 +46,14 @@ namespace Trade24.UserControls
         {
             AccountBLL.Logout();
             HttpContext.Current.Response.Redirect("~/Default.aspx");
+        }
+
+        protected void ViewProfile(object sender, EventArgs e)
+        {
+            if (loginAccount != null)
+            {
+                Response.Redirect("~/Users/Profile.aspx?id=" + loginAccount.ID.ToString());
+            }
         }
     }
 }

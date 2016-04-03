@@ -21,15 +21,15 @@ namespace Trade24.Users
         {
             try
             {
-            if (IsValidated() && IsAthenticatedAccount(txtEmail.Text.Trim(), txtPwd.Text.Trim()))
-            {
-                AccountBLL.Login(txtEmail.Text.Trim());
-                if(Request.QueryString["continue"] != null)
+                if (IsValidated() && IsAthenticatedAccount(txtEmail.Text.Trim(), txtPwd.Text.Trim()))
                 {
-                    Response.Redirect("~"+ Request.QueryString["continue"].ToString());
+                    AccountBLL.Login(txtEmail.Text.Trim());
+                    if(Request.QueryString["continue"] != null)
+                    {
+                        Response.Redirect("~"+ Request.QueryString["continue"].ToString());
+                    }
+                    Response.Redirect("~/Default.aspx");
                 }
-                Response.Redirect("~/Default.aspx");
-            }
             }
             catch (Exception ex)
             {
