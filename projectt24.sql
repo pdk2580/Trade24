@@ -121,3 +121,18 @@ CREATE TABLE Request(
 	PRIMARY KEY(ID),
 	FOREIGN KEY (ItemCategoryID) REFERENCES ItemCategories(ID)
 );
+
+
+CREATE TABLE UploadedFiles(
+	ID	INTEGER IDENTITY,
+	Name VARCHAR(250),
+	FileType VARCHAR(250),
+	PhysicalFileName CHAR(1),
+	ServerLoc VARCHAR(250) DEFAULT '',
+	RequestID INT,
+
+	Created_at datetime NOT NULL DEFAULT GETDATE(),
+
+	PRIMARY KEY(ID),
+	FOREIGN KEY (RequestID) REFERENCES Request(ID)
+);

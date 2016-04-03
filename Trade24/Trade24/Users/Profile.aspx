@@ -58,11 +58,14 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="col-sm-2"></label>
-                    <div class="col-sm-10 col-offset-2">
-                        <asp:HyperLink ID="hlinkMessage" runat="server" CssClass="btn btn-primary btn-block">Message</asp:HyperLink>
-                        <a href="/Users/Settings.aspx" class="btn btn-primary btn-block">Settings</a>
-                        <asp:Button ID="btnAddContact" runat="server" Text="Add Contact" CssClass="btn btn-primary btn-block" />
+                    <div class="col-sm-4">
+                        <asp:HyperLink ID="hlinkMessage" runat="server" CssClass="btn btn-primary btn-block"><i class="glyphicon glyphicon-envelope"></i> Message</asp:HyperLink>
+                    </div>
+                    <div class="col-sm-4">
+                        <a href="/Users/Settings.aspx" class="btn btn-primary btn-block"><i class="glyphicon glyphicon-cog"></i> Settings</a>
+                    </div>
+                    <div class="col-sm-4">
+                        <asp:Button ID="Button1" runat="server" Text="Add Contact" CssClass="btn btn-primary btn-block" />
                     </div>
                 </div>
             </div>
@@ -72,7 +75,7 @@
             <div class="col-sm-6 col-offset-2">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        Request (Looking For)
+                        <b>Request (Looking For)</b>
                     </div>
                     <div class="panel-body">
                         <asp:Repeater ID="rptRequests" runat="server">
@@ -94,7 +97,7 @@
             <div class="col-sm-6">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        Sells
+                        <b>Sells</b>
                     </div>
                     <div class="panel-body">
                         <asp:Repeater ID="rptSells" runat="server">
