@@ -12,13 +12,14 @@ namespace Trade24.UserControls
 {
     public partial class Header : System.Web.UI.UserControl
     {
-        AccountBO loginAccount = AccountBLL.GetLoginAccount();
+        public AccountBO loginAccount = AccountBLL.GetLoginAccount();
 
         protected void Page_Load(object sender, EventArgs e)
         {
             try
             {
-                InitiateLoginUserSetting();
+                SetLoginUser();
+                SetCurrentPage();
             }
             catch (Exception ex)
             {
@@ -26,11 +27,34 @@ namespace Trade24.UserControls
             }
         }
 
-        private void InitiateLoginUserSetting()
+        private void SetCurrentPage()
+        {
+            string pageName = GetCurrentPage().ToLower();
+
+            switch (pageName)
+            {
+                case "default.aspx":
+                    navHome.Attributes["class"] = "active";
+                    break;
+                case "request.aspx":
+                    navBuy.Attributes["class"] = "active";
+                    break;
+                case "sell.aspx":
+                    navSell.Attributes["class"] = "active";
+                    break;
+            }
+        }
+
+        private string GetCurrentPage()
+        {
+            return Request.Url.ToString().Split('/').Last();
+        }
+
+        private void SetLoginUser()
         {
             if (loginAccount != null)
             {
-                lblUserName.Text = loginAccount.FName.ToString() + " " + loginAccount.LName.ToString();
+                lblUserName.InnerText = loginAccount.FName.ToString() + " " + loginAccount.LName.ToString();
 
                 publicAccountNavbar.Visible = false;
                 loginAccountNavbar.Visible = true;

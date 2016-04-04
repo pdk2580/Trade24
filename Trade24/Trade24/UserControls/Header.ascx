@@ -13,10 +13,10 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="/default.aspx">Home</a></li>
-                <li><a href="/products/request.aspx">Request</a></li>
-                <li><a href="/products/sell.aspx">Sell</a></li>
-                <li class="dropdown">
+                <li id="navHome" runat="server"><a href="/default.aspx">Home</a></li>
+                <li id="navBuy" runat="server"><a href="/products/request.aspx">Request</a></li>
+                <li id="navSell" runat="server"><a href="/products/sell.aspx">Sell</a></li>
+                <%--<li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li><a href="#">Action</a></li>
@@ -27,7 +27,7 @@
                         <li><a href="#">Separated link</a></li>
                         <li><a href="#">One more separated link</a></li>
                     </ul>
-                </li>
+                </li>--%>
             </ul>
             <div class="navbar-form navbar-left" role="search">
                 <div class="form-group">
@@ -41,7 +41,19 @@
                 <li><a href="~/Users/Register.aspx" runat="server">Register</a></li>
             </ul>
             <ul id="loginAccountNavbar" class="nav navbar-nav navbar-right" visible="false" runat="server">
-                <li><asp:LinkButton ID="lblUserName" runat="server" OnClick="ViewProfile"></asp:LinkButton></li>
+                <%--<li><asp:LinkButton ID="lblUserName" runat="server" OnClick="ViewProfile"></asp:LinkButton></li>--%>
+                <li class="dropdown">
+                    <a id="lblUserName" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" runat="server"></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/Users/Profile.aspx?id=<%= loginAccount.ID.ToString() %>">View profile</a></li>
+                        <li><a href="#">Link2</a></li>
+                        <li><a href="#">Link3</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li class="dropdown-header">Actions</li>
+                        <li><a href="/products/addrequest.aspx">Request product</a></li>
+                        <li><a href="/products/addsell.aspx">Sell product</a></li>
+                    </ul>
+                </li>
                 <li><asp:LinkButton ID="lblLogout" runat="server" OnClick="Logout">Logout</asp:LinkButton></li>
             </ul>
         </div>

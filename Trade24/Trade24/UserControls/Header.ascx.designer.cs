@@ -13,6 +13,33 @@ namespace Trade24.UserControls {
     public partial class Header {
         
         /// <summary>
+        /// navHome control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl navHome;
+        
+        /// <summary>
+        /// navBuy control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl navBuy;
+        
+        /// <summary>
+        /// navSell control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl navSell;
+        
+        /// <summary>
         /// publicAccountNavbar control.
         /// </summary>
         /// <remarks>
@@ -37,7 +64,7 @@ namespace Trade24.UserControls {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lblUserName;
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor lblUserName;
         
         /// <summary>
         /// lblLogout control.
