@@ -13,11 +13,12 @@ namespace Trade24.Users
 {
     public partial class Profile : System.Web.UI.Page
     {
+        AccountBO acc = null;
+
         protected void Page_Load(object sender, EventArgs e)
         {
             try
             {
-                AccountBO acc = null;
                 try
                 {
                     int id = Int32.Parse(Request.Params["id"].ToString());
@@ -51,6 +52,21 @@ namespace Trade24.Users
                 LogManager.Log(LogType.INFO, ex.Message);
                 Response.Redirect("~/Default.aspx");
             }
+        }
+
+        private void GetAccountInfo()
+        {
+            if (!string.IsNullOrEmpty(acc.GetName()))
+                lblName.Text = acc.GetName();
+            else lblName.Text = "-";
+
+            if (!string.IsNullOrEmpty(acc.CompanyName))
+                lblCompany.Text = acc.CompanyName;
+            else lblCompany.Text = "-";
+
+            if (!string.IsNullOrEmpty(acc.Address1))
+                lblAddress1.Text = acc.Address1;
+            else lblCompany.Text = "-";
         }
     }
 }
