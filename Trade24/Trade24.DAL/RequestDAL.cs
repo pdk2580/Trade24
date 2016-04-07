@@ -72,6 +72,45 @@ namespace Trade24.DAL
             return requests;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="requestType">SELL, REQUEST</param>
+        /// <param name="keyword"></param>
+        /// <param name="searchBy">
+        /// Default is 0 general
+        /// 1: 
+        /// </param>
+        /// <param name="order">
+        /// Default is 0 no order
+        /// 1: A-Z 0,9  Ascending
+        /// 2: Descending
+        /// </param>
+        /// <returns></returns>
+        public IEnumerable<RequestBO> SearchRequest(RequesType requestType, string keyword, int searchBy, int order)
+        {
+            IEnumerable<RequestBO> requests = null;
+
+            string query = "SELECT * FROM Request WHERE RequestType = @ReqType AND (Name LIKE '%"+ keyword.Replace(" ", "%") + "%' OR Description LIKE '%" + keyword.Replace(" ", "%") + "%')";
+
+            string ReqType = "1";
+
+            if(requestType == RequesType.SELL)
+                ReqType += "2";
+
+
+            using (var sqlConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["trade24"].ConnectionString))
+            {
+                sqlConnection.Open();
+                requests = sqlConnection.Query<RequestBO>(query, new {
+                    UploaderID = requestType,
+                    ReqType = ReqType
+                });
+            }
+
+            return requests;
+        }
+
         public int CreateRequest(RequestBO request)
         {
             using (var sqlConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["trade24"].ConnectionString))

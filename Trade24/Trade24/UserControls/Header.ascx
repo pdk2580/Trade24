@@ -38,7 +38,6 @@
                 <script>
                     $("button#ui_btn_s").click(function () {
                         $("#ucHeader_btnSearch").trigger("click");
-                        alert("The paragraph was clicked.");
                         return false;
                     });
                 </script>

@@ -6,6 +6,11 @@ using System.Threading.Tasks;
 
 namespace Trade24.BO
 {
+    public enum RequesType
+    {
+        SELL, REQUEST
+    }
+
     public class RequestBO
     {
         public int ID { get; set; }

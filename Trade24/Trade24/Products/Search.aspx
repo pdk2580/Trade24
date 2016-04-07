@@ -17,7 +17,7 @@
                     <div class="form-group">
                         <label class="control-label col-sm-2" for="email">Keyword:</label>
                         <div class="col-sm-10">
-                            <asp:TextBox ID="txtKeyword" runat="server" class="form-control" placeholder="Enter email" TextMode="Email"></asp:TextBox>
+                            <asp:TextBox ID="txtKeyword" runat="server" class="form-control" placeholder="Enter email"></asp:TextBox>
                         </div>
                     </div>
                     <div class="form-group">
@@ -54,7 +54,7 @@
                     <div class="form-group">
                         <label class="control-label col-sm-2"></label>
                         <div class="col-sm-10">
-                            <asp:Button ID="btnLogin" runat="server" Text="Login" class="btn btn-lg btn-primary btn-block" OnClick="btnLogin_Click" />
+                            <asp:Button ID="btnSearch" runat="server" Text="Login" class="btn btn-lg btn-primary btn-block" OnClick="btnSearch_Click" />
                         </div>
                     </div>
                 </div>
