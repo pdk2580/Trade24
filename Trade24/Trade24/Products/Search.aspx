@@ -83,9 +83,9 @@
                                     <a class="media-left" href="#">
                                         <img class="media-object" data-src="..." alt="Generic placeholder image">
                                     </a>
-                                    &nbsp;<div class="media-body" style="text-align:left">
-                                        <h4 class="media-heading"><%# ((RequestBO)Container.DataItem).Name %></h4>
-                                        <%# ((RequestBO)Container.DataItem).Description %>
+                                    <div class="media-body" style="text-align:left">
+                                        <h4 class="media-heading">Item01 <small>sold by <a href=""><b>Bill Gates</b></a> from <a href="">Makassar, Indonesia</a></small></h4>
+                                        <small>Rp 0,-</small> Description LOOONG.
                                     </div>
                                 </div>
                             </ItemTemplate>
