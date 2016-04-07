@@ -13,13 +13,13 @@ namespace Trade24.Products {
     public partial class Search {
         
         /// <summary>
-        /// txtEmail control.
+        /// txtKeyword control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtEmail;
+        protected global::System.Web.UI.WebControls.TextBox txtKeyword;
         
         /// <summary>
         /// rbLfBuyer control.
@@ -74,5 +74,14 @@ namespace Trade24.Products {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnLogin;
+        
+        /// <summary>
+        /// rptRequests control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater rptRequests;
     }
 }

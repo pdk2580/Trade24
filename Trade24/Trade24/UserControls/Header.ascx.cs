@@ -80,5 +80,10 @@ namespace Trade24.UserControls
                 Response.Redirect("~/Users/Profile.aspx?id=" + loginAccount.ID.ToString());
             }
         }
+
+        protected void btnSearch_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Products/Search.aspx?keyword=" + txtSearch.Text);
+        }
     }
 }

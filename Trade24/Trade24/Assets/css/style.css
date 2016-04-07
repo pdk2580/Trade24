@@ -1,8 +1,10 @@
 ﻿@import url(http://fonts.googleapis.com/css?family=roboto);
 @charset "UTF-8";
-
 body{
 	background:#E9EAED;
+}
+.hidden{
+    display:none;
 }
 .content{
     background-color:white;

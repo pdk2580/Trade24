@@ -10,6 +10,7 @@
     <link href="~/Assets/css/font-awesome.min.css" rel="stylesheet" runat="server" />
     <link href="~/Assets/css/owl.carousel.css" rel="stylesheet" runat="server" />
     <link href="~/Assets/css/style.css" rel="stylesheet" runat="server" />
+    <script src="/Assets/js/jquery-1.11.1.min.js"></script>
 
     <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
 </head>
@@ -24,7 +25,6 @@
     </div>
     </form>
 </body>
-<script src="/Assets/js/jquery-1.11.1.min.js"></script>
 <script src="/Assets/js/jquery-migrate-1.2.1.min.js"></script>
 <script src="/Assets/js/bootstrap.min.js"></script>
 <script src="/Assets/js/bootstrap-hover-dropdown.min.js"></script>
