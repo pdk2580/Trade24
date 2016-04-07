@@ -21,6 +21,12 @@
                     </h1>
                 </div>
                 <div class="form-group">
+                    <label class="col-sm-2">Email</label>
+                    <div class="col-sm-10">
+                        <asp:Label ID="lblEmail" runat="server" Text="-"></asp:Label>
+                    </div>
+                </div>
+                <div class="form-group">
                     <label class="col-sm-2">Phone</label>
                     <div class="col-sm-10">
                         <asp:Label ID="lblPhone1" runat="server" Text="Label"></asp:Label>
