@@ -65,8 +65,8 @@ namespace Trade24.Product
                                                  where request.RequestType == "2"
                                                  select request;
 
-            gvSellList.DataSource = selltList;
-            gvSellList.DataBind();
+            rptSells.DataSource = selltList;
+            rptSells.DataBind();
 
         }
     }

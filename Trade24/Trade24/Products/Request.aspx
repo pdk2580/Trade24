@@ -1,4 +1,5 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/Layouts/Default.Public.Master" AutoEventWireup="true" CodeBehind="Request.aspx.cs" Inherits="Trade24.Product.Request" %>
+<%@ Import Namespace="Trade24.BO" %>
 
 <asp:Content ID="cHead" ContentPlaceHolderID="head" runat="server">
     <%--to add additional head--%>
@@ -43,8 +44,32 @@
                 </div>
             </div>
         </div>
-        <div id="dvAllRequest" class="row" visible="false" runat="server">
-            <asp:GridView ID="gvRequestList" runat="server"></asp:GridView>
+        <div id="dvAllRequest" visible="false" runat="server">
+            <div class="page-header">
+                <h2>Latest Uploaded Request</h2>
+            </div>
+            <div class="media">
+                <a class="media-left" href="#">
+                    <img class="media-object" data-src="..." alt="Generic placeholder image">
+                </a>
+                <div class="media-body" style="text-align:left">
+                    <h4 class="media-heading"><a href="">Item01</a> <small>sold by <a href=""><b>Bill Gates</b></a> from <a href="">Makassar, Indonesia</a></small></h4>
+                    <small>Rp 0,-</small> Description LOOONG.
+                </div>
+            </div>
+            <asp:Repeater ID="rptRequests" runat="server">
+                <ItemTemplate>
+                    <div class="media">
+                        <a class="media-left" href="#">
+                            <img class="media-object" data-src="..." alt="Generic placeholder image">
+                        </a>
+                        <div class="media-body" style="text-align:left">
+                            <h4 class="media-heading"><%# ((RequestBO)Container.DataItem).Name %></h4>
+                            <%# ((RequestBO)Container.DataItem).Description %>
+                        </div>
+                    </div>
+                </ItemTemplate>
+            </asp:Repeater>
         </div>
     </div>
 </asp:Content>
