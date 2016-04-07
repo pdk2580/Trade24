@@ -26,8 +26,18 @@ namespace Trade24.Product
                     }
                 }
                 else
-                { 
-                    GetAllRequestProducts();
+                {
+                    if (Page.RouteData.Values["id"] != null)
+                    {
+                        if (Int32.TryParse(Page.RouteData.Values["id"].ToString().Trim(), out requestId))
+                        {
+                            GetRequestProduct(requestId);
+                        }
+                    }
+                    else
+                    {
+                        GetAllRequestProducts();
+                    }
                 }
             }
             catch(Exception ex)

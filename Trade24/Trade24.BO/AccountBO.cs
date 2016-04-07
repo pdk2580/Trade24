@@ -35,6 +35,8 @@ namespace Trade24.BO
         public DateTime Created_at { get; set; }
         public string UserStatuts { get; set; }
 
+        //public string FriendlyID { get; set; }
+
         public AccountBO() { }
 
         public AccountBO(int ID, string Password, string FName, string LName, string Email, string SecurityQ, string SecurityA, string AdminStats, int? LoginAttempts, string CompanyName, int? CountryID, int? CityID, int? PasswordSalt, string Address1, string Address2, string PostalCode, string Phone1, string Phone2, string Fax1, string Fax2, string IsVerified, string IsPublicProfile, string Lang, string UserLevel, DateTime Created_at, string UserStatuts)
