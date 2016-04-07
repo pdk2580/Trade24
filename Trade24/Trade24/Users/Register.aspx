@@ -23,14 +23,11 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="control-label col-sm-4" for="name">First Name:</label><asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtFName" CssClass="alert-danger" Display="Dynamic" ErrorMessage="First Name must be supplied"></asp:RequiredFieldValidator>
-                        <div class="col-sm-8">
+                        <label class="control-label col-sm-4" for="name">Full Name:</label><asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtFName" CssClass="alert-danger" Display="Dynamic" ErrorMessage="First Name must be supplied"></asp:RequiredFieldValidator>
+                        <div class="col-sm-4">
                             <asp:TextBox ID="txtFName" runat="server" class="form-control" placeholder="Enter first name" TextMode="SingleLine"></asp:TextBox>
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label col-sm-4" for="name">Last Name:</label><asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txtLName" CssClass="alert-danger" Display="Dynamic" ErrorMessage="Last Name must be supplied"></asp:RequiredFieldValidator>
-                        <div class="col-sm-8">
+                        <div class="col-sm-4">
                             <asp:TextBox ID="txtLName" runat="server" class="form-control" placeholder="Enter last name" TextMode="SingleLine"></asp:TextBox>
                         </div>
                     </div>

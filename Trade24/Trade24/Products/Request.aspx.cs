@@ -26,8 +26,18 @@ namespace Trade24.Product
                     }
                 }
                 else
-                { 
-                    GetAllRequestProducts();
+                {
+                    if (Page.RouteData.Values["id"] != null)
+                    {
+                        if (Int32.TryParse(Page.RouteData.Values["id"].ToString().Trim(), out requestId))
+                        {
+                            GetRequestProduct(requestId);
+                        }
+                    }
+                    else
+                    {
+                        GetAllRequestProducts();
+                    }
                 }
             }
             catch(Exception ex)
@@ -66,8 +76,8 @@ namespace Trade24.Product
                                                  where request.RequestType == "1"
                                                  select request;
 
-            gvRequestList.DataSource = requestList;
-            gvRequestList.DataBind();
+            rptRequests.DataSource = requestList;
+            rptRequests.DataBind();
         }
     }
 }

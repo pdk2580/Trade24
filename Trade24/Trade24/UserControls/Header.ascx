@@ -31,9 +31,17 @@
             </ul>
             <div class="navbar-form navbar-left" role="search">
                 <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Search">
+                    <asp:TextBox ID="txtSearch" placeholder="Search Keyword" runat="server" Cssclass="form-control"></asp:TextBox>
                 </div>
-                <button type="submit" class="btn btn-default"><i class="glyphicon glyphicon-search"></i></button>
+                <asp:Button ID="btnSearch" runat="server" Text="" CssClass="hidden" OnClick="btnSearch_Click" />
+                <button class="btn btn-default" id="ui_btn_s"><i class="glyphicon glyphicon-search"></i></button>
+                <script>
+                    $("button#ui_btn_s").click(function () {
+                        $("#ucHeader_btnSearch").trigger("click");
+                        alert("The paragraph was clicked.");
+                        return false;
+                    });
+                </script>
             </div>
             
             <ul id="publicAccountNavbar" class="nav navbar-nav navbar-right" visible="false" runat="server">
