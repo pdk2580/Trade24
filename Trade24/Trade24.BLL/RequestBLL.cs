@@ -47,7 +47,7 @@ namespace Trade24.BLL
         }
 
 
-        public static IEnumerable<RequestBO> SearchRequest(RequesType requestType, string keyword, int searchBy = 0, int order = 0)
+        public static IEnumerable<RequestBO> SearchRequest(RequesType requestType, string keyword, int searchBy = 0, Order order = Order.ASC)
         {
             return new RequestDAL().SearchRequest(requestType, keyword, searchBy, order);
         }

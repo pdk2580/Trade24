@@ -24,7 +24,7 @@
                         <label class="control-label col-sm-2">Looking for</label>
                         <div class="col-sm-2">
                             <label>
-                                <asp:RadioButton ID="rbLfBuyer" runat="server" GroupName="lf" />
+                                <asp:RadioButton ID="rbLfBuyer" runat="server" GroupName="lf" Checked="true" />
                                 Buyer</label>
                         </div>
                         <div class="col-sm-2">
@@ -37,24 +37,14 @@
                         <label class="control-label col-sm-2" for="email">Sort by:</label>
                         <div class="col-sm-2">
                             <label>
-                                <asp:RadioButton ID="rbSbPrice" runat="server" GroupName="sb" />
+                                <asp:RadioButton ID="rbSbPrice" runat="server" GroupName="sb" Checked="true" />
                                 Price</label>
-                        </div>
-                        <div class="col-sm-2">
-                            <label>
-                                <asp:RadioButton ID="rbSbSupplierName" runat="server" GroupName="sb" />
-                                Supplier</label>
-                        </div>
-                        <div class="col-sm-2">
-                            <label>
-                                <asp:RadioButton ID="rbSbCountryName" runat="server" GroupName="sb" />
-                                Country</label>
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="control-label col-sm-2"></label>
                         <div class="col-sm-10">
-                            <asp:Button ID="btnSearch" runat="server" Text="Login" class="btn btn-lg btn-primary btn-block" OnClick="btnSearch_Click" />
+                            <asp:Button ID="btnSearch" runat="server" Text="Search Now" class="btn btn-lg btn-primary btn-block" OnClick="btnSearch_Click" />
                         </div>
                     </div>
                 </div>
@@ -68,15 +58,6 @@
                         <b>Results</b>
                     </div>
                     <div class="panel-body">
-                        <div class="media">
-                            <a class="media-left" href="#">
-                                <img class="media-object" data-src="..." alt="Generic placeholder image">
-                            </a>
-                            <div class="media-body" style="text-align:left">
-                                <h4 class="media-heading">Item01 <small>sold by <a href=""><b>Bill Gates</b></a> from <a href="">Makassar, Indonesia</a></small></h4>
-                                <small>Rp 0,-</small> Description LOOONG.
-                            </div>
-                        </div>
                         <asp:Repeater ID="rptRequests" runat="server">
                             <ItemTemplate>
                                 <div class="media">

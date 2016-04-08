@@ -11,6 +11,11 @@ namespace Trade24.BO
         SELL, REQUEST
     }
 
+    public enum Order
+    {
+        ASC, DESC
+    }
+
     public class RequestBO
     {
         public int ID { get; set; }

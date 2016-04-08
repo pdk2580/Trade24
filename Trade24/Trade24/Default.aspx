@@ -22,7 +22,7 @@
         <ul class="sidebar-nav">
             <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
             <li class="sidebar-brand">
-                <a href="#top" onclick="$('#menu-close').click();">Start Bootstrap</a>
+                <a href="#top" onclick="$('#menu-close').click();">T24.com</a>
             </li>
             <li>
                 <a href="/Users/Login">Login</a>
@@ -53,8 +53,25 @@
         <div class="text-vertical-center">
             <h1><small>Welcome to </small>T24.com</h1>
             <h3>Explore worldwide food commodity trading opportunities</h3>
-            <br>
-            <a href="#about" class="btn btn-dark btn-lg">Find Out More</a>
+            <div class="container">
+                <form id="form1" runat="server" class="form-horizontal">
+                    <div class="form-group">
+                        <label class="control-label col-sm-2 col-lg-offset-2" for="email">Search:</label>
+                        <div class="col-sm-4">
+                            <asp:TextBox ID="txtKeyword" runat="server" class="form-control" placeholder="Enter Search Keyword"></asp:TextBox>
+                        </div>
+                        <div class="col-sm-1">
+                            <asp:Button ID="btnSearch" runat="server" Text="Search" class="btn btn-sm btn-primary btn-block" OnClick="btnSearch_Click" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2"></label>
+                    </div>
+                </form>
+            </div>
+        <br>
+        <a href="#about" class="btn btn-dark btn-lg">Login / Register</a>
+        <a href="#about" class="btn btn-dark btn-lg">Find Out More</a>
         </div>
     </header>
 
@@ -228,8 +245,10 @@
                 <div class="col-lg-10 col-lg-offset-1 text-center">
                     <h4><strong>Start Bootstrap</strong>
                     </h4>
-                    <p>3481 Melrose Place<br>
-                        Beverly Hills, CA 90210</p>
+                    <p>
+                        3481 Melrose Place<br>
+                        Beverly Hills, CA 90210
+                    </p>
                     <ul class="list-unstyled">
                         <li><i class="fa fa-phone fa-fw"></i>(123) 456-7890</li>
                         <li><i class="fa fa-envelope-o fa-fw"></i><a href="mailto:name@example.com">name@example.com</a>

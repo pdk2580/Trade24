@@ -27,7 +27,7 @@
                     <div class="form-group">
                         <label class="control-label col-sm-2"></label>
                         <div class="col-sm-10"> 
-                            <asp:Button ID="btnLogin" runat="server" Text="Login" class="btn btn-lg btn-primary btn-block" OnClick="btnLogin_Click" />
+                            <asp:Button ID="btnLogin" runat="server" Text="Login" class="btn btn-lg btn-primary btn-block" onClick="btnLogin_Click" />
                         </div>
                     </div>
                 </asp:Panel>

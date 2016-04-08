@@ -48,15 +48,6 @@
             <div class="page-header">
                 <h2>Latest Uploaded Product <small><a href="/Products/AddSell.aspx">Register your selling product</a></small></h2>
             </div>
-            <div class="media">
-                <a class="media-left" href="#">
-                    <img class="media-object" data-src="..." alt="Generic placeholder image">
-                </a>
-                <div class="media-body" style="text-align:left">
-                    <h4 class="media-heading"><a href="">Item01</a> <small>sold by <a href=""><b>Bill Gates</b></a> from <a href="">Makassar, Indonesia</a></small></h4>
-                    <small>Rp 0,-</small> Description LOOONG.
-                </div>
-            </div>
             <asp:Repeater ID="rptSells" runat="server">
                 <ItemTemplate>
                     <div class="media">

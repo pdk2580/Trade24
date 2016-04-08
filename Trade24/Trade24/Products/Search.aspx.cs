@@ -14,19 +14,32 @@ namespace Trade24.Products
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if((Request.QueryString["keyword"] != null) && (Request.QueryString["keyword"].ToString().Length > 0))
+            if (!IsPostBack)
             {
-                txtKeyword.Text = Request.QueryString["keyword"].ToString();
-
-                rptRequests.DataSource = RequestBLL.SearchRequest(RequesType.REQUEST, txtKeyword.Text.Trim(), 0, 0);
-                rptRequests.DataBind();
+                if ((Request.QueryString["keyword"] != null) && (Request.QueryString["keyword"].ToString().Length > 0))
+                {
+                    txtKeyword.Text = Request.QueryString["keyword"].ToString();
+                    rptRequests.DataSource = RequestBLL.SearchRequest(RequesType.REQUEST, txtKeyword.Text.Trim(), 0, Order.ASC);
+                    rptRequests.DataBind();
+                }
             }
         }
 
         protected void btnSearch_Click(object sender, EventArgs e)
         {
-            rptRequests.DataSource = RequestBLL.SearchRequest(RequesType.REQUEST, txtKeyword.Text.Trim(), 0, 0);
-            rptRequests.DataBind();
+            if(txtKeyword.Text.Length > 0)
+            {
+
+                RequesType searchBy = RequesType.REQUEST; //Buyer, 2:Seller
+
+                if (rbLfSeller.Checked)
+                {
+                    searchBy = RequesType.SELL;
+                }
+
+                rptRequests.DataSource = RequestBLL.SearchRequest(searchBy, txtKeyword.Text.Trim(), 0, Order.ASC);
+                rptRequests.DataBind();
+            }
         }
     }
 }

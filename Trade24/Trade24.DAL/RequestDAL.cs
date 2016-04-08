@@ -78,16 +78,16 @@ namespace Trade24.DAL
         /// <param name="requestType">SELL, REQUEST</param>
         /// <param name="keyword"></param>
         /// <param name="searchBy">
-        /// Default is 0 general
-        /// 1: 
+        /// Default is 0 general (all)
+        /// 1: buyer
+        /// 2: Seller
         /// </param>
         /// <param name="order">
-        /// Default is 0 no order
-        /// 1: A-Z 0,9  Ascending
+        /// 1: A-Z 0,9  Ascending (Default)
         /// 2: Descending
         /// </param>
         /// <returns></returns>
-        public IEnumerable<RequestBO> SearchRequest(RequesType requestType, string keyword, int searchBy, int order)
+        public IEnumerable<RequestBO> SearchRequest(RequesType requestType, string keyword, int searchBy, Order order)
         {
             IEnumerable<RequestBO> requests = null;
 
@@ -96,7 +96,7 @@ namespace Trade24.DAL
             string ReqType = "1";
 
             if(requestType == RequesType.SELL)
-                ReqType += "2";
+                ReqType = "2";
 
 
             using (var sqlConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["trade24"].ConnectionString))
