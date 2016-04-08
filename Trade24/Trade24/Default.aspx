@@ -25,6 +25,12 @@
                 <a href="#top" onclick="$('#menu-close').click();">Start Bootstrap</a>
             </li>
             <li>
+                <a href="/Users/Login">Login</a>
+            </li>
+            <li>
+                <a href="/Users/Register">Register</a>
+            </li>
+            <li>
                 <a href="#top" onclick="$('#menu-close').click();">Home</a>
             </li>
             <li>
