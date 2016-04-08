@@ -116,6 +116,7 @@
   <ItemGroup>
     <Content Include="Products\AddRequest.aspx" />
     <Content Include="Products\AddSell.aspx" />
+    <Content Include="Products\Report.aspx" />
     <Content Include="Products\Request.aspx" />
     <Content Include="Products\Search.aspx" />
     <Content Include="Products\Sell.aspx" />
@@ -126,6 +127,7 @@
     <Content Include="Users\Logout.aspx" />
     <Content Include="Users\Profile.aspx" />
     <Content Include="Users\Register.aspx" />
+    <Content Include="Users\Report.aspx" />
     <Content Include="Users\Settings.aspx" />
     <Content Include="Users\EarlyAccess.aspx" />
     <Content Include="Web.config" />
@@ -211,6 +213,13 @@
     <Compile Include="Products\AddSell.aspx.designer.cs">
       <DependentUpon>AddSell.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Products\Report.aspx.cs">
+      <DependentUpon>Report.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Products\Report.aspx.designer.cs">
+      <DependentUpon>Report.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Products\Request.aspx.cs">
       <DependentUpon>Request.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -280,6 +289,13 @@
     </Compile>
     <Compile Include="Users\Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Users\Report.aspx.cs">
+      <DependentUpon>Report.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Users\Report.aspx.designer.cs">
+      <DependentUpon>Report.aspx</DependentUpon>
     </Compile>
     <Compile Include="Users\Settings.aspx.cs">
       <DependentUpon>Settings.aspx</DependentUpon>
