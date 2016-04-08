@@ -67,7 +67,16 @@
     <Content Include="Assets\css\font-awesome.min.css" />
     <Content Include="Assets\css\owl.carousel.css" />
     <Content Include="Assets\css\style.css" />
+    <Content Include="Assets\css\stylish-portfolio.css" />
+    <Content Include="Assets\fonts\fontawesome-webfont.svg" />
+    <Content Include="Assets\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Assets\img\bg.jpg" />
+    <Content Include="Assets\img\callout.jpg" />
     <Content Include="Assets\img\hand_handshake_icon.jpg" />
+    <Content Include="Assets\img\portfolio-1.jpg" />
+    <Content Include="Assets\img\portfolio-2.jpg" />
+    <Content Include="Assets\img\portfolio-3.jpg" />
+    <Content Include="Assets\img\portfolio-4.jpg" />
     <Content Include="Assets\js\bootstrap-hover-dropdown.min.js" />
     <Content Include="Assets\js\bootstrap.min.js" />
     <Content Include="Assets\js\custom.js" />
@@ -87,6 +96,14 @@
     <Content Include="Layouts\Default.Master" />
     <Content Include="Layouts\Default.Public.Master" />
     <Content Include="Layouts\Default.Login.Master" />
+    <Content Include="Assets\fonts\fontawesome-webfont.eot" />
+    <Content Include="Assets\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Assets\fonts\fontawesome-webfont.woff" />
+    <Content Include="Assets\fonts\FontAwesome.otf" />
+    <Content Include="Assets\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Assets\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Assets\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Assets\fonts\glyphicons-halflings-regular.woff2" />
     <None Include="Properties\PublishProfiles\Trade24.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -300,7 +317,9 @@
       <Name>Trade24.Utilities</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Assets\font-awesome\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
