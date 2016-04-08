@@ -25,19 +25,19 @@
                 <a href="#top" onclick="$('#menu-close').click();">Start Bootstrap</a>
             </li>
             <li>
-                <a href="#top" onclick="$('#menu-close').click();">>Home</a>
+                <a href="#top" onclick="$('#menu-close').click();">Home</a>
             </li>
             <li>
-                <a href="#about" onclick="$('#menu-close').click();">>About</a>
+                <a href="#about" onclick="$('#menu-close').click();">About</a>
             </li>
             <li>
-                <a href="#services" onclick="$('#menu-close').click();">>Services</a>
+                <a href="#services" onclick="$('#menu-close').click();">Services</a>
             </li>
             <li>
-                <a href="#portfolio" onclick="$('#menu-close').click();">>Portfolio</a>
+                <a href="#portfolio" onclick="$('#menu-close').click();">Portfolio</a>
             </li>
             <li>
-                <a href="#contact" onclick="$('#menu-close').click();">>Contact</a>
+                <a href="#contact" onclick="$('#menu-close').click();">Contact</a>
             </li>
         </ul>
     </nav>
@@ -249,7 +249,7 @@
     </footer>
 
     <!-- jQuery -->
-    <script src="Assets/js/jquery-1.11.1.js"></script>
+    <script src="Assets/js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="Assets/js/bootstrap.min.js"></script>

@@ -82,6 +82,7 @@
     <Content Include="Assets\js\custom.js" />
     <Content Include="Assets\js\jquery-1.11.1.min.js" />
     <Content Include="Assets\js\jquery-migrate-1.2.1.min.js" />
+    <Content Include="Assets\js\jquery.js" />
     <Content Include="Assets\js\jquery.magnific-popup.min.js" />
     <Content Include="Assets\js\owl.carousel.min.js" />
     <Content Include="Contacts\RequestReceived.aspx" />
