@@ -5,6 +5,7 @@ DROP TABLE Cities
 DROP TABLE Countries
 DROP TABLE ItemCategories
 DROP TABLE Messages
+DROP TABLE UploadedFiles
 
 CREATE TABLE Countries(
 	ID INT IDENTITY,
@@ -127,8 +128,6 @@ CREATE TABLE UploadedFiles(
 	ID	INTEGER IDENTITY,
 	Name VARCHAR(250),
 	FileType VARCHAR(250),
-	PhysicalFileName CHAR(1),
-	ServerLoc VARCHAR(250) DEFAULT '',
 	RequestID INT,
 
 	Created_at datetime NOT NULL DEFAULT GETDATE(),
