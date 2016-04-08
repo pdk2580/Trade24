@@ -42,6 +42,11 @@
                         <asp:Label ID="txtPd" runat="server" Text="Label"></asp:Label>
                     </div>
                 </div>
+                <div class="form-group">
+                    <div class="col-sm-4">
+                        <asp:HyperLink ID="hlinkReport" runat="server" CssClass="btn btn-primary btn-block"><i class="glyphicon glyphicon-envelope"></i> Report</asp:HyperLink>
+                    </div>
+                </div>
             </div>
         </div>
         <div id="dvAllRequest" visible="false" runat="server">
