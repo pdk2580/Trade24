@@ -14,8 +14,37 @@ namespace Trade24
         protected void Application_Start(object sender, EventArgs e)
         {
             RouteTable.Routes.MapPageRoute("ProductRequests",
-                "Products/Requests/{id}",
-                "~/Products/Request.aspx");
+                "Products/Requests/{id}", "~/Products/Request.aspx");
+
+            RouteTable.Routes.MapPageRoute("ProductAddRequests",
+                "Products/Requests/Add", "~/Products/AddRequest.aspx");
+
+            RouteTable.Routes.MapPageRoute("ProductSell",
+                "Products/Sells/{id}", "~/Products/Sell.aspx");
+
+            RouteTable.Routes.MapPageRoute("ProductAddSell",
+                "Products/Sells/Add", "~/Products/AddSell.aspx");
+
+            RouteTable.Routes.MapPageRoute("ProductSearch",
+                "Products/Search", "~/Products/Search.aspx");
+
+            RouteTable.Routes.MapPageRoute("LoginLink",
+                "Users/Login", "~/Users/Login.aspx");
+
+            RouteTable.Routes.MapPageRoute("RegisterLink",
+                "Users/Register", "~/Users/Register.aspx");
+
+            RouteTable.Routes.MapPageRoute("LogoutLink",
+                "Users/Logout", "~/Users/Logout.aspx");
+
+            RouteTable.Routes.MapPageRoute("SettingLink",
+                "Users/Setting", "~/Users/Settings.aspx");
+
+            RouteTable.Routes.MapPageRoute("MessagesLink",
+                "Messages", "~/Messages/Conversation.aspx");
+
+            RouteTable.Routes.MapPageRoute("ProfileLink",
+                "Users/Profile/{id}", "~/Users/Profile.aspx");
         }
 
         protected void Session_Start(object sender, EventArgs e)
