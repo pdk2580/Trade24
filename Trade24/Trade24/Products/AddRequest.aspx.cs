@@ -40,12 +40,36 @@ namespace Trade24.Products
                     throw new Exception("Wrong conversion of data");
                 }
                 int i = RequestBLL.CreateRequest(req);
+
+                if (!string.IsNullOrEmpty(imgs1.FileName))
+                {
+                    SaveUploadedImage(i);
+                }
+
                 Response.Redirect("~/Products/Request.aspx?id="+i.ToString());
             }
             catch (Exception ex)
             {
-                LogManager.Log(LogType.WARNING, ex.Message);
+                LogManager.Log(LogType.ERROR, ex.ToString());
             }
+        }
+
+        protected void SaveUploadedImage(int requestId)
+        {
+            
+            string subPath = "Upload\\" + AccountBLL.GetLoginAccount().ID.ToString();
+            
+            System.IO.Directory.CreateDirectory(HttpRuntime.AppDomainAppPath + subPath);
+            imgs1.SaveAs(HttpRuntime.AppDomainAppPath + subPath + "\\" + imgs1.FileName);
+
+            UploadedFileBO uploadedFile = new UploadedFileBO() {
+                Name = imgs1.FileName,
+                FileType = FileType.IMAGE.ToString(),
+                RequestId = requestId
+            };
+
+
+            UploadedFileBLL.CreateUploadedFile(uploadedFile);
         }
     }
 }
