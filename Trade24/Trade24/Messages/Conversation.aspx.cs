@@ -60,6 +60,8 @@ namespace Trade24.Messages
             catch (Exception ex)
             {
                 LogManager.Log(LogType.ERROR, ex.ToString());
+                rptConversation.DataSource = MessageBLL.GetLastConversationPartners(AccountBLL.GetLoginAccount().ID);
+                rptConversation.DataBind();
             }
         }
 
@@ -78,6 +80,11 @@ namespace Trade24.Messages
                     msg.AttachmentFileName = "";
 
                     MessageBLL.CreateMessage(msg);
+
+                    rptConversation.DataSource = MessageBLL.GetLastConversationPartners(AccountBLL.GetLoginAccount().ID);
+                    rptConversation.DataBind();
+
+                    txtBox.Text = "";
                 }
             }
             catch (Exception ex)
