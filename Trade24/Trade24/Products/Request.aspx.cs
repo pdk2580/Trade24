@@ -9,7 +9,7 @@ using Trade24.BO;
 using Trade24.BLL;
 using Trade24.Utilities.Logger;
 
-namespace Trade24.Product
+namespace Trade24.Products
 {
     public partial class Request : System.Web.UI.Page
     {

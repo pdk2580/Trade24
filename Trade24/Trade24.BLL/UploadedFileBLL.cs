@@ -15,5 +15,24 @@ namespace Trade24.BLL
         {
             return new UploadedFileDAL().CreateUploadedFile(uploadedFile);
         }
+
+        public static IEnumerable<UploadedFileBO> GetUploadedFile(int requestId)
+        {
+            return new UploadedFileDAL().GetUploadedFile(requestId);
+        }
+
+        public static string GetUploadedFilePath(int requestId)
+        {
+            string path = string.Empty;
+
+            if (GetUploadedFile(requestId).Count() != 0)
+            { 
+                UploadedFileBO uploadedFile = GetUploadedFile(requestId).First();
+                RequestBO request = RequestBLL.GetRequest(uploadedFile.RequestID);
+                path = "/Upload/" + request.UploaderID.ToString() + "/" + uploadedFile.Name;
+            }
+
+            return path;
+        }
     }
 }

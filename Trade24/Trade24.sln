@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trade24", "Trade24\Trade24.csproj", "{DA4068C1-69B8-4277-BD6B-2C514AFF786A}"
 EndProject
@@ -20,18 +20,24 @@ Global
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{DA4068C1-69B8-4277-BD6B-2C514AFF786A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA4068C1-69B8-4277-BD6B-2C514AFF786A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA4068C1-69B8-4277-BD6B-2C514AFF786A}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
 		{DA4068C1-69B8-4277-BD6B-2C514AFF786A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DA4068C1-69B8-4277-BD6B-2C514AFF786A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7F6FFD77-0E2F-4B06-AB99-DB4DDE92C766}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F6FFD77-0E2F-4B06-AB99-DB4DDE92C766}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7F6FFD77-0E2F-4B06-AB99-DB4DDE92C766}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7F6FFD77-0E2F-4B06-AB99-DB4DDE92C766}.Release|Any CPU.Build.0 = Release|Any CPU
 		{54D58BD6-FF38-4306-A28B-D12FD708406A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54D58BD6-FF38-4306-A28B-D12FD708406A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{54D58BD6-FF38-4306-A28B-D12FD708406A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{54D58BD6-FF38-4306-A28B-D12FD708406A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1D2A188D-19AB-4EEA-A4CB-3BF65427F40A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D2A188D-19AB-4EEA-A4CB-3BF65427F40A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1D2A188D-19AB-4EEA-A4CB-3BF65427F40A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1D2A188D-19AB-4EEA-A4CB-3BF65427F40A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{938C1571-D105-49E8-88BE-5F53C149162A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{938C1571-D105-49E8-88BE-5F53C149162A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{938C1571-D105-49E8-88BE-5F53C149162A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{938C1571-D105-49E8-88BE-5F53C149162A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection

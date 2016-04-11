@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/Layouts/Default.Public.Master" AutoEventWireup="true" CodeBehind="Request.aspx.cs" Inherits="Trade24.Product.Request" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/Layouts/Default.Public.Master" AutoEventWireup="true" CodeBehind="Request.aspx.cs" Inherits="Trade24.Products.Request" %>
 <%@ Import Namespace="Trade24.BO" %>
 
 <asp:Content ID="cHead" ContentPlaceHolderID="head" runat="server">
@@ -57,7 +57,7 @@
                 <ItemTemplate>
                     <div class="media">
                         <a class="media-left" href="#">
-                            <img class="media-object" data-src="..." alt="Generic placeholder image">
+                            <img class="media-object" src="<%# Trade24.BLL.UploadedFileBLL.GetUploadedFilePath(((RequestBO)Container.DataItem).ID) %>" alt="Generic placeholder image">
                         </a>
                         <div class="media-body" style="text-align:left">
                             <h4 class="media-heading"><%# ((RequestBO)Container.DataItem).Name %> <small>sold by <a href=""><b>Bill Gates</b></a> from <a href="">Makassar, Indonesia</a></small></h4>

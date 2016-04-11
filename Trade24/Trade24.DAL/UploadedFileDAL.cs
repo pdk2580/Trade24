@@ -25,5 +25,20 @@ namespace Trade24.DAL
                 //sqlConnection.Execute(query, request);
             }
         }
+
+        public IEnumerable<UploadedFileBO> GetUploadedFile(int requestId)
+        {
+            IEnumerable<UploadedFileBO> files = null;
+
+            using (var sqlConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["trade24"].ConnectionString))
+            {
+                sqlConnection.Open();
+
+                string query = "SELECT * FROM UploadedFiles WHERE RequestID = @RequestID";
+                files = sqlConnection.Query<UploadedFileBO>(query, new { RequestID = requestId });
+            }
+
+            return files;
+        }
     }
 }
