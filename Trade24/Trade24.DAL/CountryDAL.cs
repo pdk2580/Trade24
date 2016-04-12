@@ -27,6 +27,21 @@ namespace Trade24.DAL
             return countries;
         }
 
+        public CountryBO GetCountry(int countryId)
+        {
+            IEnumerable<CountryBO> countries;
+
+            using (var sqlConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["trade24"].ConnectionString))
+            {
+                sqlConnection.Open();
+
+                string query = "SELECT * FROM Countries WHERE ID = @Id";
+                countries = sqlConnection.Query<CountryBO>(query, new { Id = countryId });
+            }
+
+            return countries.Count() > 0 ? countries.First() : null;
+        }
+
         public void CreateCountry(CountryBO country)
         {
             using (var sqlConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["trade24"].ConnectionString))

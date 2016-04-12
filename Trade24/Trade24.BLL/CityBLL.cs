@@ -19,9 +19,15 @@ namespace Trade24.BLL
         {
             return !string.IsNullOrEmpty(countryISO2) ? new CityDAL().GetCities(countryISO2) : null;
         }
+
         public static IEnumerable<CityBO> GetCities(int countryID)
         {
             return ((countryID)>0) ? new CityDAL().GetCities(countryID) : null;
+        }
+
+        public static string GetCityName(int cityId)
+        {
+            return new CityDAL().GetCity(cityId).Name;
         }
     }
 }
