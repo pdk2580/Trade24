@@ -6,11 +6,6 @@ using System.Threading.Tasks;
 
 namespace Trade24.BO
 {
-    public enum FileType
-    {
-        IMAGE
-    }
-
     public class UploadedFileBO
     {
         public int ID { get; set; }
@@ -19,14 +14,6 @@ namespace Trade24.BO
         public int RequestID { get; set; }
 
         public UploadedFileBO() { }
-
-        public UploadedFileBO(string name, FileType fileType, int requestId)
-        {
-            this.Name = name;
-            if (fileType.Equals(Trade24.BO.FileType.IMAGE))
-                this.FileType = "1";
-            this.RequestID = requestId;
-        }
 
         public UploadedFileBO(int id, string name, string fileType, int requestId)
         { 

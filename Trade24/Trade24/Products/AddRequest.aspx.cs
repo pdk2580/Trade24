@@ -64,7 +64,7 @@ namespace Trade24.Products
 
             UploadedFileBO uploadedFile = new UploadedFileBO() {
                 Name = imgs1.FileName,
-                FileType = FileType.IMAGE.ToString(),
+                FileType = "1",
                 RequestID = requestId
             };
 
