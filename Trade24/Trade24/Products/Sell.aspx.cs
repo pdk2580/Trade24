@@ -41,8 +41,8 @@ namespace Trade24.Product
             dvSellDetail.Visible = true;
             dvSellList.Visible = false;
 
-            RequestBO req = RequestBLL.GetRequest(requestId);
-            if (req.RequestType == "2")
+            RequestBO req = RequestBLL.GetRequest(requestId, RequesType.SELL);
+            if (req != null)
             {
                 txtPn.Text = req.Name;
                 txtP.Text = req.MinPrice.ToString();

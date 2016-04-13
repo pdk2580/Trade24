@@ -8,7 +8,7 @@ namespace Trade24.BO
 {
     public enum RequesType
     {
-        SELL, REQUEST
+        SELL = 2, REQUEST = 1
     }
 
     public enum Order

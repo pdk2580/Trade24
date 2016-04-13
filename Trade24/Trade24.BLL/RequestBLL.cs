@@ -16,9 +16,9 @@ namespace Trade24.BLL
             return new RequestDAL().GetAllRequests();
         }
 
-        public static RequestBO GetRequest(int requestId)
+        public static RequestBO GetRequest(int requestId, RequesType requestType)
         {
-            return new RequestDAL().GetRequest(requestId);
+            return new RequestDAL().GetRequest(requestId, requestType);
         }
 
         public static IEnumerable<RequestBO> GetRequests(int categoryId)
