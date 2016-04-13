@@ -117,7 +117,7 @@ namespace Trade24.DAL
             {
                 sqlConnection.Open();
 
-                string query = "INSERT Request (RequestType, UploaderID, ItemCategoryID, MinQty, MinPrice, Description) VALUES (@RequestType, @UploaderID, @ItemCategoryID, @MinQty, @MinPrice, @Description); ";
+                string query = "INSERT Request (Name, RequestType, UploaderID, ItemCategoryID, MinQty, MinPrice, Description) VALUES (@Name, @RequestType, @UploaderID, @ItemCategoryID, @MinQty, @MinPrice, @Description); ";
                 query += "SELECT CAST(SCOPE_IDENTITY() as int)";
 
                 return sqlConnection.Query<int>(query, request).Single();

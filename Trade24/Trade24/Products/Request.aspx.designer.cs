@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Trade24.Product {
+namespace Trade24.Products {
     
     
     public partial class Request {

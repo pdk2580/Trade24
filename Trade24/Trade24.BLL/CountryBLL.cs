@@ -14,5 +14,10 @@ namespace Trade24.BLL
         {
             return new CountryDAL().GetAllCountries();
         }
+
+        public static string GetCountryName(int countryId)
+        {
+            return new CountryDAL().GetCountry(countryId).Name;
+        }
     }
 }

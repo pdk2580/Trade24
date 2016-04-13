@@ -93,6 +93,16 @@ namespace Trade24.BLL
             return account;
         }
 
+        public static string GetCityWithCountry(int accountId)
+        {
+            string cityCountryName = string.Empty;
+            AccountBO account = GetAccount(accountId);
+
+            cityCountryName = CityBLL.GetCityName((int)account.CityID) + ", " + CountryBLL.GetCountryName((int)account.CountryID);
+
+            return cityCountryName;
+        }
+
         public static bool CheckLogin()
         {
             bool isLoggedIn = false;

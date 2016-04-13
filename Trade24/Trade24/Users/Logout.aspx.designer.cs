@@ -7,10 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Trade24 {
+namespace Trade24.Users {
     
     
-    public partial class Default {
+    public partial class Logout {
         
         /// <summary>
         /// form4 control.
