@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Trade24.BO
 {
-    public enum RequesType
+    public enum RequestType
     {
         SELL = 2, REQUEST = 1
     }

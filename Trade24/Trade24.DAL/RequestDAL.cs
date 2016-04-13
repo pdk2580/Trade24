@@ -27,7 +27,7 @@ namespace Trade24.DAL
             return requests;
         }
 
-        public RequestBO GetRequest(int requestId, RequesType requestType)
+        public RequestBO GetRequest(int requestId, RequestType requestType)
         {
             IEnumerable<RequestBO> requests = null;
 
@@ -87,7 +87,7 @@ namespace Trade24.DAL
         /// 2: Descending
         /// </param>
         /// <returns></returns>
-        public IEnumerable<RequestBO> SearchRequest(RequesType requestType, string keyword, int searchBy, Order order)
+        public IEnumerable<RequestBO> SearchRequest(RequestType requestType, string keyword, int searchBy, Order order)
         {
             IEnumerable<RequestBO> requests = null;
 
@@ -95,7 +95,7 @@ namespace Trade24.DAL
 
             string ReqType = "1";
 
-            if(requestType == RequesType.SELL)
+            if(requestType == RequestType.SELL)
                 ReqType = "2";
 
 

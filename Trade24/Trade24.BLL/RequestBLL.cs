@@ -16,7 +16,7 @@ namespace Trade24.BLL
             return new RequestDAL().GetAllRequests();
         }
 
-        public static RequestBO GetRequest(int requestId, RequesType requestType)
+        public static RequestBO GetRequest(int requestId, RequestType requestType)
         {
             return new RequestDAL().GetRequest(requestId, requestType);
         }
@@ -47,7 +47,7 @@ namespace Trade24.BLL
         }
 
 
-        public static IEnumerable<RequestBO> SearchRequest(RequesType requestType, string keyword, int searchBy = 0, Order order = Order.ASC)
+        public static IEnumerable<RequestBO> SearchRequest(RequestType requestType, string keyword, int searchBy = 0, Order order = Order.ASC)
         {
             return new RequestDAL().SearchRequest(requestType, keyword, searchBy, order);
         }

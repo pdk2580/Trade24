@@ -19,7 +19,7 @@ namespace Trade24.Products
                 if ((Request.QueryString["keyword"] != null) && (Request.QueryString["keyword"].ToString().Length > 0))
                 {
                     txtKeyword.Text = Request.QueryString["keyword"].ToString();
-                    rptRequests.DataSource = RequestBLL.SearchRequest(RequesType.REQUEST, txtKeyword.Text.Trim(), 0, Order.ASC);
+                    rptRequests.DataSource = RequestBLL.SearchRequest(RequestType.REQUEST, txtKeyword.Text.Trim(), 0, Order.ASC);
                     rptRequests.DataBind();
                 }
             }
@@ -30,11 +30,11 @@ namespace Trade24.Products
             if(txtKeyword.Text.Length > 0)
             {
 
-                RequesType searchBy = RequesType.REQUEST; //Buyer, 2:Seller
+                RequestType searchBy = RequestType.REQUEST; //Buyer, 2:Seller
 
                 if (rbLfSeller.Checked)
                 {
-                    searchBy = RequesType.SELL;
+                    searchBy = RequestType.SELL;
                 }
 
                 rptRequests.DataSource = RequestBLL.SearchRequest(searchBy, txtKeyword.Text.Trim(), 0, Order.ASC);

@@ -52,7 +52,7 @@ namespace Trade24.Products
             dvRequestDetail.Visible = true;
             dvAllRequest.Visible = false;
 
-            RequestBO req = RequestBLL.GetRequest(requestId, RequesType.REQUEST);
+            RequestBO req = RequestBLL.GetRequest(requestId, RequestType.REQUEST);
             if (req != null)
             {
                 txtPn.Text = req.Name;
