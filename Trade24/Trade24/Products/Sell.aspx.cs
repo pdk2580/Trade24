@@ -45,8 +45,8 @@ namespace Trade24.Product
             if (req != null)
             {
                 txtPn.Text = req.Name;
-                txtP.Text = req.MinPrice.ToString();
-                txtQty.Text = req.MinQty.ToString();
+                txtP.Text = ((double)req.MinPrice).ToString("N2");
+                txtQty.Text = ((double)req.MinQty).ToString("N2");
                 txtPd.Text = req.Description;
                 txtPc.Text = req.ItemCategoryID.ToString();
             }

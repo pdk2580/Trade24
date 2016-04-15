@@ -9,43 +9,78 @@
 <asp:Content ID="cMain" ContentPlaceHolderID="main" runat="server">
     <div class="container main content" style="padding-top:25px;">
         <div id="dvRequestDetail" class="row" visible="false" runat="server">
-            <div class="col-lg-5">
-                <img id="pImg" src="" style="max-width:480px;" />
-            </div>
-            <div class="col-lg-5">
-                <div class="form-group">
-                    <label for="inputEmail3" class="col-sm-4 control-label">Product Name</label>
-                    <div class="col-sm-8">
-                        <asp:Label ID="txtPn" runat="server" Text="Label"></asp:Label>
+            <div class="col-lg-12">
+                <div class="col-lg-5">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <img src="/Assets/img/portfolio-1.jpg" style="width:100%;display:inline-block;" />
+                                </div>
+                            </div><br />
+                            <div class="row">
+                                <div class="col-lg-3">
+                                    <img src="/Assets/img/portfolio-1.jpg" style="width:100%;display:inline-block;" />
+                                </div>
+                                <div class="col-lg-3">
+                                    <img src="/Assets/img/portfolio-1.jpg" style="width:100%;display:inline-block;" />
+                                </div>
+                                <div class="col-lg-3">
+                                    <img src="/Assets/img/portfolio-1.jpg" style="width:100%;display:inline-block;" />
+                                </div>
+                                <div class="col-lg-3">
+                                    <img src="/Assets/img/portfolio-1.jpg" style="width:100%;display:inline-block;" />
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
                 </div>
-                <div class="form-group">
-                    <label for="inputEmail3" class="col-sm-4 control-label">Product Category</label>
-                    <div class="col-sm-8">
-                        <asp:Label ID="txtPc" runat="server" Text="Label"></asp:Label>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="inputEmail3" class="col-sm-4 control-label">Min Qty Order</label>
-                    <div class="col-sm-8">
-                        <asp:Label ID="txtQty" runat="server" Text="Label"></asp:Label>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="inputEmail3" class="col-sm-4 control-label">Price</label>
-                    <div class="col-sm-8">
-                        <asp:Label ID="txtP" runat="server" Text="Label"></asp:Label>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="inputEmail3" class="col-sm-4 control-label">Product Description</label>
-                    <div class="col-sm-8">
-                        <asp:Label ID="txtPd" runat="server" Text="Label"></asp:Label>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-sm-4">
-                        <asp:HyperLink ID="hlinkReport" runat="server" CssClass="btn btn-primary btn-block"><i class="glyphicon glyphicon-envelope"></i> Report</asp:HyperLink>
+                <div class="col-lg-7">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <h2><asp:Label ID="txtPn" runat="server" Text="Label"></asp:Label></h2>
+                            <span class="alert alert-warning" style="margin:0;padding:3.8px;"><b>Requested</b></span> by <a href="AddRequest.aspx">Bill Gates</a> from <a href="AddRequest.aspx">Makassar, Indonesia</a> 
+                        </div>
+                        <div class="panel-body">
+                            <b>Product Info</b>
+                        </div>
+                        <div class="panel-body">                          
+                            <div class="panel panel-default" style="margin-top:-15px;">
+                                <div class="panel-heading">
+                                    <b>Product Info</b>
+                                </div>
+                                <div class="panel-body">
+                                    <table class="table" style="margin:0">
+                                        <tbody>
+                                            <tr>
+                                                <td style="border:none">Min Qty Order</td>
+                                                <td style="border:none"><asp:Label ID="txtQty" runat="server" Text="Label"></asp:Label> PC</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Price</td>
+                                                <td>SGD <asp:Label ID="txtP" runat="server" Text="Label"></asp:Label></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Product Description</td>
+                                                <td><asp:Label ID="txtPd" runat="server" Text="Label"></asp:Label></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <asp:HyperLink ID="hlinkReport" runat="server" CssClass="btn btn-danger btn-block"><i class="glyphicon glyphicon-flag"></i> Report</asp:HyperLink>
+                                </div>
+                                <div class="col-lg-4">
+                                    <asp:HyperLink ID="HyperLink1" runat="server" CssClass="btn btn-success btn-block"><i class="glyphicon glyphicon-book"></i> Save to list</asp:HyperLink>
+                                </div>
+                                <div class="col-lg-4">
+                                    <asp:HyperLink ID="HyperLink2" runat="server" CssClass="btn btn-primary btn-block"><i class="glyphicon glyphicon-envelope"></i> Message Seller</asp:HyperLink>
+                                </div>
+                            </div>                            
+                        </div>
                     </div>
                 </div>
             </div>

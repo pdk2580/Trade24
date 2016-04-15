@@ -26,6 +26,11 @@ namespace Trade24.BLL
             return new RequestDAL().GetRequests(categoryId);
         }
 
+        internal static RequestBO GetRequest(int requestID)
+        {
+            return new RequestDAL().GetRequest(requestID);
+        }
+
         public static IEnumerable<RequestBO> GetRequestsByUploader(int uploaderId)
         {
             return new RequestDAL().GetRequests_(uploaderId);

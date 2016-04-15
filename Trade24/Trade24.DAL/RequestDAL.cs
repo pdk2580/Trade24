@@ -27,7 +27,7 @@ namespace Trade24.DAL
             return requests;
         }
 
-        public RequestBO GetRequest(int requestId, RequestType requestType)
+        public RequestBO GetRequest(int requestId, RequestType? requestType = null)
         {
             IEnumerable<RequestBO> requests = null;
 
@@ -36,7 +36,17 @@ namespace Trade24.DAL
                 sqlConnection.Open();
 
                 string query = "SELECT * FROM Request WHERE ID = @ID AND RequestType = @requestType";
-                requests = sqlConnection.Query<RequestBO>(query, new { ID = requestId, requestType = ((int)requestType) });
+
+                if (requestType != null)
+                {
+                    requests = sqlConnection.Query<RequestBO>(query, new { ID = requestId, requestType = ((int)requestType) });
+                }
+                else
+                {
+                    query = "SELECT * FROM Request WHERE ID = @ID";
+                    requests = sqlConnection.Query<RequestBO>(query, new { ID = requestId });
+                }
+
             }
 
             return requests.Count() > 0 ? requests.First() : null;
