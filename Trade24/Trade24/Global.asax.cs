@@ -54,7 +54,18 @@ namespace Trade24
 
         protected void Application_BeginRequest(object sender, EventArgs e)
         {
-
+            // Code that runs on application startup                                                            
+            HttpCookie cookie = HttpContext.Current.Request.Cookies["CultureInfo"];
+            if (cookie != null && cookie.Value != null)
+            {
+                System.Threading.Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(cookie.Value);
+                System.Threading.Thread.CurrentThread.CurrentCulture = new System.Globalization.CultureInfo(cookie.Value);
+            }
+            else
+            {
+                System.Threading.Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("en");
+                System.Threading.Thread.CurrentThread.CurrentCulture = new System.Globalization.CultureInfo("en");
+            }
         }
 
         protected void Application_AuthenticateRequest(object sender, EventArgs e)

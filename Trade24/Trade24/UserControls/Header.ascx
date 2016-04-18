@@ -13,9 +13,9 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li id="navHome" runat="server"><a href="/default.aspx">Home</a></li>
-                <li id="navBuy" runat="server"><a href="/products/request.aspx">Request</a></li>
-                <li id="navSell" runat="server"><a href="/products/sell.aspx">Sell</a></li>
+                <li id="navHome" runat="server"><a href="/Default.aspx"><asp:Literal ID="Literal7" runat="server" Text="<% $Resources:Resources, Home %>" /></a></li>
+                <li id="navBuy" runat="server"><a href="/Products/Request.aspx"><asp:Literal ID="Literal5" runat="server" Text="<% $Resources:Resources, Request %>" /></a></li>
+                <li id="navSell" runat="server"><a href="/Products/Sell.aspx"><asp:Literal ID="Literal6" runat="server" Text="<% $Resources:Resources, Sell %>" /></a></li>
                 <%--<li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
                     <ul class="dropdown-menu">
@@ -31,7 +31,7 @@
             </ul>
             <div class="navbar-form navbar-left" role="search">
                 <div class="form-group">
-                    <asp:TextBox ID="txtSearch" placeholder="Search Keyword" runat="server" Cssclass="form-control"></asp:TextBox>
+                    <asp:TextBox ID="txtSearch" placeholder="<% $Resources:Resources, SearchKeyword %>" runat="server" Cssclass="form-control"></asp:TextBox>
                 </div>
                 <asp:Button ID="btnSearch" runat="server" Text="" CssClass="hidden" OnClick="btnSearch_Click" />
                 <button class="btn btn-default" id="ui_btn_s"><i class="glyphicon glyphicon-search"></i></button>
@@ -44,8 +44,8 @@
             </div>
             
             <ul id="publicAccountNavbar" class="nav navbar-nav navbar-right" visible="false" runat="server">
-                <li><a href="~/Users/Login.aspx" runat="server">Login</a></li>
-                <li><a href="~/Users/Register.aspx" runat="server">Register</a></li>
+                <li><a href="~/Users/Login.aspx" runat="server"><asp:Literal ID="Literal1" runat="server" Text="<% $Resources:Resources, Login %>" /></a></li>
+                <li><a href="~/Users/Register.aspx" runat="server"><asp:Literal ID="Literal2" runat="server" Text="<% $Resources:Resources, Register %>" /></a></li>
             </ul>
             <ul id="loginAccountNavbar" class="nav navbar-nav navbar-right" visible="false" runat="server">
                 <%--<li><asp:LinkButton ID="lblUserName" runat="server" OnClick="ViewProfile"></asp:LinkButton></li>--%>
@@ -57,8 +57,6 @@
                         <li><a href="#">Link3</a></li>
                         <li role="separator" class="divider"></li>
                         <li class="dropdown-header">Actions</li>
-                        <li><a href="/products/addrequest.aspx">Request product</a></li>
-                        <li><a href="/products/addsell.aspx">Sell product</a></li>
                     </ul>
                 </li>
                 <li><asp:LinkButton ID="lblLogout" runat="server" OnClick="Logout">Logout</asp:LinkButton></li>

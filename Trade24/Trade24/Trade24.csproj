@@ -241,6 +241,11 @@
     <Compile Include="Products\Sell.aspx.designer.cs">
       <DependentUpon>Sell.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Public\Feedback.aspx.cs">
       <DependentUpon>Feedback.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -336,6 +341,16 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Assets\font-awesome\" />
+    <Folder Include="LanguageResources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="App_GlobalResources\Resources.id.resx" />
+    <EmbeddedResource Include="App_GlobalResources\Resources.kr.resx" />
+    <EmbeddedResource Include="App_GlobalResources\Resources.resx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

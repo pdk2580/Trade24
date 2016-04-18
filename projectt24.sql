@@ -1,5 +1,5 @@
-DROP TABLE Contacts
-DROP TABLE Accounts
+DROP TABLE IF NOT EXISTS Contacts
+DROP TABLE IF NOT EXISTS Accounts
 DROP TABLE Request
 DROP TABLE Cities
 DROP TABLE Countries
@@ -30,6 +30,16 @@ CREATE TABLE Cities(
 	Timezone VARCHAR(15) NOT NULL,
 	Lat FLOAT NOT NULL,
 	Lon FLOAT NOT NULL,
+	
+	PRIMARY KEY (ID),
+	FOREIGN KEY (CountryID) REFERENCES Countries(ID)
+);
+
+CREATE TABLE Currencies(
+	ID INT IDENTITY,
+	Name VARCHAR(150) NOT NULL,
+	ISO3 VARCHAR(5) NOT NULL,
+	CountryID INT NOT NULL,
 	
 	PRIMARY KEY (ID),
 	FOREIGN KEY (CountryID) REFERENCES Countries(ID)
@@ -114,12 +124,51 @@ CREATE TABLE Request(
 	UploaderID INTEGER,
 	ItemCategoryID INT,
 	MinQty FLOAT,
+	Unit VARCHAR(5),
+	Currency VARCHAR(50),
 	MinPrice FLOAT,
 	Description TEXT,
 
 	Created_at datetime NOT NULL DEFAULT GETDATE(),
 
 	PRIMARY KEY(ID),
+	FOREIGN KEY (ItemCategoryID) REFERENCES ItemCategories(ID)
+);
+
+
+CREATE TABLE AccountViewList(
+	ID	INTEGER IDENTITY,
+	UserID INTEGER,
+	VisitedID INTEGER,
+
+	Created_at datetime NOT NULL DEFAULT GETDATE(),
+
+	PRIMARY KEY(ID),
+	FOREIGN KEY (UserID) REFERENCES Accounts(ID),
+	FOREIGN KEY (VisitedID) REFERENCES Accounts(ID)
+);
+
+CREATE TABLE ItemViewList(
+	ID	INTEGER IDENTITY,
+	UserID INTEGER,
+	ItemCategoryID INT,
+
+	Created_at datetime NOT NULL DEFAULT GETDATE(),
+
+	PRIMARY KEY(ID),
+	FOREIGN KEY (UserID) REFERENCES Accounts(ID),
+	FOREIGN KEY (ItemCategoryID) REFERENCES ItemCategories(ID)
+);
+
+CREATE TABLE InterestedList(
+	ID	INTEGER IDENTITY,
+	UserID INTEGER,
+	ItemCategoryID INT,
+
+	Created_at datetime NOT NULL DEFAULT GETDATE(),
+
+	PRIMARY KEY(ID),
+	FOREIGN KEY (UserID) REFERENCES Accounts(ID),
 	FOREIGN KEY (ItemCategoryID) REFERENCES ItemCategories(ID)
 );
 

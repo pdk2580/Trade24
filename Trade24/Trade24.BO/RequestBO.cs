@@ -24,6 +24,8 @@ namespace Trade24.BO
         public int? UploaderID { get; set; }
         public int? ItemCategoryID { get; set; }
         public float? MinQty { get; set; }
+        public string Unit { get; set; }
+        public string Currency { get; set; }
         public float? MinPrice { get; set; }
         public string Description { get; set; }
         public DateTime Created_at { get; set; }

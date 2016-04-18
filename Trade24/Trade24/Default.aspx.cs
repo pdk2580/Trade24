@@ -7,11 +7,14 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using Trade24.BO;
 using Trade24.BLL;
+using System.Threading;
+using System.Globalization;
 
 namespace Trade24
 {
     public partial class Default : System.Web.UI.Page
     {
+
         protected void Page_Init(object sender, EventArgs e)
         {
             if (AccountBLL.CheckLogin())

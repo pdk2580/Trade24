@@ -1,0 +1,300 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AboutUs" xml:space="preserve">
+    <value>Mengenai Kami</value>
+    <comment>AboutUs</comment>
+  </data>
+  <data name="BusinessRelation" xml:space="preserve">
+    <value>Hubungan Bisnis</value>
+    <comment>BusinessRelation</comment>
+  </data>
+  <data name="by" xml:space="preserve">
+    <value>oleh</value>
+    <comment>by</comment>
+  </data>
+  <data name="City" xml:space="preserve">
+    <value>Kota</value>
+    <comment>City</comment>
+  </data>
+  <data name="Confirm" xml:space="preserve">
+    <value>Masukkan</value>
+    <comment>Confirm</comment>
+  </data>
+  <data name="Country" xml:space="preserve">
+    <value>Negara</value>
+    <comment>Country</comment>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>Email</value>
+    <comment>Email</comment>
+  </data>
+  <data name="Enter" xml:space="preserve">
+    <value>Masukkan</value>
+    <comment>Enter</comment>
+  </data>
+  <data name="Feedback" xml:space="preserve">
+    <value>Kritik dan Saran</value>
+    <comment>Feedback</comment>
+  </data>
+  <data name="FirstName" xml:space="preserve">
+    <value>Nama Panggilan</value>
+    <comment>FirstName</comment>
+  </data>
+  <data name="from" xml:space="preserve">
+    <value>dari</value>
+    <comment>from</comment>
+  </data>
+  <data name="FullName" xml:space="preserve">
+    <value>Nama Lengkap</value>
+    <comment>FullName</comment>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>Menu Awal</value>
+    <comment>Home</comment>
+  </data>
+  <data name="in" xml:space="preserve">
+    <value>di</value>
+    <comment>in</comment>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>Ganti Bahasa</value>
+    <comment>Language</comment>
+  </data>
+  <data name="LastName" xml:space="preserve">
+    <value>Nama Keluarga</value>
+    <comment>LastName</comment>
+  </data>
+  <data name="LatestUploadedProduct" xml:space="preserve">
+    <value>Produk yang baru didaftar</value>
+    <comment>Latest Uploaded Product</comment>
+  </data>
+  <data name="LatestUploadedRequest" xml:space="preserve">
+    <value>Permintaan yang baru didaftar</value>
+    <comment>Latest Uploaded Request</comment>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>Masuk</value>
+    <comment>Login</comment>
+  </data>
+  <data name="LoginTagline" xml:space="preserve">
+    <value>Lanjutkan eksplorasi di Trade24</value>
+    <comment>Continue your journey in Trade24</comment>
+  </data>
+  <data name="Logout" xml:space="preserve">
+    <value>Keluar</value>
+    <comment>Logout</comment>
+  </data>
+  <data name="MessageRequester" xml:space="preserve">
+    <value>Kirim Pesan</value>
+    <comment>Message Requester</comment>
+  </data>
+  <data name="MessageSeller" xml:space="preserve">
+    <value>Kirim Pesan</value>
+    <comment>Message Seller</comment>
+  </data>
+  <data name="MinQtyOrder" xml:space="preserve">
+    <value>Min Qty Order</value>
+    <comment>Min Qty Order</comment>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Kata Kunci</value>
+    <comment>Password</comment>
+  </data>
+  <data name="Price" xml:space="preserve">
+    <value>Harga</value>
+    <comment>Price</comment>
+  </data>
+  <data name="ProductDescription" xml:space="preserve">
+    <value>Deskripsi Produk</value>
+    <comment>Product Description</comment>
+  </data>
+  <data name="ProductInfo" xml:space="preserve">
+    <value>Info Produk</value>
+    <comment>Product Info</comment>
+  </data>
+  <data name="Register" xml:space="preserve">
+    <value>Daftar</value>
+    <comment>Register</comment>
+  </data>
+  <data name="RegisterTagline" xml:space="preserve">
+    <value>Mulai menjelajahi dunia Trade24</value>
+    <comment>Start explore our Trade24 world</comment>
+  </data>
+  <data name="RegisterYourRequestedProduct" xml:space="preserve">
+    <value>Daftar permintaan barang</value>
+    <comment>Register your requested product</comment>
+  </data>
+  <data name="RegisterYourSellingProduct" xml:space="preserve">
+    <value>Daftar barang yang ingin dijual</value>
+    <comment>Register your selling product</comment>
+  </data>
+  <data name="Report" xml:space="preserve">
+    <value>Laporkan</value>
+    <comment>Report</comment>
+  </data>
+  <data name="Request" xml:space="preserve">
+    <value>Permintaan</value>
+    <comment>Request</comment>
+  </data>
+  <data name="Requested" xml:space="preserve">
+    <value>Permintaan</value>
+    <comment>Requested</comment>
+  </data>
+  <data name="SaveToList" xml:space="preserve">
+    <value>Simpan</value>
+    <comment>Save To List</comment>
+  </data>
+  <data name="SearchKeyword" xml:space="preserve">
+    <value>Kata kunci pencarian</value>
+    <comment>SearchKeyword</comment>
+  </data>
+  <data name="Sell" xml:space="preserve">
+    <value>Jual</value>
+    <comment>Sell</comment>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Pengaturan</value>
+    <comment>Settings</comment>
+  </data>
+  <data name="Uploaded" xml:space="preserve">
+    <value>Di Jual</value>
+    <comment>Uploaded</comment>
+  </data>
+  <data name="Continue" xml:space="preserve">
+    <value>Lanjutkan</value>
+    <comment>Continue</comment>
+  </data>
+  <data name="Homepage" xml:space="preserve">
+    <value>halaman utama</value>
+    <comment>Homepage</comment>
+  </data>
+  <data name="ThankYou" xml:space="preserve">
+    <value>Terima kasih</value>
+    <comment>Thank You</comment>
+  </data>
+  <data name="To" xml:space="preserve">
+    <value>ke</value>
+    <comment>To</comment>
+  </data>
+  <data name="VisitHistory" xml:space="preserve">
+    <value>Visit History</value>
+    <comment>Visit History</comment>
+  </data>
+</root>
