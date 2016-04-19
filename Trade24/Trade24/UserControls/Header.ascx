@@ -59,7 +59,7 @@
                         <li class="dropdown-header">Actions</li>
                     </ul>
                 </li>
-                <li><asp:LinkButton ID="lblLogout" runat="server" OnClick="Logout">Logout</asp:LinkButton></li>
+                <li><asp:LinkButton ID="lblLogout" runat="server" OnClick="Logout"><asp:Literal ID="Literal3" runat="server" Text="<% $Resources:Resources, Logout %>" /></asp:LinkButton></li>
             </ul>
         </div>
         <!--/.nav-collapse -->

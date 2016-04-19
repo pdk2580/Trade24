@@ -10,20 +10,20 @@
             <div class="col-lg-7 col-lg-offset-2">
                 <asp:Panel id="pLogin" DefaultButton="btnLogin" runat="server">
                     <div class="page-header">
-                        <h1><asp:Literal ID="Literal1" runat="server" Text="<% $Resources:Resources, Login %>" /> <small>Continue your journey in Trade24</small></h1>
+                        <h1><asp:Literal ID="Literal1" runat="server" Text="<% $Resources:Resources, Login %>" /> <small><asp:Literal ID="Literal3" runat="server" Text="<% $Resources:Resources, LoginTagline %>" /></small></h1>
                     </div>
                     <div class="form-group">
                         <label class="control-label col-sm-2" for="email">
                             <asp:Literal ID="Literal2" runat="server" Text="<% $Resources:Resources, Email %>" />
                         :</label>
                         <div class="col-sm-10">
-                            <asp:TextBox ID="txtEmail" runat="server" class="form-control" placeholder="Enter email" TextMode="Email"></asp:TextBox>
+                            <asp:TextBox ID="txtEmail" runat="server" class="form-control" placeholder="<% $Resources:Resources, EnterEmail %>" TextMode="Email"></asp:TextBox>
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="control-label col-sm-2" for="pwd"><asp:Label ID="Label2" runat="server" Text="<% $Resources:Resources, Password %>"></asp:Label>:</label>
                         <div class="col-sm-10"> 
-                            <asp:TextBox ID="txtPwd" runat="server" class="form-control" placeholder="Enter password" TextMode="Password"></asp:TextBox>
+                            <asp:TextBox ID="txtPwd" runat="server" class="form-control" placeholder="<% $Resources:Resources, EnterPassword %>" TextMode="Password"></asp:TextBox>
                         </div>
                     </div>
                     <div class="form-group">

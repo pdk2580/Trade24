@@ -117,9 +117,29 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="ConfirmPassword" xml:space="preserve">
+    <value>Confirm Password</value>
+    <comment>Confirm Password</comment>
+  </data>
+  <data name="Enter" xml:space="preserve">
+    <value>Enter</value>
+    <comment>Enter</comment>
+  </data>
+  <data name="EnterEmail" xml:space="preserve">
+    <value>Enter Email</value>
+    <comment>Enter Email</comment>
+  </data>
+  <data name="EnterPassword" xml:space="preserve">
+    <value>Enter Password</value>
+    <comment>Enter Password</comment>
+  </data>
   <data name="Images" xml:space="preserve">
     <value>Images</value>
     <comment>Images</comment>
+  </data>
+  <data name="ItemCategories" xml:space="preserve">
+    <value>Item Categories</value>
+    <comment>Item Categories</comment>
   </data>
   <data name="Packaging" xml:space="preserve">
     <value>Packaging</value>
@@ -128,6 +148,10 @@
   <data name="PlaceOfOrigin" xml:space="preserve">
     <value>Place of origin</value>
     <comment>Place of origin</comment>
+  </data>
+  <data name="Select" xml:space="preserve">
+    <value>Select</value>
+    <comment>Select</comment>
   </data>
   <data name="SupplyAbility" xml:space="preserve">
     <value>Supply ability</value>

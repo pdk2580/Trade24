@@ -61,11 +61,56 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Confirm Password.
+        /// </summary>
+        internal static string ConfirmPassword {
+            get {
+                return ResourceManager.GetString("ConfirmPassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enter.
+        /// </summary>
+        internal static string Enter {
+            get {
+                return ResourceManager.GetString("Enter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enter Email.
+        /// </summary>
+        internal static string EnterEmail {
+            get {
+                return ResourceManager.GetString("EnterEmail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enter Password.
+        /// </summary>
+        internal static string EnterPassword {
+            get {
+                return ResourceManager.GetString("EnterPassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Images.
         /// </summary>
         internal static string Images {
             get {
                 return ResourceManager.GetString("Images", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Item Categories.
+        /// </summary>
+        internal static string ItemCategories {
+            get {
+                return ResourceManager.GetString("ItemCategories", resourceCulture);
             }
         }
         
@@ -84,6 +129,15 @@ namespace Resources {
         internal static string PlaceOfOrigin {
             get {
                 return ResourceManager.GetString("PlaceOfOrigin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select.
+        /// </summary>
+        internal static string Select {
+            get {
+                return ResourceManager.GetString("Select", resourceCulture);
             }
         }
         

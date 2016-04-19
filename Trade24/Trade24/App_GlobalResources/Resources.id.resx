@@ -214,7 +214,7 @@
     <comment>Min Qty Order</comment>
   </data>
   <data name="Password" xml:space="preserve">
-    <value>Kata Kunci</value>
+    <value>Kata Sandi</value>
     <comment>Password</comment>
   </data>
   <data name="Price" xml:space="preserve">
@@ -316,5 +316,25 @@
   <data name="Weight" xml:space="preserve">
     <value>Berat</value>
     <comment>Weight</comment>
+  </data>
+  <data name="ItemCategories" xml:space="preserve">
+    <value>Kategori Barang</value>
+    <comment>Item Categories</comment>
+  </data>
+  <data name="ConfirmPassword" xml:space="preserve">
+    <value>Ulang Sandi</value>
+    <comment>Confirm Password</comment>
+  </data>
+  <data name="EnterEmail" xml:space="preserve">
+    <value>Masukkan Email</value>
+    <comment>Enter Email</comment>
+  </data>
+  <data name="EnterPassword" xml:space="preserve">
+    <value>Masukkan Kata Sandi</value>
+    <comment>Enter Password</comment>
+  </data>
+  <data name="Select" xml:space="preserve">
+    <value>Pilih</value>
+    <comment>Select</comment>
   </data>
 </root>
