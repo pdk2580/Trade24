@@ -32,7 +32,7 @@ namespace Trade24.BO
 
         public RequestBO() { }
 
-        public RequestBO(int ID, string Name, string RequestType, int? UploaderID, int? ItemCategoryID, float? MinQty, float? MinPrice, string Description, DateTime Created_at)
+        public RequestBO(int ID, string Name, string RequestType, int? UploaderID, int? ItemCategoryID, float? MinQty, string Unit, string Currency, float? MinPrice, string Description, DateTime Created_at)
         {
             this.ID = ID;
             this.Name = Name;
@@ -40,6 +40,8 @@ namespace Trade24.BO
             this.UploaderID = UploaderID;
             this.ItemCategoryID = ItemCategoryID;
             this.MinQty = MinQty;
+            this.Unit = Unit;
+            this.Currency = Currency;
             this.MinPrice = MinPrice;
             this.Description = Description;
             this.Created_at = Created_at;

@@ -127,11 +127,18 @@ CREATE TABLE Request(
 	Unit VARCHAR(5),
 	Currency VARCHAR(50),
 	MinPrice FLOAT,
+	Weight FLOAT,
+	WeightUnit VARCHAR(20),
+	Packaging VARCHAR(50),
+	PlaceOfOriginCityID INTEGER, 
+	SupplyAbility INTEGER,
+	SupplyAbilityUnit VARCHAR(20),
 	Description TEXT,
 
 	Created_at datetime NOT NULL DEFAULT GETDATE(),
 
 	PRIMARY KEY(ID),
+	FOREIGN KEY (CityID) REFERENCES Cities(ID),
 	FOREIGN KEY (ItemCategoryID) REFERENCES ItemCategories(ID)
 );
 

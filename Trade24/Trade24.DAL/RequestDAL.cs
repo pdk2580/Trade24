@@ -127,7 +127,7 @@ namespace Trade24.DAL
             {
                 sqlConnection.Open();
 
-                string query = "INSERT Request (Name, RequestType, UploaderID, ItemCategoryID, MinQty, MinPrice, Description) VALUES (@Name, @RequestType, @UploaderID, @ItemCategoryID, @MinQty, @MinPrice, @Description); ";
+                string query = "INSERT Request (Name, RequestType, UploaderID, ItemCategoryID, MinQty, Unit, Currency, MinPrice, Description) VALUES (@Name, @RequestType, @UploaderID, @ItemCategoryID, @MinQty, @Unit, @Currency, @MinPrice, @Description); ";
                 query += "SELECT CAST(SCOPE_IDENTITY() as int)";
 
                 return sqlConnection.Query<int>(query, request).Single();
@@ -152,7 +152,7 @@ namespace Trade24.DAL
             {
                 sqlConnection.Open();
 
-                string query = "UPDATE Messages SET RequestType=@RequestType, UploaderID=@UploaderID, ItemCategoryID=@ItemCategoryID, MinQty=@MinQty, MinPrice=@MinPrice, Description=@Description WHERE ID=@ID";
+                string query = "UPDATE Request SET RequestType=@RequestType, UploaderID=@UploaderID, ItemCategoryID=@ItemCategoryID, MinQty=@MinQty, MinPrice=@MinPrice, Description=@Description WHERE ID=@ID";
                 sqlConnection.Execute(query, updatedRequest);
             }
         }

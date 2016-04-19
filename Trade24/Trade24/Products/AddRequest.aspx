@@ -30,6 +30,13 @@
                 </div>
               </div>
               <div class="form-group">
+                <label for="inputEmail3" class="col-sm-4 control-label">Min Qty Order</label>
+                <div class="col-sm-8">
+                    <asp:TextBox ID="TextBox1" runat="server" TextMode="Number" CssClass="form-control"></asp:TextBox>
+                    <asp:TextBox ID="TextBox2" runat="server" TextMode="Number" CssClass="form-control"></asp:TextBox><asp:DropDownList ID="DropDownList1" runat="server"></asp:DropDownList>
+                </div>
+              </div>
+              <div class="form-group">
                 <label for="inputEmail3" class="col-sm-4 control-label">Price</label>
                 <div class="col-sm-8">
                     <asp:TextBox ID="txtP" runat="server" TextMode="Number" CssClass="form-control"></asp:TextBox>
