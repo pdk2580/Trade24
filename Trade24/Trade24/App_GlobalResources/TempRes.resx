@@ -117,204 +117,24 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="AboutUs" xml:space="preserve">
-    <value>Mengenai Kami</value>
-    <comment>AboutUs</comment>
-  </data>
-  <data name="BusinessRelation" xml:space="preserve">
-    <value>Hubungan Bisnis</value>
-    <comment>BusinessRelation</comment>
-  </data>
-  <data name="by" xml:space="preserve">
-    <value>oleh</value>
-    <comment>by</comment>
-  </data>
-  <data name="City" xml:space="preserve">
-    <value>Kota</value>
-    <comment>City</comment>
-  </data>
-  <data name="Confirm" xml:space="preserve">
-    <value>Masukkan</value>
-    <comment>Confirm</comment>
-  </data>
-  <data name="Country" xml:space="preserve">
-    <value>Negara</value>
-    <comment>Country</comment>
-  </data>
-  <data name="Email" xml:space="preserve">
-    <value>Email</value>
-    <comment>Email</comment>
-  </data>
-  <data name="Enter" xml:space="preserve">
-    <value>Masukkan</value>
-    <comment>Enter</comment>
-  </data>
-  <data name="Feedback" xml:space="preserve">
-    <value>Kritik dan Saran</value>
-    <comment>Feedback</comment>
-  </data>
-  <data name="FirstName" xml:space="preserve">
-    <value>Nama Panggilan</value>
-    <comment>FirstName</comment>
-  </data>
-  <data name="from" xml:space="preserve">
-    <value>dari</value>
-    <comment>from</comment>
-  </data>
-  <data name="FullName" xml:space="preserve">
-    <value>Nama Lengkap</value>
-    <comment>FullName</comment>
-  </data>
-  <data name="Home" xml:space="preserve">
-    <value>Menu Awal</value>
-    <comment>Home</comment>
-  </data>
-  <data name="in" xml:space="preserve">
-    <value>di</value>
-    <comment>in</comment>
-  </data>
-  <data name="Language" xml:space="preserve">
-    <value>Ganti Bahasa</value>
-    <comment>Language</comment>
-  </data>
-  <data name="LastName" xml:space="preserve">
-    <value>Nama Keluarga</value>
-    <comment>LastName</comment>
-  </data>
-  <data name="LatestUploadedProduct" xml:space="preserve">
-    <value>Produk yang baru didaftar</value>
-    <comment>Latest Uploaded Product</comment>
-  </data>
-  <data name="LatestUploadedRequest" xml:space="preserve">
-    <value>Permintaan yang baru didaftar</value>
-    <comment>Latest Uploaded Request</comment>
-  </data>
-  <data name="Login" xml:space="preserve">
-    <value>Masuk</value>
-    <comment>Login</comment>
-  </data>
-  <data name="LoginTagline" xml:space="preserve">
-    <value>Lanjutkan eksplorasi di Trade24</value>
-    <comment>Continue your journey in Trade24</comment>
-  </data>
-  <data name="Logout" xml:space="preserve">
-    <value>Keluar</value>
-    <comment>Logout</comment>
-  </data>
-  <data name="MessageRequester" xml:space="preserve">
-    <value>Kirim Pesan</value>
-    <comment>Message Requester</comment>
-  </data>
-  <data name="MessageSeller" xml:space="preserve">
-    <value>Kirim Pesan</value>
-    <comment>Message Seller</comment>
-  </data>
-  <data name="MinQtyOrder" xml:space="preserve">
-    <value>Min Qty Order</value>
-    <comment>Min Qty Order</comment>
-  </data>
-  <data name="Password" xml:space="preserve">
-    <value>Kata Kunci</value>
-    <comment>Password</comment>
-  </data>
-  <data name="Price" xml:space="preserve">
-    <value>Harga</value>
-    <comment>Price</comment>
-  </data>
-  <data name="ProductDescription" xml:space="preserve">
-    <value>Deskripsi Produk</value>
-    <comment>Product Description</comment>
-  </data>
-  <data name="ProductInfo" xml:space="preserve">
-    <value>Info Produk</value>
-    <comment>Product Info</comment>
-  </data>
-  <data name="Register" xml:space="preserve">
-    <value>Daftar</value>
-    <comment>Register</comment>
-  </data>
-  <data name="RegisterTagline" xml:space="preserve">
-    <value>Mulai menjelajahi dunia Trade24</value>
-    <comment>Start explore our Trade24 world</comment>
-  </data>
-  <data name="RegisterYourRequestedProduct" xml:space="preserve">
-    <value>Daftar permintaan barang</value>
-    <comment>Register your requested product</comment>
-  </data>
-  <data name="RegisterYourSellingProduct" xml:space="preserve">
-    <value>Daftar barang yang ingin dijual</value>
-    <comment>Register your selling product</comment>
-  </data>
-  <data name="Report" xml:space="preserve">
-    <value>Laporkan</value>
-    <comment>Report</comment>
-  </data>
-  <data name="Request" xml:space="preserve">
-    <value>Permintaan</value>
-    <comment>Request</comment>
-  </data>
-  <data name="Requested" xml:space="preserve">
-    <value>Permintaan</value>
-    <comment>Requested</comment>
-  </data>
-  <data name="SaveToList" xml:space="preserve">
-    <value>Simpan</value>
-    <comment>Save To List</comment>
-  </data>
-  <data name="SearchKeyword" xml:space="preserve">
-    <value>Kata kunci pencarian</value>
-    <comment>SearchKeyword</comment>
-  </data>
-  <data name="Sell" xml:space="preserve">
-    <value>Jual</value>
-    <comment>Sell</comment>
-  </data>
-  <data name="Settings" xml:space="preserve">
-    <value>Pengaturan</value>
-    <comment>Settings</comment>
-  </data>
-  <data name="Uploaded" xml:space="preserve">
-    <value>Di Jual</value>
-    <comment>Uploaded</comment>
-  </data>
-  <data name="Continue" xml:space="preserve">
-    <value>Lanjutkan</value>
-    <comment>Continue</comment>
-  </data>
-  <data name="Homepage" xml:space="preserve">
-    <value>halaman utama</value>
-    <comment>Homepage</comment>
-  </data>
-  <data name="ThankYou" xml:space="preserve">
-    <value>Terima kasih</value>
-    <comment>Thank You</comment>
-  </data>
-  <data name="To" xml:space="preserve">
-    <value>ke</value>
-    <comment>To</comment>
-  </data>
-  <data name="VisitHistory" xml:space="preserve">
-    <value>Visit History</value>
-    <comment>Visit History</comment>
-  </data>
   <data name="Images" xml:space="preserve">
-    <value>Gambar</value>
+    <value>Images</value>
     <comment>Images</comment>
   </data>
   <data name="Packaging" xml:space="preserve">
-    <value>Kemasan</value>
+    <value>Packaging</value>
     <comment>Packaging</comment>
   </data>
   <data name="PlaceOfOrigin" xml:space="preserve">
-    <value>Asal Barang</value>
+    <value>Place of origin</value>
     <comment>Place of origin</comment>
   </data>
   <data name="SupplyAbility" xml:space="preserve">
-    <value>Kemampuan Suplai</value>
+    <value>Supply ability</value>
     <comment>Supply ability</comment>
   </data>
   <data name="Weight" xml:space="preserve">
-    <value>Berat</value>
+    <value>Weight</value>
     <comment>Weight</comment>
   </data>
 </root>

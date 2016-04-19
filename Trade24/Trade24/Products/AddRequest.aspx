@@ -10,7 +10,7 @@
             <div class="col-lg-5">
                 <img id="pImg" src="" style="max-width:480px;" />
             </div>
-            <div class="col-lg-5">
+            <div class="col-lg-7">
               <div class="form-group">
                 <label for="inputEmail3" class="col-sm-4 control-label">Product Name</label>
                 <div class="col-sm-8">
@@ -19,27 +19,64 @@
               </div>
               <div class="form-group">
                 <label for="inputEmail3" class="col-sm-4 control-label">Product Category</label>
-                <div class="col-sm-8">
-                    <asp:TextBox ID="txtPc" runat="server" TextMode="SingleLine" CssClass="form-control"></asp:TextBox><button class="btn btn-default">Select</button>
+                <div class="col-sm-6">
+                    <asp:TextBox ID="txtPc" runat="server" TextMode="SingleLine" CssClass="form-control"></asp:TextBox>
+                </div>
+                <div class="col-sm-2">
+                    <button class="btn btn-default btn-block">Select</button>
                 </div>
               </div>
               <div class="form-group">
                 <label for="inputEmail3" class="col-sm-4 control-label">Min Qty Order</label>
-                <div class="col-sm-8">
+                <div class="col-sm-4">
                     <asp:TextBox ID="txtQty" runat="server" TextMode="Number" CssClass="form-control"></asp:TextBox>
                 </div>
-              </div>
-              <div class="form-group">
-                <label for="inputEmail3" class="col-sm-4 control-label">Min Qty Order</label>
-                <div class="col-sm-8">
-                    <asp:TextBox ID="TextBox1" runat="server" TextMode="Number" CssClass="form-control"></asp:TextBox>
-                    <asp:TextBox ID="TextBox2" runat="server" TextMode="Number" CssClass="form-control"></asp:TextBox><asp:DropDownList ID="DropDownList1" runat="server"></asp:DropDownList>
+                <div class="col-sm-4">
+                    <asp:DropDownList ID="ddlUnit" runat="server" CssClass="form-control"></asp:DropDownList>
                 </div>
               </div>
               <div class="form-group">
                 <label for="inputEmail3" class="col-sm-4 control-label">Price</label>
-                <div class="col-sm-8">
+                <div class="col-sm-4">
+                    <asp:DropDownList ID="ddlCurrency" runat="server" CssClass="form-control"></asp:DropDownList>
+                </div>
+                <div class="col-sm-4">
                     <asp:TextBox ID="txtP" runat="server" TextMode="Number" CssClass="form-control"></asp:TextBox>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inputEmail3" class="col-sm-4 control-label">Weight</label>
+                <div class="col-sm-4">
+                    <asp:TextBox ID="txtWeight" runat="server" TextMode="Number" CssClass="form-control"></asp:TextBox>
+                </div>
+                <div class="col-sm-4">
+                    <asp:DropDownList ID="ddlWeightUnit" runat="server" CssClass="form-control"></asp:DropDownList>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inputEmail3" class="col-sm-4 control-label">Packaging</label>
+                <div class="col-sm-4">
+                    <asp:DropDownList ID="ddlPackaging" runat="server" CssClass="form-control"></asp:DropDownList>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inputEmail3" class="col-sm-4 control-label">Place of origin</label>
+                <div class="col-sm-4">
+                    <asp:DropDownList ID="ddlCountry" runat="server" CssClass="form-control"></asp:DropDownList>
+                </div>
+                <div class="col-sm-4">
+                    <asp:DropDownList ID="ddlCity" runat="server" CssClass="form-control"></asp:DropDownList>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inputEmail3" class="col-sm-4 control-label">Supply ability</label>
+                <div class="col-sm-4">
+                    <asp:TextBox ID="txtSupplyAbility" runat="server" TextMode="Number" CssClass="form-control"></asp:TextBox>
+                </div>
+                <div class="col-sm-4">
+                    <asp:DropDownList ID="ddlSupplyAbilityUnit" runat="server" CssClass="form-control"></asp:DropDownList>
+                    in 
+                    <asp:DropDownList ID="ddlSupplyAbilityTimeUnit" runat="server" CssClass="form-control"></asp:DropDownList>
                 </div>
               </div>
               <div class="form-group">
