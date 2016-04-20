@@ -97,21 +97,25 @@
                                         <p><%# ((RequestBO)Container.DataItem).Description %></p>
                                     </div>
                                 </div>--%>
-                                <div class="col-sm-3">
-                                    <img id="imgProduct" class="img-responsive img-rounded" src="<%# Trade24.BLL.UploadedFileBLL.GetUploadedFilePath(((RequestBO)Container.DataItem).ID) %>" alt="Product image" />
-                                </div>
-                                <div class="col-sm-9">
-                                    <h4 class="list-group-item-heading"><%# ((RequestBO)Container.DataItem).Name %></h4>
-                                    <div class="list-group-item-text">
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                US$ <%# ((RequestBO)Container.DataItem).MinPrice %>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <%# ((RequestBO)Container.DataItem).MinQty %> Tons
+                                <div class="list-group-item">
+                                    <div class="row">
+                                        <div class="col-sm-3">
+                                            <img id="imgProduct" class="img-responsive img-rounded" src="<%# Trade24.BLL.UploadedFileBLL.GetUploadedFilePath(((RequestBO)Container.DataItem).ID) %>" alt="Product image" />
+                                        </div>
+                                        <div class="col-sm-9">
+                                            <h4 class="list-group-item-heading"><%# ((RequestBO)Container.DataItem).Name %></h4>
+                                            <div class="list-group-item-text">
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        US$ <%# ((RequestBO)Container.DataItem).MinPrice %>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <%# ((RequestBO)Container.DataItem).MinQty %> Tons
+                                                    </div>
+                                                </div>
+                                                <p><%# ((RequestBO)Container.DataItem).Description %></p>
                                             </div>
                                         </div>
-                                        <p><%# ((RequestBO)Container.DataItem).Description %></p>
                                     </div>
                                 </div>
                             </ItemTemplate>
@@ -150,23 +154,27 @@
                                         <p><%# ((RequestBO)Container.DataItem).Description %></p>
                                     </div>
                                 </div>--%>
-                                <div class="col-sm-3">
-                                    <img id="imgProduct" class="img-responsive img-rounded" src="<%# Trade24.BLL.UploadedFileBLL.GetUploadedFilePath(((RequestBO)Container.DataItem).ID) %>" alt="Product image" />
-                                </div>
-                                <div class="col-sm-9">
-                                    <h4 class="list-group-item-heading"><%# ((RequestBO)Container.DataItem).Name %></h4>
-                                    <div class="list-group-item-text">
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                US$ <%# ((RequestBO)Container.DataItem).MinPrice %>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <%# ((RequestBO)Container.DataItem).MinQty %> Tons
+                                <%--<div class="list-group-item">--%>
+                                    <div class="row">
+                                        <div class="col-sm-3">
+                                            <img id="imgProduct" class="img-responsive img-rounded" src="<%# Trade24.BLL.UploadedFileBLL.GetUploadedFilePath(((RequestBO)Container.DataItem).ID) %>" alt="Product image" />
+                                        </div>
+                                        <div class="col-sm-9">
+                                            <h4 class="list-group-item-heading"><%# ((RequestBO)Container.DataItem).Name %></h4>
+                                            <div class="list-group-item-text">
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        US$ <%# ((RequestBO)Container.DataItem).MinPrice %>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <%# ((RequestBO)Container.DataItem).MinQty %> Tons
+                                                    </div>
+                                                </div>
+                                                <p><%# ((RequestBO)Container.DataItem).Description %></p>
                                             </div>
                                         </div>
-                                        <p><%# ((RequestBO)Container.DataItem).Description %></p>
                                     </div>
-                                </div>
+                                <%--</div>--%>
                             </ItemTemplate>
                             <FooterTemplate>
                                 </div>

@@ -45,9 +45,9 @@ namespace Trade24.Users
 
                     InitiateButtons();
                     
-                    rptRequests.DataSource = RequestBLL.GetRequests(acc.ID);
+                    rptRequests.DataSource = RequestBLL.GetRequestsByUploader(acc.ID, RequestType.REQUEST);
                     rptRequests.DataBind();
-                    rptSells.DataSource = RequestBLL.GetRequests(acc.ID);
+                    rptSells.DataSource = RequestBLL.GetRequestsByUploader(acc.ID, RequestType.SELL);
                     rptSells.DataBind();
                 }
             }
