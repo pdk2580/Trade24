@@ -67,15 +67,6 @@ namespace Trade24.Users {
         protected global::System.Web.UI.WebControls.Label lblAddress1;
         
         /// <summary>
-        /// lblAddress2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblAddress2;
-        
-        /// <summary>
         /// lblPostalCode control.
         /// </summary>
         /// <remarks>
@@ -85,22 +76,13 @@ namespace Trade24.Users {
         protected global::System.Web.UI.WebControls.Label lblPostalCode;
         
         /// <summary>
-        /// lblCity control.
+        /// lblCityCountry control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblCity;
-        
-        /// <summary>
-        /// lblCountry control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblCountry;
+        protected global::System.Web.UI.WebControls.Label lblCityCountry;
         
         /// <summary>
         /// hlinkMessage control.
