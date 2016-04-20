@@ -1,9 +1,9 @@
-DROP TABLE IF NOT EXISTS Contacts
-DROP TABLE IF NOT EXISTS Accounts
+DROP TABLE Contacts
+DROP TABLE Accounts
+DROP TABLE ItemCategories
 DROP TABLE Request
 DROP TABLE Cities
 DROP TABLE Countries
-DROP TABLE ItemCategories
 DROP TABLE Messages
 DROP TABLE UploadedFiles
 
@@ -138,7 +138,6 @@ CREATE TABLE Request(
 	Created_at datetime NOT NULL DEFAULT GETDATE(),
 
 	PRIMARY KEY(ID),
-	FOREIGN KEY (CityID) REFERENCES Cities(ID),
 	FOREIGN KEY (ItemCategoryID) REFERENCES ItemCategories(ID)
 );
 
