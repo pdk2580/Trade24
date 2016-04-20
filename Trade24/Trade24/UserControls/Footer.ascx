@@ -11,7 +11,7 @@
                 <asp:DropDownList ID="ddlLanguages" runat="server" AutoPostBack="true" OnSelectedIndexChanged="ddlLanguages_SelectedIndexChanged" CssClass="form-control">
                     <asp:ListItem Text="English" Value="en" />
                     <asp:ListItem Text="Bahasa Indonesia" Value="id" />
-                    <asp:ListItem Text="Korean 한국어" Value="kr" />
+                    <asp:ListItem Text="Korean 한국어" Value="ko" />
                     <asp:ListItem Text="Thai" Value="th" />
                     <asp:ListItem Text="Malay" Value="my" />
                     <asp:ListItem Text="Vietnamese" Value="vn" />

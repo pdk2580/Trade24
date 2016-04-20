@@ -47,7 +47,7 @@ namespace Trade24.UserControls
                 case "id":
                     Session["ddindex"] = 1;
                     break;
-                case "kr":
+                case "ko":
                     Session["ddindex"] = 2;
                     break;
                 default:
