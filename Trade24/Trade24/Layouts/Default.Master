@@ -6,6 +6,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Trade24</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <link href="~/Assets/css/bootstrap.min.css" rel="stylesheet" runat="server" />
     <link href="~/Assets/css/font-awesome.min.css" rel="stylesheet" runat="server" />
     <link href="~/Assets/css/owl.carousel.css" rel="stylesheet" runat="server" />
