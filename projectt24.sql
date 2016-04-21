@@ -1,5 +1,5 @@
-DROP TABLE IF NOT EXISTS Contacts
-DROP TABLE IF NOT EXISTS Accounts
+DROP TABLE Contacts
+DROP TABLE Accounts
 DROP TABLE Request
 DROP TABLE Cities
 DROP TABLE Countries
@@ -130,14 +130,17 @@ CREATE TABLE Request(
 	Weight FLOAT,
 	WeightUnit VARCHAR(20),
 	Packaging VARCHAR(50),
+	PlaceOfOriginCountryID INTEGER, 
 	PlaceOfOriginCityID INTEGER, 
 	SupplyAbility INTEGER,
 	SupplyAbilityUnit VARCHAR(20),
+	SupplyAbilityTimeUnit VARCHAR(20),
 	Description TEXT,
 
 	Created_at datetime NOT NULL DEFAULT GETDATE(),
 
 	PRIMARY KEY(ID),
+	FOREIGN KEY (CountryID) REFERENCES Countries(ID),
 	FOREIGN KEY (CityID) REFERENCES Cities(ID),
 	FOREIGN KEY (ItemCategoryID) REFERENCES ItemCategories(ID)
 );
