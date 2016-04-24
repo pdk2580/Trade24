@@ -3,7 +3,6 @@ DROP TABLE Accounts
 DROP TABLE Request
 DROP TABLE Cities
 DROP TABLE Countries
-DROP TABLE ItemCategories
 DROP TABLE Messages
 DROP TABLE UploadedFiles
 
@@ -140,8 +139,8 @@ CREATE TABLE Request(
 	Created_at datetime NOT NULL DEFAULT GETDATE(),
 
 	PRIMARY KEY(ID),
-	FOREIGN KEY (CountryID) REFERENCES Countries(ID),
-	FOREIGN KEY (CityID) REFERENCES Cities(ID),
+	FOREIGN KEY (PlaceOfOriginCityID) REFERENCES Cities(ID),
+	FOREIGN KEY (PlaceOfOriginCountryID) REFERENCES Countries(ID),
 	FOREIGN KEY (ItemCategoryID) REFERENCES ItemCategories(ID)
 );
 
@@ -161,25 +160,25 @@ CREATE TABLE AccountViewList(
 CREATE TABLE ItemViewList(
 	ID	INTEGER IDENTITY,
 	UserID INTEGER,
-	ItemCategoryID INT,
+	RequestID INT,
 
 	Created_at datetime NOT NULL DEFAULT GETDATE(),
 
 	PRIMARY KEY(ID),
 	FOREIGN KEY (UserID) REFERENCES Accounts(ID),
-	FOREIGN KEY (ItemCategoryID) REFERENCES ItemCategories(ID)
+	FOREIGN KEY (RequestID) REFERENCES Request(ID)
 );
 
 CREATE TABLE InterestedList(
 	ID	INTEGER IDENTITY,
 	UserID INTEGER,
-	ItemCategoryID INT,
+	RequestID INT,
 
 	Created_at datetime NOT NULL DEFAULT GETDATE(),
 
 	PRIMARY KEY(ID),
 	FOREIGN KEY (UserID) REFERENCES Accounts(ID),
-	FOREIGN KEY (ItemCategoryID) REFERENCES ItemCategories(ID)
+	FOREIGN KEY (RequestID) REFERENCES Request(ID)
 );
 
 

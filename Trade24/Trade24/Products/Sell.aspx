@@ -73,7 +73,7 @@
                                     <asp:HyperLink ID="hlinkReport" runat="server" CssClass="btn btn-danger btn-block"><i class="glyphicon glyphicon-flag"></i> Report</asp:HyperLink>
                                 </div>
                                 <div class="col-lg-4">
-                                    <asp:HyperLink ID="HyperLink1" runat="server" CssClass="btn btn-success btn-block"><i class="glyphicon glyphicon-book"></i> Save to list</asp:HyperLink>
+                                    <button runat="server" id="btnAddToList" class="btn btn-success btn-block" onserverclick="btnAddToList_Click"><i class="glyphicon glyphicon-book"></i> Save to list</button>
                                 </div>
                                 <div class="col-lg-4">
                                     <asp:HyperLink ID="HyperLink2" runat="server" CssClass="btn btn-primary btn-block"><i class="glyphicon glyphicon-envelope"></i> Message Seller</asp:HyperLink>

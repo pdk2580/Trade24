@@ -123,6 +123,8 @@
     <Content Include="Public\Feedback.aspx" />
     <Content Include="UserControls\Footer.ascx" />
     <Content Include="UserControls\Header.ascx" />
+    <Content Include="Users\InterestList.aspx" />
+    <Content Include="Users\LastSeenRequests.aspx" />
     <Content Include="Users\Login.aspx" />
     <Content Include="Users\Logout.aspx" />
     <Content Include="Users\Profile.aspx" />
@@ -272,6 +274,20 @@
     <Compile Include="UserControls\Header.ascx.designer.cs">
       <DependentUpon>Header.ascx</DependentUpon>
     </Compile>
+    <Compile Include="Users\InterestList.aspx.cs">
+      <DependentUpon>InterestList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Users\InterestList.aspx.designer.cs">
+      <DependentUpon>InterestList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Users\LastSeenRequests.aspx.cs">
+      <DependentUpon>LastSeenRequests.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Users\LastSeenRequests.aspx.designer.cs">
+      <DependentUpon>LastSeenRequests.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Users\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -372,7 +388,7 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
+          <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>9901</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>

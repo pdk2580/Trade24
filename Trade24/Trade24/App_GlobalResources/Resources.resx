@@ -337,4 +337,8 @@
     <value>Weight</value>
     <comment>Weight</comment>
   </data>
+  <data name="Hello" xml:space="preserve">
+    <value>Hello</value>
+    <comment>Hello</comment>
+  </data>
 </root>

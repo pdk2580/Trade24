@@ -67,7 +67,7 @@ namespace Trade24.DAL
             return requests;
         }
 
-        public IEnumerable<RequestBO> GetRequests_(int uploaderId)
+        public IEnumerable<RequestBO> GetRequests_(int uploaderId, RequestType? requestType = null)
         {
             IEnumerable<RequestBO> requests = null;
 
@@ -75,8 +75,16 @@ namespace Trade24.DAL
             {
                 sqlConnection.Open();
 
-                string query = "SELECT * FROM Request WHERE UploaderID = @UploaderID";
-                requests = sqlConnection.Query<RequestBO>(query, new { UploaderID = uploaderId });
+                string query = "SELECT * FROM Request WHERE UploaderID = @UploaderID AND RequestType = @RequestType";
+                if (requestType != null)
+                {
+                    requests = sqlConnection.Query<RequestBO>(query, new { UploaderID = uploaderId, RequestType = (int)requestType });
+                }
+                else
+                {
+                    query = "SELECT * FROM Request WHERE UploaderID = @UploaderID";
+                    requests = sqlConnection.Query<RequestBO>(query, new { UploaderID = uploaderId });
+                }
             }
 
             return requests;

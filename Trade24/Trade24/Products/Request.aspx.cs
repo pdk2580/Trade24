@@ -13,16 +13,22 @@ namespace Trade24.Products
 {
     public partial class Request : System.Web.UI.Page
     {
+        int requestId = 0;
         protected void Page_Load(object sender, EventArgs e)
         {
+
             try
             {
-                int requestId;
                 if (Request.QueryString["id"] != null)
                 {
                     if (Int32.TryParse(Request.QueryString["id"].Trim().ToString(), out requestId))
                     {
                         GetRequestProduct(requestId);
+
+                        if (AccountBLL.GetLoginAccount() != null)
+                        {
+                            ItemViewListBLL.Save(new ItemViewListBO() { UserID = AccountBLL.GetLoginAccount().ID, RequestID = requestId });
+                        }
                     }
                 }
                 else
@@ -32,6 +38,11 @@ namespace Trade24.Products
                         if (Int32.TryParse(Page.RouteData.Values["id"].ToString().Trim(), out requestId))
                         {
                             GetRequestProduct(requestId);
+
+                            if (AccountBLL.GetLoginAccount() != null)
+                            {
+                                ItemViewListBLL.Save(new ItemViewListBO() { UserID = AccountBLL.GetLoginAccount().ID, RequestID = requestId });
+                            }
                         }
                     }
                     else
@@ -78,6 +89,12 @@ namespace Trade24.Products
 
             rptRequests.DataSource = requestList;
             rptRequests.DataBind();
+        }
+
+        protected void btnAddToList_Click(object sender, EventArgs e)
+        {
+            btnAddToList.Disabled = true;
+            InterestListBLL.Save(new InterestListBO() { UserID = AccountBLL.GetLoginAccount().ID, RequestID = requestId });
         }
     }
 }

@@ -43,6 +43,8 @@
     <Compile Include="CityBO.cs" />
     <Compile Include="CountryBO.cs" />
     <Compile Include="ItemCategoryBO.cs" />
+    <Compile Include="InterestListBO.cs" />
+    <Compile Include="ItemViewListBO.cs" />
     <Compile Include="MessageBO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RequestBO.cs" />

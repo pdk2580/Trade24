@@ -25,7 +25,7 @@ INSERT INTO Countries(Name,LongName,ISO2,ISO3,NumCode,UNMemberState,CallingCode,
 INSERT INTO Countries(Name,LongName,ISO2,ISO3,NumCode,UNMemberState,CallingCode,CCTLD,InternationalRegion) VALUES ('Bermuda', 'Bermuda Islands', 'BM', 'BMU', '060', 'no', '1+441', '.bm', 'North America');
 INSERT INTO Countries(Name,LongName,ISO2,ISO3,NumCode,UNMemberState,CallingCode,CCTLD,InternationalRegion) VALUES ('Bhutan', 'Kingdom of Bhutan', 'BT', 'BTN', '064', 'yes', '975', '.bt', 'Asia');
 INSERT INTO Countries(Name,LongName,ISO2,ISO3,NumCode,UNMemberState,CallingCode,CCTLD,InternationalRegion) VALUES ('Bolivia', 'Plurinational State of Bolivia', 'BO', 'BOL', '068', 'yes', '591', '.bo', 'South America');
-INSERT INTO Countries(Name,LongName,ISO2,ISO3,NumCode,UNMemberState,CallingCode,CCTLD,InternationalRegion) VALUES ('Bonaire', 'Sint Eustatius and Saba', 'BQ', 'Bonaire', 'Sint Eustatius and Saba', 'BES', '535', 'no', '599');
+INSERT INTO Countries(Name,LongName,ISO2,ISO3,NumCode,UNMemberState,CallingCode,CCTLD,InternationalRegion) VALUES ('Bonaire', 'Sint Eustatius and Saba', 'BQ', 'BES', '535', 'no', '599', '', '');
 INSERT INTO Countries(Name,LongName,ISO2,ISO3,NumCode,UNMemberState,CallingCode,CCTLD,InternationalRegion) VALUES ('Bosnia and Herzegovina', 'Bosnia and Herzegovina', 'BA', 'BIH', '070', 'yes', '387', '.ba', 'Europe');
 INSERT INTO Countries(Name,LongName,ISO2,ISO3,NumCode,UNMemberState,CallingCode,CCTLD,InternationalRegion) VALUES ('Botswana', 'Republic of Botswana', 'BW', 'BWA', '072', 'yes', '267', '.bw', 'Africa');
 INSERT INTO Countries(Name,LongName,ISO2,ISO3,NumCode,UNMemberState,CallingCode,CCTLD,InternationalRegion) VALUES ('Bouvet Island', 'Bouvet Island', 'BV', 'BVT', '074', 'no', 'NONE', '.bv', 'Antarctica');
@@ -114,7 +114,7 @@ INSERT INTO Countries(Name,LongName,ISO2,ISO3,NumCode,UNMemberState,CallingCode,
 INSERT INTO Countries(Name,LongName,ISO2,ISO3,NumCode,UNMemberState,CallingCode,CCTLD,InternationalRegion) VALUES ('Kazakhstan', 'Republic of Kazakhstan', 'KZ', 'KAZ', '398', 'yes', '7', '.kz', 'Asia');
 INSERT INTO Countries(Name,LongName,ISO2,ISO3,NumCode,UNMemberState,CallingCode,CCTLD,InternationalRegion) VALUES ('Kenya', 'Republic of Kenya', 'KE', 'KEN', '404', 'yes', '254', '.ke', 'Africa');
 INSERT INTO Countries(Name,LongName,ISO2,ISO3,NumCode,UNMemberState,CallingCode,CCTLD,InternationalRegion) VALUES ('Kiribati', 'Republic of Kiribati', 'KI', 'KIR', '296', 'yes', '686', '.ki', 'Oceania');
-INSERT INTO Countries(Name,LongName,ISO2,ISO3,NumCode,UNMemberState,CallingCode,CCTLD,InternationalRegion) VALUES ('Kosovo', 'Republic of Kosovo', 'XK', '---', '---', 'some', '381', '', 'Europe');
+INSERT INTO Countries(Name,LongName,ISO2,ISO3,NumCode,UNMemberState,CallingCode,CCTLD,InternationalRegion) VALUES ('Kosovo', 'Republic of Kosovo', 'XK', '', '', 'some', '381', '', 'Europe');
 INSERT INTO Countries(Name,LongName,ISO2,ISO3,NumCode,UNMemberState,CallingCode,CCTLD,InternationalRegion) VALUES ('Kuwait', 'State of Kuwait', 'KW', 'KWT', '414', 'yes', '965', '.kw', 'Middle East');
 INSERT INTO Countries(Name,LongName,ISO2,ISO3,NumCode,UNMemberState,CallingCode,CCTLD,InternationalRegion) VALUES ('Kyrgyzstan', 'Kyrgyz Republic', 'KG', 'KGZ', '417', 'yes', '996', '.kg', 'Asia');
 INSERT INTO Countries(Name,LongName,ISO2,ISO3,NumCode,UNMemberState,CallingCode,CCTLD,InternationalRegion) VALUES ('Laos', 'Lao People''s Democratic Republic', 'LA', 'LAO', '418', 'yes', '856', '.la', 'Asia');
@@ -182,7 +182,7 @@ INSERT INTO Countries(Name,LongName,ISO2,ISO3,NumCode,UNMemberState,CallingCode,
 INSERT INTO Countries(Name,LongName,ISO2,ISO3,NumCode,UNMemberState,CallingCode,CCTLD,InternationalRegion) VALUES ('Russia', 'Russian Federation', 'RU', 'RUS', '643', 'yes', '7', '.ru', 'Europe');
 INSERT INTO Countries(Name,LongName,ISO2,ISO3,NumCode,UNMemberState,CallingCode,CCTLD,InternationalRegion) VALUES ('Rwanda', 'Republic of Rwanda', 'RW', 'RWA', '646', 'yes', '250', '.rw', 'Africa');
 INSERT INTO Countries(Name,LongName,ISO2,ISO3,NumCode,UNMemberState,CallingCode,CCTLD,InternationalRegion) VALUES ('Saint Barthelemy', 'Saint Barth&eacute;lemy', 'BL', 'BLM', '652', 'no', '590', '.bl', 'The Caribbean');
-INSERT INTO Countries(Name,LongName,ISO2,ISO3,NumCode,UNMemberState,CallingCode,CCTLD,InternationalRegion) VALUES ('Saint Helena', 'Saint Helena', 'SH', 'Ascension and Tristan da Cunha', 'SHN', '654', 'no', '290', '.sh');
+INSERT INTO Countries(Name,LongName,ISO2,ISO3,NumCode,UNMemberState,CallingCode,CCTLD,InternationalRegion) VALUES ('Saint Helena', 'Saint Helena', 'SH', 'SHN', '654', 'no', '290', '.sh', '');
 INSERT INTO Countries(Name,LongName,ISO2,ISO3,NumCode,UNMemberState,CallingCode,CCTLD,InternationalRegion) VALUES ('Saint Kitts and Nevis', 'Federation of Saint Christopher and Nevis', 'KN', 'KNA', '659', 'yes', '1+869', '.kn', 'The Caribbean');
 INSERT INTO Countries(Name,LongName,ISO2,ISO3,NumCode,UNMemberState,CallingCode,CCTLD,InternationalRegion) VALUES ('Saint Lucia', 'Saint Lucia', 'LC', 'LCA', '662', 'yes', '1+758', '.lc', 'The Caribbean');
 INSERT INTO Countries(Name,LongName,ISO2,ISO3,NumCode,UNMemberState,CallingCode,CCTLD,InternationalRegion) VALUES ('Saint Martin', 'Saint Martin', 'MF', 'MAF', '663', 'no', '590', '.mf', 'The Caribbean');
@@ -215,7 +215,7 @@ INSERT INTO Countries(Name,LongName,ISO2,ISO3,NumCode,UNMemberState,CallingCode,
 INSERT INTO Countries(Name,LongName,ISO2,ISO3,NumCode,UNMemberState,CallingCode,CCTLD,InternationalRegion) VALUES ('Sweden', 'Kingdom of Sweden', 'SE', 'SWE', '752', 'yes', '46', '.se', 'European Union');
 INSERT INTO Countries(Name,LongName,ISO2,ISO3,NumCode,UNMemberState,CallingCode,CCTLD,InternationalRegion) VALUES ('Switzerland', 'Swiss Confederation', 'CH', 'CHE', '756', 'yes', '41', '.ch', 'Europe');
 INSERT INTO Countries(Name,LongName,ISO2,ISO3,NumCode,UNMemberState,CallingCode,CCTLD,InternationalRegion) VALUES ('Syria', 'Syrian Arab Republic', 'SY', 'SYR', '760', 'yes', '963', '.sy', 'Middle East');
-INSERT INTO Countries(Name,LongName,ISO2,ISO3,NumCode,UNMemberState,CallingCode,CCTLD,InternationalRegion) VALUES ('Taiwan', 'Republic of China (Taiwan)', 'TW', 'TWN', '158', 'former', '886', '.tw', 'Asia');
+INSERT INTO Countries(Name,LongName,ISO2,ISO3,NumCode,UNMemberState,CallingCode,CCTLD,InternationalRegion) VALUES ('Taiwan', 'Republic of China (Taiwan)', 'TW', 'TWN', '158', 'for', '886', '.tw', 'Asia');
 INSERT INTO Countries(Name,LongName,ISO2,ISO3,NumCode,UNMemberState,CallingCode,CCTLD,InternationalRegion) VALUES ('Tajikistan', 'Republic of Tajikistan', 'TJ', 'TJK', '762', 'yes', '992', '.tj', 'Asia');
 INSERT INTO Countries(Name,LongName,ISO2,ISO3,NumCode,UNMemberState,CallingCode,CCTLD,InternationalRegion) VALUES ('Tanzania', 'United Republic of Tanzania', 'TZ', 'TZA', '834', 'yes', '255', '.tz', 'Africa');
 INSERT INTO Countries(Name,LongName,ISO2,ISO3,NumCode,UNMemberState,CallingCode,CCTLD,InternationalRegion) VALUES ('Thailand', 'Kingdom of Thailand', 'TH', 'THA', '764', 'yes', '66', '.th', 'Asia');
@@ -241,8 +241,8 @@ INSERT INTO Countries(Name,LongName,ISO2,ISO3,NumCode,UNMemberState,CallingCode,
 INSERT INTO Countries(Name,LongName,ISO2,ISO3,NumCode,UNMemberState,CallingCode,CCTLD,InternationalRegion) VALUES ('Vatican City', 'State of the Vatican City', 'VA', 'VAT', '336', 'no', '39', '.va', 'Europe');
 INSERT INTO Countries(Name,LongName,ISO2,ISO3,NumCode,UNMemberState,CallingCode,CCTLD,InternationalRegion) VALUES ('Venezuela', 'Bolivarian Republic of Venezuela', 'VE', 'VEN', '862', 'yes', '58', '.ve', 'South America');
 INSERT INTO Countries(Name,LongName,ISO2,ISO3,NumCode,UNMemberState,CallingCode,CCTLD,InternationalRegion) VALUES ('Vietnam', 'Socialist Republic of Vietnam', 'VN', 'VNM', '704', 'yes', '84', '.vn', 'Asia');
-INSERT INTO Countries(Name,LongName,ISO2,ISO3,NumCode,UNMemberState,CallingCode,CCTLD,InternationalRegion) VALUES ('Virgin Islands', 'British', 'VG', 'British Virgin Islands', 'VGB', '092', 'no', '1+284', '.vg');
-INSERT INTO Countries(Name,LongName,ISO2,ISO3,NumCode,UNMemberState,CallingCode,CCTLD,InternationalRegion) VALUES ('Virgin Islands', 'US', 'VI', 'Virgin Islands of the United States', 'VIR', '850', 'no', '1+340', '.vi');
+INSERT INTO Countries(Name,LongName,ISO2,ISO3,NumCode,UNMemberState,CallingCode,CCTLD,InternationalRegion) VALUES ('Virgin Islands', 'British Virgin Islands', 'VG', 'VGB', '092', 'no', '284', '.vg', '');
+INSERT INTO Countries(Name,LongName,ISO2,ISO3,NumCode,UNMemberState,CallingCode,CCTLD,InternationalRegion) VALUES ('Virgin Islands', 'Virgin Islands of the United States','VI', 'VIR', '850', 'no', '1+340', '.vi', '');
 INSERT INTO Countries(Name,LongName,ISO2,ISO3,NumCode,UNMemberState,CallingCode,CCTLD,InternationalRegion) VALUES ('Wallis and Futuna', 'Wallis and Futuna', 'WF', 'WLF', '876', 'no', '681', '.wf', 'Oceania');
 INSERT INTO Countries(Name,LongName,ISO2,ISO3,NumCode,UNMemberState,CallingCode,CCTLD,InternationalRegion) VALUES ('Western Sahara', 'Western Sahara', 'EH', 'ESH', '732', 'no', '212', '.eh', 'Africa');
 INSERT INTO Countries(Name,LongName,ISO2,ISO3,NumCode,UNMemberState,CallingCode,CCTLD,InternationalRegion) VALUES ('Yemen', 'Republic of Yemen', 'YE', 'YEM', '887', 'yes', '967', '.ye', 'Middle East');

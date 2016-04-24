@@ -294,7 +294,7 @@
     <comment>To</comment>
   </data>
   <data name="VisitHistory" xml:space="preserve">
-    <value>Visit History</value>
+    <value>Lihat kunjungan</value>
     <comment>Visit History</comment>
   </data>
   <data name="Images" xml:space="preserve">
@@ -336,5 +336,9 @@
   <data name="Select" xml:space="preserve">
     <value>Pilih</value>
     <comment>Select</comment>
+  </data>
+  <data name="Hello" xml:space="preserve">
+    <value>Halo</value>
+    <comment>Hello</comment>
   </data>
 </root>

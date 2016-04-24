@@ -65,7 +65,9 @@
                                         <img class="media-object" data-src="..." alt="Generic placeholder image">
                                     </a>
                                     <div class="media-body" style="text-align:left">
-                                        <h4 class="media-heading"><%# ((RequestBO)Container.DataItem).Name %> <small>sold by <a href=""><b>Bill Gates</b></a> from <a href="">Makassar, Indonesia</a></small></h4>
+                                        <h4 class="media-heading">
+                                            <a href="<%# ((RequestBO)Container.DataItem).ID %>/<%# ((RequestBO)Container.DataItem).ID %>"><%# ((RequestBO)Container.DataItem).Name %></a> 
+                                        <small>sold by <a href=""><b>Bill Gates</b></a> from <a href="">Makassar, Indonesia</a></small></h4>
                                         <small><%# ((RequestBO)Container.DataItem).MinPrice.ToString() %></small> <%# ((RequestBO)Container.DataItem).Description %>
                                     </div>
                                 </div>

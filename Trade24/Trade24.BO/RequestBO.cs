@@ -28,6 +28,14 @@ namespace Trade24.BO
         public string Currency { get; set; }
         public float? MinPrice { get; set; }
         public string Description { get; set; }
+        public float Weight { get; set; }
+        public string WeightUnit { get; set; }
+        public string Packaging { get; set; }
+        public int? PlaceOfOriginCountryID { get; set; }
+        public int? PlaceOfOriginCityID { get; set; }
+        public int? SupplyAbility { get; set; }
+        public string SupplyAbilityUnit { get; set; }
+        public string SupplyAbilityTimeUnit { get; set; }
         public DateTime Created_at { get; set; }
 
         public RequestBO() { }
