@@ -107,10 +107,14 @@
                     <div class="list-group-item">
                         <div class="row">
                             <div class="col-md-2">
-                                <img id="imgProduct" class="img-responsive img-rounded" src="<%# Trade24.BLL.UploadedFileBLL.GetUploadedFilePath(((RequestBO)Container.DataItem).ID) %>" alt="Product image" />
+                                <a href="/products/request.aspx?id=<%# ((RequestBO)Container.DataItem).ID %>">
+                                    <img id="imgProduct" class="img-responsive img-rounded" src="<%# Trade24.BLL.UploadedFileBLL.GetUploadedFilePath(((RequestBO)Container.DataItem).ID) %>" alt="Product image" />
+                                </a>
                             </div>
                             <div class="col-md-6">
-                                <h4 class="list-group-item-heading"><%# ((RequestBO)Container.DataItem).Name %></h4>
+                                <a href="/products/request.aspx?id=<%# ((RequestBO)Container.DataItem).ID %>">
+                                    <h4 class="list-group-item-heading"><%# ((RequestBO)Container.DataItem).Name %></h4>
+                                </a>
                                 <div class="list-group-item-text">
                                     <div class="row">
                                         <div class="col-md-6">
@@ -125,7 +129,9 @@
                             </div>
                             <div class="col-md-4">
                                 <div class="row">
-                                    <h5 class="list-group-item-heading"><%# AccountBLL.GetAccount((int)((RequestBO)Container.DataItem).UploaderID).GetName() %></h5>
+                                    <a href="/users/profile.aspx?id<%# ((RequestBO)Container.DataItem).UploaderID %>">
+                                        <h5 class="list-group-item-heading"><%# AccountBLL.GetAccount((int)((RequestBO)Container.DataItem).UploaderID).GetName() %></h5>
+                                    </a>
                                     <div class="list-group-item-text">
                                         <p class="text-muted"><%# AccountBLL.GetCityWithCountry((int)((RequestBO)Container.DataItem).UploaderID) %></p>
                                     </div>
