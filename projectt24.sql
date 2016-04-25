@@ -1,10 +1,15 @@
+DROP TABLE AccountViewList
+DROP TABLE InterestedList
+DROP TABLE ItemViewList
 DROP TABLE Contacts
 DROP TABLE Accounts
 DROP TABLE Request
 DROP TABLE Cities
+DROP TABle Currencies
 DROP TABLE Countries
 DROP TABLE Messages
 DROP TABLE UploadedFiles
+DROP TABLE ItemCategories
 
 CREATE TABLE Countries(
 	ID INT IDENTITY,
