@@ -18,5 +18,9 @@ namespace Trade24.BLL
         {
             return new InterestListDAL().GetAllInterested(UserID);
         }
+        public static bool IsInterested(InterestListBO il)
+        {
+            return new InterestListDAL().IsInterested(il);
+        }
     }
 }

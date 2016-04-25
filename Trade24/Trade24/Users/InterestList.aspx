@@ -1,4 +1,5 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/Layouts/Default.Login.Master" AutoEventWireup="true" CodeBehind="InterestList.aspx.cs" Inherits="Trade24.Users.InterestList" %>
+<%@ Import Namespace="Trade24.BLL" %>
 <%@ Import Namespace="Trade24.BO" %>
 
 <asp:Content ID="cHead" ContentPlaceHolderID="head" runat="server">
@@ -25,10 +26,12 @@
                         <asp:Repeater ID="rptInterestTable" runat="server">
                             <ItemTemplate>
                                 <tr>
-                                    <td><%# ((RequestBO)Container.DataItem).RequestType.ToString() %></td>
-                                    <td><%# ((RequestBO)Container.DataItem).ItemCategoryID.ToString() %></td>
-                                    <td><%# ((RequestBO)Container.DataItem).Name.ToString() %></td>
-                                    <td><%# ((RequestBO)Container.DataItem).PlaceOfOriginCountryID.ToString() %>, <%# ((RequestBO)Container.DataItem).PlaceOfOriginCityID.ToString() %></td>
+                                    <td>
+                                        <%# ((RequestBO)Container.DataItem).RequestTypeToString() %>
+                                    </td>
+                                    <td><%# ItemCategoryBLL.GetCategory(((RequestBO)Container.DataItem).ItemCategoryID).Name %></td>
+                                    <td><a href="/Products/<%# ((RequestBO)Container.DataItem).RequestTypeToString() %>.aspx?id=<%# ((RequestBO)Container.DataItem).ID.ToString() %>"><%# ((RequestBO)Container.DataItem).Name.ToString() %></a></td>
+                                    <td><%# CountryBLL.GetCountryName(((RequestBO)Container.DataItem).PlaceOfOriginCountryID) %>, <%# CityBLL.GetCityName(((RequestBO)Container.DataItem).PlaceOfOriginCityID) %></td>
                                 </tr>
                             </ItemTemplate>
                         </asp:Repeater>

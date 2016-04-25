@@ -29,6 +29,11 @@ namespace Trade24.Product
                     {
                         GetSellProduct(requestId);
 
+                        if(InterestListBLL.IsInterested(new InterestListBO() { UserID = AccountBLL.GetLoginAccount().ID, RequestID = requestId }))
+                        {
+                            btnAddToList.Disabled = true;
+                        }
+
                         if(AccountBLL.GetLoginAccount() != null)
                         {
                             ItemViewListBLL.Save(new ItemViewListBO() { UserID = AccountBLL.GetLoginAccount().ID, RequestID = requestId });

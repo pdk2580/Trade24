@@ -38,5 +38,20 @@ namespace Trade24.DAL
 
             return requests;
         }
+
+        public bool IsInterested(InterestListBO il)
+        {
+            IEnumerable<RequestBO> requests = null;
+
+            using (var sqlConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["trade24"].ConnectionString))
+            {
+                sqlConnection.Open();
+
+                string query = "SELECT * FROM InterestedList InterestedList.UserID = @UserID AND InterestedList.RequestID = @RequestID";
+                requests = sqlConnection.Query<RequestBO>(query, il);
+            }
+
+            return ((requests.Count() > 0)?true:false);
+        }
     }
 }

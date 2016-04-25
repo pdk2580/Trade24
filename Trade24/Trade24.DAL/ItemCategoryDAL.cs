@@ -12,6 +12,21 @@ namespace Trade24.DAL
 {
     public class ItemCategoryDAL
     {
+        public ItemCategoryBO GetCategory(int categoryID)
+        {
+            IEnumerable<ItemCategoryBO> categories;
+
+            using (var sqlConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["trade24"].ConnectionString))
+            {
+                sqlConnection.Open();
+
+                string query = "SELECT * FROM ItemCategories WHERE ID = @Id";
+                categories = sqlConnection.Query<ItemCategoryBO>(query, new { Id = categoryID });
+            }
+
+            return categories.Count() > 0 ? categories.First() : null;
+        }
+
         public IEnumerable<ItemCategoryBO> GetAllCategories()
         {
             IEnumerable<ItemCategoryBO> categories;

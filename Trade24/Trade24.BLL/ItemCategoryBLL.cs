@@ -10,6 +10,11 @@ namespace Trade24.BLL
 {
     public class ItemCategoryBLL
     {
+        public static ItemCategoryBO GetCategory(int categoryID)
+        {
+            return new ItemCategoryDAL().GetCategory(categoryID);
+        }
+
         public static IEnumerable<ItemCategoryBO> GetAllCategories()
         {
             return new ItemCategoryDAL().GetAllCategories();

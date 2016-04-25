@@ -15,7 +15,23 @@ namespace Trade24.Products
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!IsPostBack)
+            {
+                ddlUnit.DataSource = null;
+                ddlUnit.DataBind();
+                ddlCurrency.DataSource = null;
+                ddlCurrency.DataBind();
+                ddlWeightUnit.DataSource = null;
+                ddlWeightUnit.DataBind();
+                ddlCountry.DataSource = null;
+                ddlCountry.DataBind();
+                ddlCity.DataSource = null;
+                ddlCity.DataBind();
+                ddlSupplyAbilityUnit.DataSource = null;
+                ddlSupplyAbilityUnit.DataBind();
+                ddlSupplyAbilityTimeUnit.DataSource = null;
+                ddlSupplyAbilityTimeUnit.DataBind();
+            }
         }
 
         protected void submit_Click(object sender, EventArgs e)
